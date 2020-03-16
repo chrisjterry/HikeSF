@@ -1,7 +1,7 @@
 import React from "react";
-import NavContainer from '../components/nav/nav_container';
-import LoginFormContainer from '../components/session_form/login_form_container';
-import LoginFormContainer from '../components/session_form/signup_form_container';
+import NavContainer from './nav/nav_container';
+import LoginFormContainer from './session_form/login_form_container';
+import LoginFormContainer from './session_form/signup_form_container';
 
 const App = () => (
     <div>
