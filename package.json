@@ -5,36 +5,26 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "frontend-install": "npm install --prefix frontend",
+    "frontend": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run frontend\""
   },
   "author": "Victoria Campbell, Jeff Lui, Jordan Tom, Chris Terry",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.8.7",
-    "@babel/preset-env": "^7.8.7",
-    "@babel/preset-react": "^7.8.3",
-    "babel-loader": "^8.0.6",
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.15",
-    "mongoose": "^5.9.4",
-    "passport": "^0.4.1",
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.3.15",
+    "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "react": "^16.13.0",
-    "react-dom": "^16.13.0",
-    "react-redux": "^7.2.0",
-    "react-router-dom": "^5.1.2",
-    "redux": "^4.0.5",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "validator": "^12.2.0",
-    "webpack": "^4.42.0",
-    "webpack-cli": "^3.3.11"
+    "validator": "^10.9.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^1.18.7"
   },
   "repository": {
     "type": "git",
