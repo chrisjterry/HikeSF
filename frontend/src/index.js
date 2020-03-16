@@ -1,35 +1,39 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import Root from "./components/root";
-import configureStore from "./store/store";
-import jwt_decode from "jwt-decode";
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-import { setAuthToken } from "./util/session_api_util";
-import { logout } from "./actions/session_actions";
+import Root from './components/root';
 
-document.addEventListener("DOMContentLoaded", () => {
-  let store;
+import configureStore from './store/store';
 
-  if (localStorage.jwtToken) {
-    setAuthToken(localStorage.jwtToken);
+import jwt_decode from 'jwt-decode';
 
-    const decodedUser = jwt_decode(localStorage.jwtToken);
-    const preloadedState = {
-      session: { isAuthenticated: true, user: decodedUser }
-    };
+import { setAuthToken } from './util/session_api_util';
 
-    store = configureStore(preloadedState);
+import { logout } from './actions/session_actions';
 
-    const currentTime = Date.now() / 1000;
+document.addEventListener('DOMContentLoaded', () => {
+    let store;
 
-    if (decodedUser.exp < currentTime) {
-      store.dispatch(logout());
-      window.location.href = "/login";
+    if (localStorage.jwtToken) {
+
+        setAuthToken(localStorage.jwtToken);
+
+        const decodedUser = jwt_decode(localStorage.jwtToken);
+
+        const preloadedState = { session: { isAuthenticated: true, user: decodedUser } };
+
+        store = configureStore(preloadedState);
+
+        const currentTime = Date.now() / 1000;
+
+        if (decodedUser.exp < currentTime) {
+            store.dispatch(logout());
+            window.location.href = '/login';
+        }
+    } else {
+        store = configureStore({});
     }
-  } else {
-    store = configureStore({});
-  }
-  const root = document.getElementById("root");
+    const root = document.getElementById('root');
 
-  ReactDOM.render(<Root store={store} />, root);
+    ReactDOM.render(<Root store={store} />, root);
 });
