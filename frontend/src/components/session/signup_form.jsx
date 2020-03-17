@@ -40,14 +40,21 @@ class SignupForm extends React.Component {
       password2: this.state.password2
     };
 
-    this.props.signup(user, this.props.history);
+    // this.props.signup(user, this.props.history);
+    // this.props.login(user);
+
+    this.props.signup(user).then((e) => {
+      if (this.props.errors.length === 0) {
+        this.props.history.push("/");
+      }
+    });
   }
 
   renderErrors() {
     return (
-      <ul>
-        {Object.keys(this.state.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.state.errors[error]}</li>
+      <ul className='signup-errors'>
+        {Object.keys(this.props.errors).map((error, i) => (
+          <li key={`error-${i}`}>{error}</li>
         ))}
       </ul>
     );

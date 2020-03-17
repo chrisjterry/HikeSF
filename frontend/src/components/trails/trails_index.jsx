@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import Tucker1 from "./tucker1.png";
 
 class TrailIndex extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+    // constructor(props) {
+    //     super(props);
+    // }
 
     componentDidMount() {
         this.props.fetchTrails();

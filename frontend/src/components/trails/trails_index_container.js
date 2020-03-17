@@ -1,4 +1,3 @@
-import React from "react";
 import TrailsIndex from "./trails_index";
 import { fetchTrails, fetchTrail } from "../../actions/trail_actions";
 import { connect } from "react-redux";
