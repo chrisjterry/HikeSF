@@ -1,0 +1,31 @@
+.nav-bar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    font-family: Circular,
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    Helvetica Neue,
+    sans-serif;
+}
+
+.right-side-nav-bar {
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.signup, .login {
+    display: flex;
+    /* border: 1px solid purple; */
+    padding: .6rem;
+}
+
+.signup-link, .login-link {
+    text-decoration: none;
+}
+
+.nav-logo {
+    height: 70px;
+}
