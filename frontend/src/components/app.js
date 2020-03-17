@@ -5,6 +5,7 @@ import MainPage from "./main/main_page";
 import NavContainer from "./nav/nav_container";
 import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
+import TrailsIndexContainer from "./trails/trails_index_container";
 
 
 const App = () => (
@@ -14,6 +15,7 @@ const App = () => (
       <AuthRoute exact path="/" component={MainPage} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/register" component={SignupFormContainer} />
+      <ProtectedRoute exact path="/trails" component={TrailsIndexContainer} />
     </Switch>
   </div>
 );
