@@ -9,8 +9,8 @@ class NewTrailForm extends React.Component {
             title: "",
             description: "",
             difficulty: "",
-            petFriendly: false,
-            paved: false,
+            petFriendly: true,
+            paved: true,
             errors: {}
         };
 
@@ -21,6 +21,7 @@ class NewTrailForm extends React.Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({ errors: nextProps.errors });
+        // this.setState({newTrail: nextProps.newTrail.title});
     }
 
     update(field) {
@@ -53,6 +54,7 @@ class NewTrailForm extends React.Component {
         };
 
         this.props.createTrail(trail);
+        this.setState({title: ''})
     }
 
     renderErrors() {

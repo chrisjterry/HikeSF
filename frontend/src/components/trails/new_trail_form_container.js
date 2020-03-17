@@ -4,6 +4,8 @@ import NewTrailForm from "./new_trail_form";
 
 const mapStateToProps = state => {
     return {
+        currentUser: state.session.user,
+        // newTrail: state.trails.new,
         errors: state.errors.trailErrors
     };
 };

@@ -15,13 +15,13 @@ class SignupForm extends React.Component {
     this.clearedErrors = false;
   }
 
-  // componentWillReceiveProps(nextProps) {
-  //   if (nextProps.signedIn === true) {
-  //     this.props.history.push("/login");
-  //   }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.signedIn === true) {
+      this.props.history.push("/login");
+    }
 
-  //   this.setState({ errors: nextProps.errors });
-  // }
+    this.setState({ errors: nextProps.errors });
+  }
 
   update(field) {
     return e =>
@@ -44,7 +44,7 @@ class SignupForm extends React.Component {
 
     this.props.signup(user).then((e) => {
       if (this.props.errors.length === 0) {
-        this.props.history.push("/home");
+        this.props.history.push("/");
       }
     });
   }
@@ -53,7 +53,7 @@ class SignupForm extends React.Component {
     return (
       <ul className='signup-errors'>
         {Object.keys(this.props.errors).map((error, i) => (
-          <li key={`error-${i}`}>{this.props.errors[error]}</li>
+          <li key={`error-${i}`}>{error}</li>
         ))}
       </ul>
     );
