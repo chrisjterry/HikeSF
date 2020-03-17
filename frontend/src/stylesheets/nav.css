@@ -29,3 +29,12 @@
 .nav-logo {
     height: 70px;
 }
+
+.loggedInHeader {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    font-family: 'Sen', sans-serif;
+    color: black;
+    padding: 15px;
+}

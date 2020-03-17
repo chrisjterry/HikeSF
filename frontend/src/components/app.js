@@ -7,6 +7,7 @@ import LoginFormContainer from "./session/login_form_container";
 import SignupFormContainer from "./session/signup_form_container";
 import TrailsIndexContainer from "./trails/trails_index_container";
 import TrailShowContainer from "./trails/trail_show_container";
+import NewTrailContainer from "./trails/new_trail_form_container";
 
 
 const App = () => (
@@ -17,9 +18,10 @@ const App = () => (
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/register" component={SignupFormContainer} />
       <ProtectedRoute exact path="/trails" component={TrailsIndexContainer} />
+      <ProtectedRoute exact path="/trails/new" component={NewTrailContainer} />
       <ProtectedRoute exact path="/trails/:id" component={TrailShowContainer} />
     </Switch>
-    <footer>Copyright 2020</footer>
+    <footer>Copyright 2020. Temporary Footer. Github Link. LinkedIn Links</footer>
   </div>
 );
 

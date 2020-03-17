@@ -4,9 +4,9 @@ import Buttercup1 from "./buttercup1.png";
 
 
 class PetShow extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   componentDidMount() {
     //   debugger
