@@ -1,0 +1,21 @@
+.main_page-whole-wrapper {
+    display: flex
+}
+
+.main_page-container {
+    display: flex;
+    flex-direction: column;
+}
+.main-page-picture {
+    display: flex;
+    width: 100%;
+}
+
+.main-page-words {
+    font-family: Circular,
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    Helvetica Neue,
+    sans-serif;
+}

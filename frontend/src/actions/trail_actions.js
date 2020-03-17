@@ -25,17 +25,17 @@ const receiveTrailErrors = errors => ({
     errors
 });
 
-export const fetchTrails = data => dispatch => TrailAPIUtil.fetchTrails(data)
+export const fetchTrails = data => dispatch => TrailAPIUtil.fetchAllTrails(data)
     .then(trails => dispatch(receiveTrails(trails)),
     errors => dispatch(receiveTrailErrors(errors)));
 
-export const fetchTrail = id => dispatch => TrailAPIUtil.fetchTrail(id)
+export const fetchTrail = id => dispatch => TrailAPIUtil.fetchOneTrail(id)
     .then(trail => dispatch(receiveTrail(trail)),
     errors => dispatch(receiveTrailErrors(errors)));
 
-export const fetchTrail = id => dispatch => TrailAPIUtil.fetchTrail(id)
-    .then(trail => dispatch(receiveTrail(trail)),
-    errors => dispatch(receiveTrailErrors(errors)));
+// export const fetchTrail = id => dispatch => TrailAPIUtil.fetchTrail(id)
+//     .then(trail => dispatch(receiveTrail(trail)),
+//     errors => dispatch(receiveTrailErrors(errors)));
 
 export const createTrail = data => dispatch => TrailAPIUtil.createTrail(data)
     .then(trail => dispatch(receiveNewTrail(trail)),

@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import '../../stylesheets/login_form.css'
 
 class LoginForm extends React.Component {
   constructor(props) {
@@ -17,7 +18,7 @@ class LoginForm extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.currentUser === true) {
-      this.props.history.push("/tweets");
+      this.props.history.push("/home");
     }
 
     this.setState({ errors: nextProps.errors });
