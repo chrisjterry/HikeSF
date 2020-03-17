@@ -19,6 +19,7 @@ const App = () => (
       <ProtectedRoute exact path="/trails" component={TrailsIndexContainer} />
       <ProtectedRoute exact path="/trails/:id" component={TrailShowContainer} />
     </Switch>
+    <footer>Copyright 2020</footer>
   </div>
 );
 
