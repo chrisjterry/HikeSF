@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import '../../stylesheets/sign_up_form.css'
 
 class SignupForm extends React.Component {
   constructor(props) {
@@ -54,33 +55,25 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
+      <div className="signup-form-container">
         <form onSubmit={this.handleSubmit}>
-          <div className="login-form">
-            <br />
-            <input
-              type="text"
-              value={this.state.email}
-              onChange={this.update("email")}
-              placeholder="Email"
-            />
-            <br />
-            <input
-              type="password"
-              value={this.state.password}
-              onChange={this.update("password")}
-              placeholder="Password"
-            />
-            <br />
-            <input
-              type="password"
-              value={this.state.password2}
-              onChange={this.update("password2")}
-              placeholder="Confirm Password"
-            />
-            <br />
-            <input type="submit" value="Submit" />
-            {this.renderErrors()}
+          <div className="sign-up-form-container">
+            <div className='sign-up-text'>
+              Please Sign Up
+            </div>
+            <div className='sign-up-email'>
+              <input className='sign-up-email-input' type="text" value={this.state.email} onChange={this.update("email")} placeholder="Email"/>
+            </div>
+            <div className='sign-up-password'>
+              <input className='sign-up-password-input' type="password" value={this.state.password} onChange={this.update("password")} placeholder="Password"/>
+            </div>
+            <div className='confirm-password'>
+              <input className='confirm-password-input' type="password" value={this.state.password2} onChange={this.update("password2")} placeholder="Confirm Password"/>
+            </div>
+            <div className='sign-up-submit'>
+              <input className='sign-up-submit-button' type="submit" value="Submit" />
+              {this.renderErrors()}
+            </div>
           </div>
         </form>
       </div>

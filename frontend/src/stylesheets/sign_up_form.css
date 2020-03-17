@@ -1,4 +1,4 @@
-.login-in-container-wrapper {
+.signup-form-container {
     display: flex;
     justify-content: center;
     font-family: Circular,
@@ -7,22 +7,16 @@
     Roboto,
     Helvetica Neue,
     sans-serif;
-    /* background-image: url('../app/tucker.JPG');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646; */
 }
 
-.sign-in-text {
+.sign-up-text {
     display: flex;
     padding-bottom: 1rem;
     padding-top: 1rem;
     font-size: 1.5rem;
 }
 
-.email-input {
+.sign-up-email-input, .sign-up-password-input, .confirm-password-input {
     height: 2rem;
     width: 15.625rem;
     margin-bottom: 0.625rem;
@@ -31,16 +25,7 @@
     padding-right: 1rem;
 }
 
-.password-input {
-    height: 2rem;
-    width: 15.625rem;
-    margin-bottom: 0.625rem;
-    border-radius: 5px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.sumbit-button {
+.sign-up-submit-button {
     height: 2rem;
     width: 100%;
     margin-bottom: 0.625rem;
