@@ -7,15 +7,15 @@ const validateTrailInput = require('../../validation/trails');
 router.get('/', (req, res) => {
     Trail.find()
         .sort({ date: -1 })
-        .then(hikes => res.json(hikes))
-        .catch(err => res.status(404).json({ noHikesFound: 'No hikes found' }));
+        .then(trails => res.json(trails))
+        .catch(err => res.status(404).json({ noTrailsFound: 'No hikes found' }));
 });
 
 router.get('/:id', (req, res) => {
     Trail.findById(req.params.id)
         .then(trail => res.json(trail))
         .catch(err =>
-            res.status(404).json({ noHikeFound: 'No hike found with that ID' })
+            res.status(404).json({ noTrailFound: 'No hike found with that ID' })
         );
 });
 
@@ -40,6 +40,24 @@ router.post('/',
       });
   
       newTrail.save().then(trail => res.json(trail));
+    }
+);
+
+router.delete('/:id',
+    passport.authenticate('jwt', { session: false }),
+    (req, res) => {
+        Trail.findById(req.params.id)
+            .then(trail => {
+                if (trail.user.equals(req.user.id)) {
+                    trail.remove();
+                    Trail.find()
+                        .sort({ date: -1 })
+                        .then(trails => res.json(trails))
+                        .catch(err => res.status(404).json({ noTrailsFound: 'No hikes found' }));
+                } else {
+                    res.status(404).json({ noPermission: 'You do not have permission to do that' });
+                }
+            })
     }
 );
 
