@@ -6,6 +6,10 @@ const validateTrailInput = require('../../validation/trails');
 
 router.get('/', (req, res) => {
     Trail.find()
+        .filter(trail => trail.lat <= req.body.east)
+        .filter(trail => trail.lat >= req.body.west)
+        .filter(trail => trail.lng <= req.body.north)
+        .filter(trail => trail.lng >= req.body.south)
         .sort({ date: -1 })
         .then(trails => res.json(trails))
         .catch(err => res.status(404).json({ noTrailsFound: 'No hikes found' }));
