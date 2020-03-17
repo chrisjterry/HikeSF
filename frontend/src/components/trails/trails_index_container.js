@@ -4,7 +4,7 @@ import { fetchTrails, fetchTrail } from "../../actions/trail_actions";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => ({
-  trails: Object.values(state.entities.trails)
+  trails: Object.values(state.entities.trails.all)
 });
 
 const mapDispatchToProps = dispatch => ({
