@@ -1,10 +1,10 @@
 import axios from 'axios';
 
-export const fetchTrails = () => {
+export const fetchAllTrails = () => {
   return axios.get('/api/trails')
 };
 
-export const fetchTrail = id => {
+export const fetchOneTrail = id => {
   return axios.get(`/api/trails/${id}`)
 };
 
