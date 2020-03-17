@@ -5,11 +5,17 @@ const Trail = require('../../models/Trail');
 const validateTrailInput = require('../../validation/trails');
 
 router.get('/', (req, res) => {
-    Trail.find()
-        .filter(trail => trail.lat <= req.body.east)
-        .filter(trail => trail.lat >= req.body.west)
-        .filter(trail => trail.lng <= req.body.north)
-        .filter(trail => trail.lng >= req.body.south)
+    req.body.east = req.body.east || 180;
+    req.body.west = req.body.west || -180;
+    req.body.north = req.body.north || 180;
+    req.body.south = req.body.south || -180;
+
+    Trail.find({
+        lat: { $gte: req.body.west },
+        lat: { $lte: req.body.east },
+        lng: { $gte: req.body.south },
+        lng: { $lte: req.body.north }
+     })
         .sort({ date: -1 })
         .then(trails => res.json(trails))
         .catch(err => res.status(404).json({ noTrailsFound: 'No hikes found' }));
