@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import '../../stylesheets/new_trail_form.css'
 
 class NewTrailForm extends React.Component {
     constructor(props) {
@@ -84,40 +85,35 @@ class NewTrailForm extends React.Component {
             <div className='new-trail-container'>
                 <form onSubmit={this.handleSubmit}>
                     <div className="new-trail-form">
-                        <br />
-                        <input
-                            type="text"
-                            value={this.state.title}
-                            onChange={this.update("title")}
-                            placeholder="Title"
-                        />
-                        <br />
-                        <input
-                            type="text"
-                            value={this.state.description}
-                            onChange={this.update("description")}
-                            placeholder="Description"
-                        />
-                        <br />
-                        <input
-                            type="difficulty"
-                            value={this.state.difficulty}
-                            onChange={this.update("difficulty")}
-                            placeholder="Difficulty"
-                        />
-                        <br />
-                        <label> Pet friendly? 
-                            {/* <input type="checkbox" value={this.state.petFriendly} /> */}
-                            <input type="checkbox" value={this.state.petFriendly} onClick={this.togglePet.bind(this)} checked={this.state.petFriendly} />
-                        </label>
-                        <br />
-                        <label> Paved?
-                            {/* <input type="checkbox" value={this.state.paved} /> */}
-                            <input type="checkbox" value={this.state.paved} onClick={this.togglePaved.bind(this)} checked={this.state.paved} />
-                        </label>
-                        <br />
-                        <input type="submit" value="Create New Trail"/>
-                        {this.renderErrors()}
+                        <div classaName='trail-form-wrapper'>
+                            <div className='trail-title'>
+                                <input className='trail-title-text' type="text" value={this.state.title} onChange={this.update("title")} placeholder="Title"/>
+                            </div>
+                            <div className='trail-description'>
+                                <input className='trail-description-text' type="text" value={this.state.description} onChange={this.update("description")} placeholder="Description"/>
+                            </div>
+                            <div className='trail-difficulity'>
+                                <input className='trail-difficulity-text' type="difficulty" value={this.state.difficulty} onChange={this.update("difficulty")} placeholder="Difficulty"/>
+                            </div>
+                            <div className='bottom-container'>
+                                <div className='trail-pet-friendly'>
+                                    <label className='pet-friendly'> Pet friendly? 
+                                        {/* <input type="checkbox" value={this.state.petFriendly} /> */}
+                                        <input className='pet-friendly' type="checkbox" value={this.state.petFriendly} onClick={this.togglePet.bind(this)} checked={this.state.petFriendly} />
+                                    </label>
+                                </div>
+                                <div className='trail-paved'>
+                                    <label className='paved-trail'> Paved?
+                                        {/* <input type="checkbox" value={this.state.paved} /> */}
+                                        <input className='trail-paved-text' type="checkbox" value={this.state.paved} onClick={this.togglePaved.bind(this)} checked={this.state.paved} />
+                                    </label>
+                                </div>
+                            </div>    
+                            <div className='trail-submit'>
+                                <input className='trail-submit-button' type="submit" value="Create New Trail"/>
+                                {this.renderErrors()}
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
