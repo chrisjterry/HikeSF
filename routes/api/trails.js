@@ -32,6 +32,11 @@ router.get('/:id', (req, res) => {
 router.post('/new',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
+        req.body.petFriendly = req.body.petFriendly.toString()
+        req.body.paved = req.body.paved.toString();
+        req.body.lat = req.body.lat.toString();
+        req.body.lng = req.body.lng.toString();
+        
       const { errors, isValid } = validateTrailInput(req.body);
   
       if (!isValid) {
