@@ -19,13 +19,13 @@ router.get('/:id', (req, res) => {
         );
 });
 
-router.post('/',
+router.post('/new',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
       const { errors, isValid } = validateTrailInput(req.body);
   
       if (!isValid) {
-        return res.status(400).json(errors);
+        return res.status(401).json(errors);
       }
       
       const newTrail = new Trail({

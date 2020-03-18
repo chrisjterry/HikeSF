@@ -15,7 +15,7 @@ class NewTrailForm extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.handleCheckBox = this.handleCheckBox.bind(this);
+        // this.handleCheckBox = this.handleCheckBox.bind(this);
         this.clearedErrors = false;
     }
 
@@ -31,14 +31,22 @@ class NewTrailForm extends React.Component {
             });
     }
 
-    handleCheckBox(e) {
-        this.setState({
-            petFriendly: e.target.petFriendly,
-            paved: e.target.paved
-        })
+    // handleCheckBox(e) {
+    //     this.setState({
+    //         petFriendly: e.target.petFriendly,
+    //         paved: e.target.paved
+    //     })
+    // }
+
+    togglePet(e) {
+        this.setState({ petFriendly: !this.state.petFriendly });
+    }
+    togglePaved(e) {
+        this.setState({ paved: !this.state.paved });
     }
 
     handleSubmit(e) {
+        // debugger
         e.preventDefault();
         
         let trail = {
@@ -47,14 +55,14 @@ class NewTrailForm extends React.Component {
             difficulty: this.state.difficulty,
             petFriendly: this.state.petFriendly,
             paved: this.state.paved,
-            lat: this.state.lat,
-            lng: this.state.lng,
-            user: this.state.user,
-            date: this.state.date
+            // lat: this.state.lat,
+            // lng: this.state.lng,
+            user: this.props.currentUser,
+            // date: this.state.date
         };
 
         this.props.createTrail(trail);
-        this.setState({title: ''})
+        // this.setState({title: ''})
     }
 
     renderErrors() {
@@ -82,7 +90,7 @@ class NewTrailForm extends React.Component {
                         />
                         <br />
                         <input
-                            type="textarea"
+                            type="text"
                             value={this.state.description}
                             onChange={this.update("description")}
                             placeholder="Description"
@@ -97,15 +105,15 @@ class NewTrailForm extends React.Component {
                         <br />
                         <label> Pet friendly? 
                             {/* <input type="checkbox" value={this.state.petFriendly} /> */}
-                            <input type="checkbox" value={this.state.petFriendly} onChange={this.handleCheckBox} checked={this.state.petFriendly} />
+                            <input type="checkbox" value={this.state.petFriendly} onClick={this.togglePet.bind(this)} checked={this.state.petFriendly} />
                         </label>
                         <br />
                         <label> Paved?
                             {/* <input type="checkbox" value={this.state.paved} /> */}
-                            <input type="checkbox" value={this.state.paved} onChange={this.handleCheckBox} checked={this.state.paved} />
+                            <input type="checkbox" value={this.state.paved} onClick={this.togglePaved.bind(this)} checked={this.state.paved} />
                         </label>
                         <br />
-                        <input type="submit" value="Submit"/>
+                        <input type="submit" value="Create New Trail"/>
                         {this.renderErrors()}
                     </div>
                 </form>
