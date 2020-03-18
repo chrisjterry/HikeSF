@@ -1,11 +1,12 @@
 .main_page-whole-wrapper {
-    display: flex
+    display: flex;
 }
 
 .main_page-container {
     display: flex;
     flex-direction: column;
 }
+
 .main-page-picture {
     display: flex;
     width: 100%;
