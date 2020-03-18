@@ -1,2 +1,4 @@
 /config/keys.js
 /node_modules
+/config/.env
+/npm-debug.log
