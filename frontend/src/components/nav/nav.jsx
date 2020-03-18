@@ -19,6 +19,7 @@ class NavBar extends React.Component {
     if (this.props.loggedIn) {
       return (
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="logged-in-home-page-container">
           <div className="left-side-logged-in-container">
             <h3>HikeSF</h3>
@@ -40,6 +41,8 @@ class NavBar extends React.Component {
             </div>
           </div>
 =======
+=======
+>>>>>>> master
         <div className='loggedInHeader'>
           {/* <h1>HikeSF</h1> */}
           <Link to={"/"}>HikeSF Home</Link>
