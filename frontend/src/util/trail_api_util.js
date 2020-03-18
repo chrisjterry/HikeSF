@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-export const fetchAllTrails = () => {
-  return axios.get('/api/trails')
+export const fetchAllTrails = data => {
+  return axios.get('/api/trails', { params: data })
 };
 
 export const fetchOneTrail = id => {

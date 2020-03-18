@@ -25,7 +25,7 @@ const receiveTrailErrors = errors => ({
     errors
 });
 
-export const fetchTrails = () => dispatch => TrailAPIUtil.fetchAllTrails()
+export const fetchTrails = data => dispatch => TrailAPIUtil.fetchAllTrails(data)
     .then(trails => dispatch(receiveTrails(trails)),
     errors => dispatch(receiveTrailErrors(errors)));
 
