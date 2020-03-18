@@ -22,10 +22,40 @@
     padding: .6rem;
 }
 
-.signup-link, .login-link {
+.signup-link, .login-link, .all-trails, .profile, .log-out {
     text-decoration: none;
 }
 
 .nav-logo {
     height: 70px;
+}
+
+.logged-in-home-page-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Circular,
+    -apple-system,
+    BlinkMacSystemFont,
+    Roboto,
+    Helvetica Neue,
+    sans-serif;
+}
+
+.right-side-nav-logged-in-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.all-trails, .profile {
+    padding: .6rem;
+}
+
+.log-out {
+    padding: .3rem;
+    /* padding-right: .6rem; */
+    border-radius: 5px; 
+    align-items: center;
+    font-size: .8rem;
 }

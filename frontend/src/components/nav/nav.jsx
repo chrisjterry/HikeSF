@@ -18,11 +18,26 @@ class NavBar extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
-        <div>
-          <h1>HikeSF</h1>
-          <Link to={"/trails"}>All Trails</Link>
-          <Link to={"/profile"}>Profile</Link>
-          <button onClick={this.logoutUser}>Log out</button>
+        <div className="logged-in-home-page-container">
+          <div className="left-side-logged-in-container">
+            <h3>HikeSF</h3>
+          </div>
+          <div className="nav-bar-logo">
+            <Link to="/">
+              <img className="nav-logo " src={logo} alt="" />
+            </Link>
+          </div>
+          <div className="right-side-nav-logged-in-container">
+            <div className="trails-link">
+              <Link className='all-trails' to={"/trails"}>All Trails</Link>
+            </div>
+            <div className="profile-link">
+              <Link className='profile' to={"/profile"}>Profile</Link>
+            </div>
+            <div className="logout-button">
+              <button className='log-out' onClick={this.logoutUser}>Log out</button>
+            </div>
+          </div>
         </div>
       );
     } else {

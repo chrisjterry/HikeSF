@@ -4,7 +4,10 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "fsevents": "^1.2.11",
     "jwt-decode": "^2.2.0",
+    "node-gyp": "^6.1.0",
+    "node-sass": "^4.13.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^6.0.0",
@@ -29,5 +32,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "node": "^8.15.0"
+  }
 }
