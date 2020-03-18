@@ -7,12 +7,13 @@
     Roboto,
     Helvetica Neue,
     sans-serif;
-    /* background-image: url('../app/tucker.JPG');
+    background-image: url('../app/assets/IMG_8491.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #464646; */
+    background-color: #464646;
+    height: 600px;
 }
 
 .sign-in-text {
@@ -20,6 +21,7 @@
     padding-bottom: 1rem;
     padding-top: 1rem;
     font-size: 1.5rem;
+    color: white;
 }
 
 .email-input {
