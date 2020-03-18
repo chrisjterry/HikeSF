@@ -81,7 +81,7 @@ class NewTrailForm extends React.Component {
     render() {
         // debugger
         return (
-            <div>
+            <div className='new-trail-container'>
                 <form onSubmit={this.handleSubmit}>
                     <div className="new-trail-form">
                         <br />
