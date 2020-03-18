@@ -7,6 +7,13 @@
     Roboto,
     Helvetica Neue,
     sans-serif;
+    /* background-image: url('../app/assets/butter.png'); */
+    /* background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    height: 600px; */
 }
 
 .sign-up-text {

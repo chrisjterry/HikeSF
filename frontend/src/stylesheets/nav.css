@@ -22,19 +22,10 @@
     padding: .6rem;
 }
 
-.signup-link, .login-link {
+.signup-link, .login-link, .all-trails, .profile, .log-out {
     text-decoration: none;
 }
 
 .nav-logo {
     height: 70px;
-}
-
-.loggedInHeader {
-    display: flex;
-    justify-content: space-around;
-    background-color: white;
-    font-family: 'Sen', sans-serif;
-    color: black;
-    padding: 15px;
 }
