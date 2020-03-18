@@ -1,14 +1,20 @@
 .new-trail-container {
     display: flex;
     justify-content: center;
-    
+    /* background-image: url('../../src/app/assets/tucker2.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    height: 600px; */
 }
 
 
 .trail-title-text, .trail-difficulity-text, .trail-description-text {
     margin-top: 1.5rem;
     height: 1.5rem;
-    width: 10.625rem;
+    width: 12.625rem;
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;

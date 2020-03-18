@@ -27,7 +27,7 @@ class NavBar extends React.Component {
             </div>
             <div className="create-trail">
               <Link className="create-trail" to={"/trails/new"}>
-                Create a New Trail
+                Create New Trail
               </Link>
             </div>
           </div>
