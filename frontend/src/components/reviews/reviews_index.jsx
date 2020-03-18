@@ -1,13 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
-class TrailIndex extends React.Component {
+class ReviewIndex extends React.Component {
   // constructor(props) {
   //     super(props);
   // }
 
   componentDidMount() {
-    this.props.fetchReviews();
+    this.props.fetchReviews(this.props.currentTrail.id);
   }
 
   render() {
@@ -15,9 +15,9 @@ class TrailIndex extends React.Component {
     return (
       <div>
         <h3>All reviews???</h3>
-        {this.props.trails.map((trail, i) => (
+        {this.props.reviews.map((review, i) => (
           <div>
-            
+            {review}
           </div>
         ))}
       </div>
@@ -25,4 +25,4 @@ class TrailIndex extends React.Component {
   }
 }
 
-export default TrailIndex;
+export default ReviewIndex;

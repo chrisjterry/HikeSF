@@ -1,13 +1,14 @@
 import ReviewsIndex from "./reviews_index";
-import { fetchReviews } from "../../actions/review_actions";
+import { fetchTrailReviews } from "../../actions/review_actions";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => ({
   reviews: state.entities.reviews.all,
+  currentTrail: state.entities.trail.current
 });
 
 const mapDispatchToProps = dispatch => ({
-  fetchReviews: () => dispatch(fetchReviews())
+  fetchTrailReviews: (trailId) => dispatch(fetchTrailReviews(trailId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewsIndex);
