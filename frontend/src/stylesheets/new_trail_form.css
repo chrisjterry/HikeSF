@@ -1,38 +1,33 @@
-.signup-form-container {
+.new-trail-container {
     display: flex;
     justify-content: center;
-    font-family: Circular,
-    -apple-system,
-    BlinkMacSystemFont,
-    Roboto,
-    Helvetica Neue,
-    sans-serif;
-    /* background-image: url('../app/assets/tucky.JPG'); 
+    /* background-image: url('../../src/app/assets/tucker2.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
-    height: 600px;  */
+    height: 600px; */
 }
 
-.sign-up-text {
-    display: flex;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-    font-size: 1.5rem;
-}
 
-.sign-up-email-input, .sign-up-password-input, .confirm-password-input {
-    height: 2rem;
-    width: 15.625rem;
-    margin-bottom: 0.625rem;
+.trail-title-text, .trail-difficulity-text, .trail-description-text {
+    margin-top: 1.5rem;
+    height: 1.5rem;
+    width: 12.625rem;
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
 }
 
-.sign-up-submit-button {
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.trail-submit-button {
     height: 2rem;
     width: 100%;
     margin-bottom: 0.625rem;

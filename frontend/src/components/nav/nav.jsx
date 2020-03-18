@@ -18,11 +18,18 @@ class NavBar extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className="logged-in-home-page-container">
           <div className="left-side-logged-in-container">
-            <h3>HikeSF</h3>
+            <div className="trails-link">
+              <Link className="all-trails" to={"/trails"}>
+                All Trails
+              </Link>
+            </div>
+            <div className="create-trail">
+              <Link className="create-trail" to={"/trails/new"}>
+                Create New Trail
+              </Link>
+            </div>
           </div>
           <div className="nav-bar-logo">
             <Link to="/">
@@ -30,27 +37,17 @@ class NavBar extends React.Component {
             </Link>
           </div>
           <div className="right-side-nav-logged-in-container">
-            <div className="trails-link">
-              <Link className='all-trails' to={"/trails"}>All Trails</Link>
-            </div>
             <div className="profile-link">
-              <Link className='profile' to={"/profile"}>Profile</Link>
+              <Link className="profile" to={"/profile"}>
+                Profile
+              </Link>
             </div>
             <div className="logout-button">
-              <button className='log-out' onClick={this.logoutUser}>Log out</button>
+              <button className="log-out" onClick={this.logoutUser}>
+                Log out
+              </button>
             </div>
           </div>
-=======
-=======
->>>>>>> master
-        <div className='loggedInHeader'>
-          {/* <h1>HikeSF</h1> */}
-          <Link to={"/"}>HikeSF Home</Link>
-          <Link to={"/trails"}>All Trails</Link>
-          <Link to={"/trails/new"}>Create a New Trail</Link>
-          <Link to={"/profile"}>Profile</Link>
-          <button onClick={this.logoutUser}>Log out</button>
->>>>>>> master
         </div>
       );
     } else {
