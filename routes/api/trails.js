@@ -5,7 +5,17 @@ const Trail = require('../../models/Trail');
 const validateTrailInput = require('../../validation/trails');
 
 router.get('/', (req, res) => {
-    Trail.find()
+    req.query.east = req.query.east || 180;
+    req.query.west = req.query.west || -180;
+    req.query.north = req.query.north || 180;
+    req.query.south = req.query.south || -180;
+
+    Trail.find({
+        lat: { $gte: req.query.west },
+        lat: { $lte: req.query.east },
+        lng: { $gte: req.query.south },
+        lng: { $lte: req.query.north }
+     })
         .sort({ date: -1 })
         .then(trails => res.json(trails))
         .catch(err => res.status(404).json({ noTrailsFound: 'No hikes found' }));
@@ -19,13 +29,13 @@ router.get('/:id', (req, res) => {
         );
 });
 
-router.post('/',
+router.post('/new',
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
       const { errors, isValid } = validateTrailInput(req.body);
   
       if (!isValid) {
-        return res.status(400).json(errors);
+        return res.status(401).json(errors);
       }
       
       const newTrail = new Trail({

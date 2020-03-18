@@ -30,6 +30,7 @@
     height: 70px;
 }
 
+
 .logged-in-home-page-container {
     display: flex;
     align-items: center;
@@ -58,4 +59,12 @@
     border-radius: 5px; 
     align-items: center;
     font-size: .8rem;
+}
+.loggedInHeader {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    font-family: 'Sen', sans-serif;
+    color: black;
+    padding: 15px;
 }
