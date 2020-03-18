@@ -9,6 +9,6 @@ export const fetchOneTrail = id => {
 };
 
 export const createNewTrail = data => {
-  debugger
+  // debugger
   return axios.post('/api/trails/new', data)
 }

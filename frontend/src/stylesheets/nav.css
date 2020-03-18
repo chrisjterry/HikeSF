@@ -10,22 +10,18 @@
     Helvetica Neue,
     sans-serif;
 }
-
 .right-side-nav-bar {
     display: flex;
     /* border: 1px solid red; */
 }
-
 .signup, .login {
     display: flex;
     /* border: 1px solid purple; */
     padding: .6rem;
 }
-
 .signup-link, .login-link, .all-trails, .profile, .log-out {
     text-decoration: none;
 }
-
 .nav-logo {
     height: 70px;
 }

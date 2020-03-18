@@ -1,9 +1,11 @@
 import { combineReducers } from 'redux';
 
 import usersReducer from './users_reducer';
-import trails from './trails_reducer'
+import trailsReducer from './trails_reducer';
+// import reviewsReducer from './reviews_reducer';
 
 export default combineReducers({
     users: usersReducer,
-    trails
+    trails: trailsReducer,
+    // reviews: reviewsReducer
 });
