@@ -25,6 +25,7 @@ class NewTrailForm extends React.Component {
     }
 
     update(field) {
+        // debugger
         return e =>
             this.setState({
                 [field]: e.currentTarget.value
@@ -51,14 +52,16 @@ class NewTrailForm extends React.Component {
         
         let trail = {
             title: this.state.title,
-            desciption: this.state.desciption,
+            description: this.state.description,
             difficulty: this.state.difficulty,
             petFriendly: this.state.petFriendly,
             paved: this.state.paved,
             // lat: this.state.lat,
             // lng: this.state.lng,
+            lat: 3,
+            lng: 1,
             user: this.props.currentUser,
-            // date: this.state.date
+            date: this.state.date
         };
 
         this.props.createTrail(trail);

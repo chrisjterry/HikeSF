@@ -60,8 +60,8 @@ class IndexMap extends React.Component {
     
     Object.keys(this.markers).forEach(trailId => {
       if (!trailsObj[trailId]) {
-        this.markers[marker.trailId].setMap(null);
-        delete this.markers[marker.trailId];    
+        this.markers[trailId].setMap(null);
+        delete this.markers[trailId];  
       }
     });
   }
@@ -91,7 +91,8 @@ class IndexMap extends React.Component {
 
   render() {
     return (
-      <div className="map" ref="map" style={ {width: '500px'}, {height:'500px'} }>
+      // <div className="map" ref="map" style={ {width: '500px'}, {height:'500px'} }>
+      <div className="map" ref="map" width='500px' height='500px'>
         Map
       </div>
     );
