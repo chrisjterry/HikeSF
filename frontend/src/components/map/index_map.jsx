@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-const mapsKey = require('./config/keys').mapsAPIKey;
+const google = window.google;
+const marker = window.marker;
 
 const getCoordsObj = latLng => ({
   lat: latLng.lat(),
@@ -21,11 +22,12 @@ class IndexMap extends React.Component {
     this.markers = {};
     this.handleMarkerClick = this.handleMarkerClick.bind(this);
   }
-
+  
   componentDidMount() {
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
     this.registerListeners();
+    console.log(this.props.trails)
     this.props.trails.forEach( trail => {
       const position = new google.maps.LatLng(trail.lat, trail.lng);
       const marker = new google.maps.Marker({
@@ -35,12 +37,13 @@ class IndexMap extends React.Component {
       });
       marker.addListener('click', () => this.handleMarkerClick(trail));
       this.markers[marker.trailId] = marker;
-    })
+    });
   }
   
 
   componentDidUpdate() {
-    const trailsObj = this.props.trails.forEach(trail => trailsObj[trail.id] = trail)
+    const trailsObj = {};
+    this.props.trails.forEach(trail => trailsObj[trail.id] = trail);
 
     this.props.trails.forEach(trail => {
       if (!this.markers[trail.id]) {
@@ -54,8 +57,8 @@ class IndexMap extends React.Component {
         this.markers[marker.trailId] = marker;
       }
     });
-
-    Object.keys[this.markers].forEach(trailId => {
+    
+    Object.keys(this.markers).forEach(trailId => {
       if (!trailsObj[trailId]) {
         this.markers[marker.trailId].setMap(null);
         delete this.markers[marker.trailId];    
@@ -88,9 +91,7 @@ class IndexMap extends React.Component {
 
   render() {
     return (
-      <div className="map" ref="map">
-        <script src={`https://maps.googleapis.com/maps/api/js?key=${mapsKey}&callback=initMap`}
-        async defer></script>
+      <div className="map" ref="map" style={ {width: '500px'}, {height:'500px'} }>
         Map
       </div>
     );

@@ -5,16 +5,16 @@ const Trail = require('../../models/Trail');
 const validateTrailInput = require('../../validation/trails');
 
 router.get('/', (req, res) => {
-    req.body.east = req.body.east || 180;
-    req.body.west = req.body.west || -180;
-    req.body.north = req.body.north || 180;
-    req.body.south = req.body.south || -180;
+    req.query.east = req.query.east || 180;
+    req.query.west = req.query.west || -180;
+    req.query.north = req.query.north || 180;
+    req.query.south = req.query.south || -180;
 
     Trail.find({
-        lat: { $gte: req.body.west },
-        lat: { $lte: req.body.east },
-        lng: { $gte: req.body.south },
-        lng: { $lte: req.body.north }
+        lat: { $gte: req.query.west },
+        lat: { $lte: req.query.east },
+        lng: { $gte: req.query.south },
+        lng: { $lte: req.query.north }
      })
         .sort({ date: -1 })
         .then(trails => res.json(trails))
