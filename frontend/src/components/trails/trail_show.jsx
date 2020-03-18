@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Buttercup1 from "./buttercup1.png";
 
 
-class PetShow extends React.Component {
+class TrailShow extends React.Component {
   // constructor(props) {
   //   super(props);
   // }
@@ -33,4 +33,4 @@ class PetShow extends React.Component {
   }
 }
 
-export default PetShow;
+export default TrailShow;

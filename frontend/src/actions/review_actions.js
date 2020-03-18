@@ -10,10 +10,10 @@ const receiveReviews = reviews => ({
   reviews
 });
 
-const receiveReview = review => ({
-  type: RECEIVE_REVIEW,
-  review
-});
+// const receiveReview = review => ({
+//   type: RECEIVE_REVIEW,
+//   review
+// });
 
 const receiveNewReview = review => ({
   type: RECEIVE_NEW_REVIEW,
@@ -31,11 +31,11 @@ export const fetchReviews = data => dispatch =>
     errors => dispatch(receiveReviewErrors(errors))
   );
 
-export const fetchReview = id => dispatch =>
-  ReviewAPIUtil.fetchOneReview(id).then(
-    review => dispatch(receiveReview(review)),
-    errors => dispatch(receiveReviewErrors(errors))
-  );
+// export const fetchReview = id => dispatch =>
+//   ReviewAPIUtil.fetchOneReview(id).then(
+//     review => dispatch(receiveReview(review)),
+//     errors => dispatch(receiveReviewErrors(errors))
+//   );
 
 export const createReview = data => dispatch =>
   ReviewAPIUtil.createNewReview(data).then(
