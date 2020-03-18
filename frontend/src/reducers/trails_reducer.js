@@ -1,6 +1,6 @@
 import { RECEIVE_TRAILS, RECEIVE_TRAIL, RECEIVE_NEW_TRAIL } from '../actions/trail_actions';
   
-const TrailsReducer = (state = { all: {}, current: {} }, action) => {
+const TrailsReducer = (state = { all: [], current: {} }, action) => {
     Object.freeze(state);
     let newState = Object.assign({}, state);
     switch(action.type) {
