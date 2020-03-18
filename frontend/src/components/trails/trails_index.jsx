@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import IndexMap from "../map/TEST_map_container";
 import Tucker1 from "./tucker1.png";
 
 class TrailIndex extends React.Component {
@@ -17,12 +18,13 @@ class TrailIndex extends React.Component {
         return (
           <div>
             <h1>HEADER FOR TRAILS INDEX PAGE</h1>
+            <IndexMap
+              trails={this.props.trails}
+              fetchTrails={this.props.fetchTrails}
+            />
             {this.props.trails.map((trail, i) => (
               <div className="trails-list">
-                {/* hi Jeff we can render whatever you want about each trail here (see Trail.js for full list of Trail properties/ie table columns)! (full details can go in each trails show page)*/}
-                {/* each trails number (starting at 1) */}
-                
-                <div>Trail #{i + 1}</div>
+                {/* <div>Trail #{i + 1}</div> */}
                 <Link to={`/trails/${trail._id}`}>
                   <img src={Tucker1} height="100px" width="100px"></img>
                 </Link>
