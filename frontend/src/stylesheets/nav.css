@@ -3,12 +3,6 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    font-family: Circular,
-    -apple-system,
-    BlinkMacSystemFont,
-    Roboto,
-    Helvetica Neue,
-    sans-serif;
 }
 
 .right-side-nav-bar {
@@ -20,7 +14,7 @@
     padding: .6rem;
 }
 
-.signup-link, .login-link, .all-trails, .profile, .log-out {
+.signup-link, .login-link, .all-trails, .profile, .log-out, .create-trail {
     text-decoration: none;
 }
 
@@ -28,3 +22,25 @@
     height: 70px;
 }
 
+
+.logged-in-home-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-side-nav-logged-in-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.left-side-logged-in-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px
+}
+
+.trails-link, .create-trail, .profile-link, .logout-button {
+    padding: 10px;
+}
