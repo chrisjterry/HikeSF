@@ -1,5 +1,6 @@
 import { connect } from "react-redux";
 import { fetchTrail } from "../../actions/trail_actions";
+import { fetchWeather } from "../../actions/weather_actions";
 import TrailShow from "./trail_show";
 
 const mapStateToProps = (state, ownProps) => {
@@ -11,7 +12,8 @@ const mapStateToProps = (state, ownProps) => {
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchTrail: id => dispatch(fetchTrail(id))
+  fetchTrail: id => dispatch(fetchTrail(id)),
+  fetchWeather: weather => dispatch(fetchWeather(weather))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TrailShow);

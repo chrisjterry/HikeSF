@@ -17,7 +17,16 @@ class NavBar extends React.Component {
       return (
         <div className="logged-in-home-page-container">
           <div className="left-side-logged-in-container">
-            <h3>HikeSF</h3>
+            <div className="trails-link">
+              <Link className="all-trails" to={"/trails"}>
+                All Trails
+              </Link>
+            </div>
+            <div className="create-trail">
+              <Link className="create-trail" to={"/trails/new"}>
+                Create New Trail
+              </Link>
+            </div>
           </div>
           <div className="nav-bar-logo">
             <Link to="/">
