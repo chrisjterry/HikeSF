@@ -4,6 +4,9 @@
     justify-content: space-between;
     box-sizing: border-box;
 }
+
+
+
 .right-side-nav-bar {
     display: flex;
 }
@@ -18,3 +21,31 @@
 .nav-logo {
     height: 70px;
 }
+
+.logged-in-home-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side-logged-in-container {
+    display: flex;
+}
+
+.right-side-nav-logged-in-container {
+    display: flex;
+}
+
+.all-trails {
+    padding: 20px;
+}
+
+.profile {
+    padding: 20px;
+}
+
+.log-out {
+    padding-right: 10px;
+    margin-right: 20px;
+}
+

@@ -46,8 +46,8 @@ class SignupForm extends React.Component {
           this.props.login({
             email: this.state.email,
             password: this.state.password
-        });
-    });
+          });
+      });
   }
 
   renderErrors() {
@@ -79,13 +79,13 @@ class SignupForm extends React.Component {
               Please Sign Up
             </div>
             <div className='sign-up-email'>
-              <input className='sign-up-email-input' type="text" value={this.state.email} onChange={this.update("email")} placeholder="Email"/>
+              <input className='sign-up-email-input' type="text" value={this.state.email} onChange={this.update("email")} placeholder="Email" />
             </div>
             <div className='sign-up-password'>
-              <input className='sign-up-password-input' type="password" value={this.state.password} onChange={this.update("password")} placeholder="Password"/>
+              <input className='sign-up-password-input' type="password" value={this.state.password} onChange={this.update("password")} placeholder="Password" />
             </div>
             <div className='confirm-password'>
-              <input className='confirm-password-input' type="password" value={this.state.password2} onChange={this.update("password2")} placeholder="Confirm Password"/>
+              <input className='confirm-password-input' type="password" value={this.state.password2} onChange={this.update("password2")} placeholder="Confirm Password" />
             </div>
             <div className='sign-up-submit'>
               <input className='sign-up-submit-button' type="submit" value="Sign Up!" />

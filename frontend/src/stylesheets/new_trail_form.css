@@ -1,13 +1,13 @@
 .new-trail-container {
     display: flex;
     justify-content: center;
-    /* background-image: url('../../src/app/assets/tucker2.png');
+    background-image: url('../../src/app/assets/tucky6.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
-    height: 600px; */
+    height: 600px;
 }
 
 
@@ -37,4 +37,8 @@
     background-color: #0070c9;
     color: #fff;
     font-size: .8rem;
+}
+
+.pet-friendly, .paved-trail {
+    color: white;
 }
