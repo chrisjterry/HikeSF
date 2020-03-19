@@ -1,0 +1,12 @@
+.trails-index-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.trails-list {
+    display: flex;
+}
+
+.trals-header-text {
+    font-size: 2rem;
+}
