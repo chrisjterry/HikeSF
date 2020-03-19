@@ -6,22 +6,26 @@ import '../../stylesheets/trail_show.css'
 
 
 class TrailShow extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = Object.assign({loaded:false}, this.state);
-  }
-
-  componentDidMount() {
-    //   debugger
-    this.props.fetchTrail(this.props.match.params.id)
-    .then(() => {this.setState({loaded: true})})
+  // constructor(props) {
+  //   super(props);
+  // }
+  componentWillMount() {
+    this.props.fetchTrail(this.props.match.params.id);
     window.scrollTo(0, 0);
   }
 
-  render() {
-    const { trail } = this.props;
+  componentDidMount() {
+    this.props.fetchWeather({
+      lat: this.props.trail.lat,
+      lng: this.props.trail.lng
+    })
+  }
 
-    // if (!trail) return null;
+  render() {
+    const { trail, weather } = this.props;
+
+    if (!trail) return null;
+    if (!weather) return null;
     // if (!trail.photos) return null;
 
     if (!this.state.loaded) {
