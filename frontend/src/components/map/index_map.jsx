@@ -27,13 +27,13 @@ class IndexMap extends React.Component {
     const map = this.refs.map;
     this.map = new google.maps.Map(map, mapOptions);
     this.registerListeners();
-    console.log(this.props.trails)
+
     this.props.trails.forEach( trail => {
       const position = new google.maps.LatLng(trail.lat, trail.lng);
       const marker = new google.maps.Marker({
         position,
         map: this.map,
-        trailId: trail.id
+        trailId: trail._id
       });
       marker.addListener('click', () => this.handleMarkerClick(trail));
       this.markers[marker.trailId] = marker;
@@ -43,15 +43,15 @@ class IndexMap extends React.Component {
 
   componentDidUpdate() {
     const trailsObj = {};
-    this.props.trails.forEach(trail => trailsObj[trail.id] = trail);
-
+    this.props.trails.forEach(trail => trailsObj[trail._id] = trail);
+    
     this.props.trails.forEach(trail => {
-      if (!this.markers[trail.id]) {
+      if (!this.markers[trail._id]) {
         const position = new google.maps.LatLng(trail.lat, trail.lng);
         const marker = new google.maps.Marker({
           position,
           map: this.map,
-          trailId: trail.id
+          trailId: trail._id
         });
         marker.addListener('click', () => this.handleMarkerClick(trail));
         this.markers[marker.trailId] = marker;
@@ -79,7 +79,7 @@ class IndexMap extends React.Component {
   }
 
   handleMarkerClick(trail) {
-    this.props.history.push(`trails/${trail.id}`);
+    this.props.history.push(`trails/${trail._id}`);
   }
 
   handleClick(coords) {
@@ -91,8 +91,7 @@ class IndexMap extends React.Component {
 
   render() {
     return (
-      // <div className="map" ref="map" style={ {width: '500px'}, {height:'500px'} }>
-      <div className="map" ref="map" width='500px' height='500px'>
+      <div className="map" ref="map">
         Map
       </div>
     );
