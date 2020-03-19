@@ -4,7 +4,6 @@ import Buttercup1 from "./buttercup1.png";
 import ReviewsIndexContainer from '../reviews/reviews_index_container';
 import "../../stylesheets/trail_show.css";
 
-
 class TrailShow extends React.Component {
   constructor(props) {
     super(props);
@@ -22,19 +21,44 @@ class TrailShow extends React.Component {
       lng: this.props.trail.lng
     })
   }
+  
   render() {
     const { trail, weather } = this.props;
     // if (!trail) return null;
     // if (!trail.photos) return null;
     if(!weather) return null;
     // debugger
+    
     if (!this.state.loaded) {
       return (
         <div>not loaded</div>
       );
     }
     return (
+<<<<<<< HEAD
       <div className="trail-show-container">
+=======
+<<<<<<< HEAD
+      <div className="trail-show">
+        <h1>Trail title goes here-{trail.title}</h1>
+        <Link to={`/trails/${trail.id}`}>
+          <img src={Buttercup1} height="300px" width="300px"></img>
+        </Link>
+        <div className="weather-container">
+          <div className="weather-info">
+            {weather.summary}
+            {weather.temperature}
+            {weather.windSpeed}
+            {weather.precipProbability}
+            {weather.humidity}
+          </div>
+        </div>
+        <div>Description - {trail.description}</div>
+        <div>Rating - ★★★★★</div>
+        <ReviewsIndexContainer />
+=======
+      <div className='trail-show-container'>
+>>>>>>> master
         <div className="trail-show">
           <h1 className="trail-title">Trail title goes here-{trail.title}</h1>
           <div className="trail-show-link">
@@ -59,8 +83,13 @@ class TrailShow extends React.Component {
             <ReviewsIndexContainer />
           </div>
         </div>
+>>>>>>> master
       </div>
     );
   }
 }
+<<<<<<< HEAD
 export default TrailShow;
+=======
+export default TrailShow;
+>>>>>>> master

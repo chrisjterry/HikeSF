@@ -9,6 +9,6 @@ const receiveWeather = weatherData => ({
 
 export const fetchWeather = weatherData => dispatch => (
     WeatherAPIUtil.fetchWeatherData(weatherData).then(
-        weather => dispatch(receiveWeather(weather))
+        weatherData => dispatch(receiveWeather(weatherData))
     )
 );
