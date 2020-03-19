@@ -1,6 +1,7 @@
 import React from "react";
 import NewReviewForm from "./new_review_form_container";
 // import { Link } from "react-router-dom";
+import '../../stylesheets/reviews_index_container.css'
 
 class ReviewIndex extends React.Component {
   constructor(props) {
@@ -47,7 +48,7 @@ class ReviewIndex extends React.Component {
      console.log(this.props)
     return (
       <div className='reviews-container'>
-        <h3>All reviews???</h3>
+        <h3 className='reviews-container-review'>All reviews???</h3>
         {this.trailsList()}
         <NewReviewForm />
       </div>
