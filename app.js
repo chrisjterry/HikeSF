@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const express = require("express");
 const app = express();
 const db = require('./config/keys').mongoURI;
+const DarkSkyKey = require('./config/keys').DarkSkyAPIKey;
 const users = require('./routes/api/users');
 const trails = require('./routes/api/trails');
 const reviews = require('./routes/api/reviews');
@@ -37,15 +38,13 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.post('/api/weather', async (req, res) => {
     console.log(req.body)
 
-    const { lon, lat } = req.body;
+    const { lng, lat } = req.body;
 
-    const darkSkyURL = `https://api.darksky.net/forecast/a2c527140b778139083a237f4c1b2985/${lat},${lon}?exclude=[minutely,hourly,daily,flags]`;
-    // const darkSkyURL = `https://api.darksky.net/forecast/a2c527140b778139083a237f4c1b2985/37.8267,-122.4233`;
+    const darkSkyURL = `https://api.darksky.net/forecast/${DarkSkyKey}/${lat},${lng}?exclude=[minutely,hourly,daily,flags]`;
 
     const data = await axios.get(darkSkyURL);
 
     res.json({
-        message: 'working',
         data: data.data
     })
 })

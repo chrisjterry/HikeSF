@@ -3,6 +3,7 @@ import NewReviewForm from "./new_review_form_container";
 import StarRatings from "react-star-ratings";
 
 // import { Link } from "react-router-dom";
+import '../../stylesheets/reviews_index_container.css'
 
 class ReviewIndex extends React.Component {
   constructor(props) {
@@ -85,8 +86,8 @@ class ReviewIndex extends React.Component {
     }
      console.log(this.props)
     return (
-      <div>
-        <h2>Reviews for {this.props.currentTrail.title}</h2>
+      <div className='reviews-container'>
+        <h2 className='reviews-container-review'>Reviews for {this.props.currentTrail.title}</h2>
         {this.reviewsList()}
         <NewReviewForm />
       </div>

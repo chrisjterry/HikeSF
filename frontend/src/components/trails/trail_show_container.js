@@ -7,13 +7,14 @@ const mapStateToProps = (state, ownProps) => {
   // debugger
   return {
     trail: state.entities.trails.current,
+    weather: state.entities.weather
     // currentUser: state.entities.users[state.session.id]
     };
 };
 
 const mapDispatchToProps = dispatch => ({
   fetchTrail: id => dispatch(fetchTrail(id)),
-  fetchWeather: weather => dispatch(fetchWeather(weather))
+  fetchWeather: weatherData => dispatch(fetchWeather(weatherData))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TrailShow);

@@ -1,15 +1,14 @@
 import { RECEIVE_WEATHER } from '../actions/weather_actions';
 
-const WeatherReducer = (currentState = {}, action) => {
+const weatherReducer = (currentState = {}, action) => {
     Object.freeze(currentState);
     let newState = Object.assign({}, currentState);
     switch(action.type) {
         case RECEIVE_WEATHER:
-            newState.currentState = action.weather.weatherData;
-            return newState;
+            return action.weatherData.data.data.currently
         default:
             return currentState;
     }
 };
 
-export default WeatherReducer;
+export default weatherReducer;

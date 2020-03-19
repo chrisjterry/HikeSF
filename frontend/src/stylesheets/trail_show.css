@@ -1,0 +1,23 @@
+.trail-show-container {
+    display: flex;
+    justify-content: center;
+}
+
+.trail-show {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: flex-start;
+
+}
+
+.trail-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.trail-descrption, .trail-rating {
+    margin-bottom: 1.25rem;
+}
+

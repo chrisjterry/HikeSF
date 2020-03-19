@@ -2,6 +2,7 @@ import React from "react";
 // import Stars from './stars_container';
 import StarRatings from "react-star-ratings";
 import { withRouter } from "react-router-dom";
+import '../../stylesheets/review_form_container.css'
 
 class NewReviewForm extends React.Component {
   constructor(props) {
@@ -64,41 +65,39 @@ class NewReviewForm extends React.Component {
   //   }
 
   render() {
-    // debugger
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <br />
-            <input
-              type="textarea"
-              value={this.state.text}
-              onChange={this.update("text")}
-              placeholder="Tell us about this trail!"
-            />
-            <br />
-            {/* note to vic: turn into stars */}
-            {/* <input
-              type="rating"
-              value={this.state.rating}
-              onChange={this.update("rating")}
-              placeholder="rating"
-            />
-            <br /> */}
-            {/* <Stars /> */}
-            <StarRatings
-              rating={this.state.rating || 5}
-              changeRating={this.changeRating}
-              starDimension="20px"
-              starSpacing="1px"
-              starRatedColor="green"
-              name="rating"
-            />
-            <br />
-            <input type="submit" value="Create Review" />
-            {/* {this.renderErrors()} */}
-          </div>
-        </form>
+      <div className='review-form-container-wrapper'>
+        <div className='review-form-container'>
+          <form onSubmit={this.handleSubmit}>
+            <div className='review-form-text'>
+              <br />
+              <input
+                className='review-form-text-input'
+                type="textarea"
+                value={this.state.text}
+                onChange={this.update("text")}
+                placeholder="Tell us about this trail!"
+              />
+              <br />
+              <div className='review-rating'> 
+                <StarRatings
+                  className='review-form-rating'
+                  rating={this.state.rating || 5}
+                  changeRating={this.changeRating}
+                  starDimension="20px"
+                  starSpacing="1px"
+                  starRatedColor="green"
+                  name="rating"
+                />
+              </div>
+              <br />
+              <div className='review-form-submit'>
+                <input type="submit" value="Create Review" />
+              </div>
+              {/* {this.renderErrors()} */}
+              </div>
+            </form>
+        </div>
       </div>
     );
   }
