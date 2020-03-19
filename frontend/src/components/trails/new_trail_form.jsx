@@ -12,10 +12,15 @@ class NewTrailForm extends React.Component {
             difficulty: "",
             petFriendly: true,
             paved: true,
-            errors: {}
+            lat: this.props.lat,
+            lng: this.props.lng,
+            errors: {},
+            picture_url: null,
+            picture: null,
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleFile = this.handleFile.bind(this);
         // this.handleCheckBox = this.handleCheckBox.bind(this);
         this.clearedErrors = false;
     }
@@ -47,26 +52,37 @@ class NewTrailForm extends React.Component {
         this.setState({ paved: !this.state.paved });
     }
 
-    handleSubmit(e) {
-        // debugger
+    handleFile(e) {
         e.preventDefault();
-        
-        let trail = {
+        const file = e.currentTarget.files[0];
+        const fileReader = new FileReader();
+
+        fileReader.onloadend = () => {
+            this.setState({picture: file, picture_url: fileReader.result});
+        };
+
+        if (file) fileReader.readAsDataURL(file);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const trail = {
             title: this.state.title,
             description: this.state.description,
             difficulty: this.state.difficulty,
-            petFriendly: this.state.petFriendly,
-            paved: this.state.paved,
-            // lat: this.state.lat,
-            // lng: this.state.lng,
-            lat: 3,
-            lng: 1,
+            petFriendly: this.state.petFriendly.toString(),
+            paved: this.state.paved.toString(),
+            lat: this.state.lat,
+            lng: this.state.lng,
             user: this.props.currentUser,
-            date: this.state.date
+            date: this.state.date,
+            picture: this.state.picture
         };
-
-        this.props.createTrail(trail);
-        // this.setState({title: ''})
+        const formData = new FormData();
+        Object.keys(trail).forEach( key => {
+            if (trail[key]) formData.append(`${key}`, trail[key])
+        });
+        this.props.createTrail(formData);
     }
 
     renderErrors() {
@@ -108,7 +124,9 @@ class NewTrailForm extends React.Component {
                                         <input className='trail-paved-text' type="checkbox" value={this.state.paved} onClick={this.togglePaved.bind(this)} checked={this.state.paved} />
                                     </label>
                                 </div>
-                            </div>    
+                            </div>
+                            <input onChange={this.handleFile} id='photo-upload' type="file"/>
+                            { this.state.picture_url ? <img src={this.state.picture_url} /> : null }    
                             <div className='trail-submit'>
                                 <input className='trail-submit-button' type="submit" value="Create New Trail"/>
                                 {this.renderErrors()}

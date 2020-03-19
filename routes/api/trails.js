@@ -1,8 +1,30 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
+const multer  = require('multer');
+const multerS3 = require('multer-s3')
+const aws = require('aws-sdk');
+const AWSAccessKeyId = require('../../config/keys').AWSAccessKeyId;
+const AWSSecretKey = require('../../config/keys').AWSSecretKey;
+const AWSBucket = require('../../config/keys').AWSBucket;
 const Trail = require('../../models/Trail');
 const validateTrailInput = require('../../validation/trails');
+
+aws.config.update({
+    region: 'us-west-1',
+    accessKeyId: AWSAccessKeyId,
+    secretAccessKey: AWSSecretKey
+});
+const s3 = new aws.S3();
+const upload = multer({
+    storage: multerS3({
+      s3: s3,
+      bucket: AWSBucket,
+      key: function (req, file, cb) {
+        cb(null, Date.now().toString() + '.jpg')
+      }
+    })
+});
 
 router.get('/', (req, res) => {
     req.query.east = req.query.east || 180;
@@ -30,14 +52,20 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/new',
+    upload.single('picture'),
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
+        req.body.petFriendly = req.body.petFriendly.toString()
+        req.body.paved = req.body.paved.toString();
+        req.body.lat = req.body.lat.toString();
+        req.body.lng = req.body.lng.toString();
+        
       const { errors, isValid } = validateTrailInput(req.body);
   
       if (!isValid) {
         return res.status(401).json(errors);
       }
-      
+
       const newTrail = new Trail({
         title: req.body.title,
         description: req.body.description,
@@ -46,6 +74,7 @@ router.post('/new',
         paved: req.body.paved,
         lat: req.body.lat,
         lng: req.body.lng,
+        picture_url: req.file.location,
         user: req.user.id
       });
   

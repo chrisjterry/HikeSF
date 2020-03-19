@@ -5,10 +5,11 @@
     box-sizing: border-box;
 }
 
+
+
 .right-side-nav-bar {
     display: flex;
 }
-
 .signup, .login {
     display: flex;
     padding: .6rem;
@@ -17,11 +18,9 @@
 .signup-link, .login-link, .all-trails, .profile, .log-out, .create-trail {
     text-decoration: none;
 }
-
 .nav-logo {
     height: 70px;
 }
-
 
 .logged-in-home-page-container {
     display: flex;
@@ -29,20 +28,24 @@
     align-items: center;
 }
 
-.right-side-nav-logged-in-container {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    align-items: center;
-}
-
 .left-side-logged-in-container {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-
 }
 
-.trails-link, .create-trail, .profile-link, .logout-button {
-    padding: 10px;
+.right-side-nav-logged-in-container {
+    display: flex;
 }
+
+.all-trails {
+    padding: 20px;
+}
+
+.profile {
+    padding: 20px;
+}
+
+.log-out {
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
