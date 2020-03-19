@@ -3,8 +3,8 @@ import { fetchTrailReviews } from "../../actions/review_actions";
 import { connect } from "react-redux";
 
 const mapStateToProps = state => ({
-  reviews: state.entities.reviews.all,
-  currentTrail: state.entities.trail.current
+  reviews: state.entities.reviews,
+  currentTrail: state.entities.trails.current
 });
 
 const mapDispatchToProps = dispatch => ({

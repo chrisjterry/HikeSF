@@ -7,7 +7,7 @@ class NewReviewForm extends React.Component {
 
     this.state = {
       text: "",
-      rating: 0
+      rating: ""
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -29,10 +29,10 @@ class NewReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
+    debugger
     let review = {
       text: this.state.text,
-      rating: 0,
+      rating: this.state.rating,
       user: this.props.currentUser,
       trail: this.props.currentTrail,
       date: this.state.date
@@ -75,8 +75,8 @@ class NewReviewForm extends React.Component {
               placeholder="rating"
             />
             <br />
-            <input type="submit" value="Create New Trail" />
-            {this.renderErrors()}
+            <input type="submit" value="Create New Review" />
+            {/* {this.renderErrors()} */}
           </div>
         </form>
       </div>
@@ -84,5 +84,4 @@ class NewReviewForm extends React.Component {
   }
 }
 
-export default withRouter(NewTrailForm);
-// export default NewTrailForm;
+export default withRouter(NewReviewForm);
