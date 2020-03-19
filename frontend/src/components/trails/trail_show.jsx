@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Buttercup1 from "./buttercup1.png";
 import ReviewsIndexContainer from '../reviews/reviews_index_container';
+import '../../stylesheets/trail_show.css'
 
 class TrailShow extends React.Component {
   constructor(props) {
@@ -35,6 +36,7 @@ class TrailShow extends React.Component {
       );
     }
     return (
+<<<<<<< HEAD
       <div className="trail-show">
         <h1>Trail title goes here-{trail.title}</h1>
         <Link to={`/trails/${trail.id}`}>
@@ -52,6 +54,26 @@ class TrailShow extends React.Component {
         <div>Description - {trail.description}</div>
         <div>Rating - ★★★★★</div>
         <ReviewsIndexContainer />
+=======
+      <div className='trail-show-container'>
+        <div className="trail-show">
+          <h1 className='trail-title'>Trail title goes here-{trail.title}</h1>
+          <div className='trail-show-link'>
+            <Link className='trail-show-link' to={`/trails/${trail.id}`}>
+              <img src={Buttercup1} height="300px" width="300px"></img>
+            </Link>
+          </div>
+          <div className='trail-descrption'>
+            Description - {trail.description}
+          </div>
+          <div className='trail-rating'>
+            Rating - ★★★★★
+          </div>
+          <div className='reviews-container'>
+            <ReviewsIndexContainer />
+          </div>
+        </div>
+>>>>>>> master
       </div>
     );
   }

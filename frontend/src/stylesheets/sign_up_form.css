@@ -1,7 +1,7 @@
 .signup-form-container {
     display: flex;
     justify-content: center;
-    background-image: url('../app/assets/tucky4.jpg');
+    background-image: url('../app/assets/butter4.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -15,8 +15,7 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-    /* border: 1px solid red; */
-    box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.486);
     margin-top: 10px;
     padding: 20px;
     border-radius: 5px;
@@ -27,7 +26,8 @@
     display: flex;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-weight: 500;
     margin-bottom: 2rem;
     color: #fff;
 }
@@ -37,7 +37,7 @@
 .confirm-password-input {
     height: 2rem;
     width: 15.625rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -46,7 +46,7 @@
 .sign-up-submit-button {
     height: 2rem;
     width: 100%;
-    margin-bottom: 0.625rem;
+    margin-bottom: 2rem;
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;

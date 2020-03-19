@@ -1,33 +1,47 @@
 .login-in-container-wrapper {
     display: flex;
     justify-content: center;
-    font-family: Circular,
-    -apple-system,
-    BlinkMacSystemFont,
-    Roboto,
-    Helvetica Neue,
-    sans-serif;
     background-image: url('../app/assets/IMG_8491.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
-    height: 600px;
+    height: 700px;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* border: 1px solid red; */
+    box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.486);
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    height: 60%;
+    justify-content: flex-start;
+}
+
+.email-password-container {
+    display: flex;
+    flex-direction: column;
+
 }
 
 .sign-in-text {
     display: flex;
     padding-bottom: 1rem;
     padding-top: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     color: white;
+    margin-bottom: 1.5rem;
 }
 
 .email-input {
     height: 2rem;
     width: 15.625rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 2rem;
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -36,7 +50,7 @@
 .password-input {
     height: 2rem;
     width: 15.625rem;
-    margin-bottom: 0.625rem;
+    margin-bottom: 2rem;
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
