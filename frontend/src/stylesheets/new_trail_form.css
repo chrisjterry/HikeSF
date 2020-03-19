@@ -10,6 +10,17 @@
     height: 600px;
 }
 
+.new-trail-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.486);
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    height: 60%;
+    justify-content: flex-start;
+}
 
 .trail-title-text, .trail-difficulity-text, .trail-description-text {
     margin-top: 1.5rem;
@@ -18,6 +29,11 @@
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+.create-trail {
+    font-size: 2rem;
+    color: #fff;
 }
 
 .bottom-container {
@@ -42,3 +58,8 @@
 .pet-friendly, .paved-trail {
     color: white;
 }
+
+.input-file {
+    margin-bottom: 1rem;
+}
+

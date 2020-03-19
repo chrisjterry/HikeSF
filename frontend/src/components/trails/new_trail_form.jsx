@@ -99,9 +99,12 @@ class NewTrailForm extends React.Component {
         // debugger
         return (
             <div className='new-trail-container'>
-                <form onSubmit={this.handleSubmit}>
-                    <div className="new-trail-form">
+                <div className="new-trail-form">
+                    <form onSubmit={this.handleSubmit}>
                         <div classaName='trail-form-wrapper'>
+                            <div className='create-trail'>
+                                Create New Trail
+                            </div>
                             <div className='trail-title'>
                                 <input className='trail-title-text' type="text" value={this.state.title} onChange={this.update("title")} placeholder="Title"/>
                             </div>
@@ -125,15 +128,17 @@ class NewTrailForm extends React.Component {
                                     </label>
                                 </div>
                             </div>
-                            <input onChange={this.handleFile} id='photo-upload' type="file"/>
-                            { this.state.picture_url ? <img src={this.state.picture_url} /> : null }    
+                            <div className='input-file'>
+                                <input className='file-input' onChange={this.handleFile} id='photo-upload' type="file"/>
+                                { this.state.picture_url ? <img src={this.state.picture_url} /> : null } 
+                            </div>   
                             <div className='trail-submit'>
                                 <input className='trail-submit-button' type="submit" value="Create New Trail"/>
                                 {this.renderErrors()}
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         );
     }
