@@ -34,14 +34,6 @@ class NavBar extends React.Component {
             </Link>
           </div>
           <div className="right-side-nav-logged-in-container">
-            <div className="trails-link">
-              <Link className="all-trails" to={"/trails"}>
-                All Trails
-              </Link>
-            </div>
-            <div className="create-trail">
-              <Link to={"/trails/new"}>Create a New Trail</Link>
-            </div>
             <div className="profile-link">
               <Link className="profile" to={"/profile"}>
                 Profile
