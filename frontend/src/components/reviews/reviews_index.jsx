@@ -1,11 +1,24 @@
 import React from "react";
 import NewReviewForm from "./new_review_form_container";
+import StarRatings from "react-star-ratings";
+
 // import { Link } from "react-router-dom";
 
 class ReviewIndex extends React.Component {
   constructor(props) {
-      super(props);
-      this.state = Object.assign({ loaded: false }, this.state);
+    super(props);
+    this.calcAvgRating = this.calcAvgRating.bind(this);
+    this.state = Object.assign({ loaded: false, avg_rating: 5 }, this.state);
+  }
+  
+  calcAvgRating() {
+    let avg;
+    let ratingsSum = 0;
+      this.props.reviews.data.map(review => 
+        ratingsSum += review.rating
+      )
+    avg = Math.floor(ratingsSum / (this.props.reviews.data.length));
+    this.setState({ avg_rating: avg});
   }
 
   componentDidMount() {
@@ -13,11 +26,14 @@ class ReviewIndex extends React.Component {
     this.props
       .fetchTrailReviews(this.props.currentTrail._id)
       // .then(() => (this.setState({loaded: true})));
-      .then(() => { this.setState({ loaded: true })});
-      
+      .then(() => { 
+        this.setState({ loaded: true }); 
+        this.calcAvgRating();
+      });    
   }
 
-  trailsList() {
+
+  reviewsList() {
     console.log(this.props.reviews)
     if (Object.keys(this.props.reviews.data).length < 1) {
       return(
@@ -25,16 +41,39 @@ class ReviewIndex extends React.Component {
       )
     } else {
       // return(<div>You got some Reviews</div>)
-      return(
+      return (
         <div>
-          {this.props.reviews.data.map(review => <div>
-            {review.text}<br />
-            {review.rating}<br />
-            {review.date}<br />
-            {review.user}<br />
-            </div>)}
+          Average Rating -
+          <StarRatings
+            // rating={this.state.rating || 5}
+            rating={this.state.avg_rating}
+            changeRating={this.changeRating}
+            starDimension="20px"
+            starSpacing="1px"
+            starRatedColor="green"
+          />
+          {this.props.reviews.data.map(review => (
+            <div>
+              {review.text}
+              <br />
+              {/* {review.rating} */}
+              <StarRatings
+                // rating={this.state.rating || 5}
+                rating={review.rating}
+                changeRating={this.changeRating}
+                starDimension="20px"
+                starSpacing="1px"
+                starRatedColor="green"
+              />
+              <br />
+              {review.date.split("T").shift()}
+              <br />
+              {review.user.email}
+              <br />
+            </div>
+          ))}
         </div>
-      )
+      );
     }
   }
 
@@ -47,8 +86,8 @@ class ReviewIndex extends React.Component {
      console.log(this.props)
     return (
       <div>
-        <h3>All reviews???</h3>
-        {this.trailsList()}
+        <h2>Reviews for {this.props.currentTrail.title}</h2>
+        {this.reviewsList()}
         <NewReviewForm />
       </div>
     );

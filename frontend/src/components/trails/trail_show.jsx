@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import StarRatings from "react-star-ratings";
 import Buttercup1 from "./buttercup1.png";
 import ReviewsIndexContainer from '../reviews/reviews_index_container';
 
@@ -35,7 +36,18 @@ class TrailShow extends React.Component {
           <img src={Buttercup1} height="300px" width="300px"></img>
         </Link>
         <div>Description - {trail.description}</div>
-        <div>Rating - ★★★★★</div>
+        {/* <div>Rating - stars★★★★★</div> */}
+        <div>
+          {/* Average Rating -
+          <StarRatings
+            // rating={this.state.rating || 5}
+            rating={this.state.avg_rating}
+            changeRating={this.changeRating}
+            starDimension="20px"
+            starSpacing="1px"
+            starRatedColor="green"
+          /> */}
+        </div>
         <ReviewsIndexContainer />
       </div>
     );
