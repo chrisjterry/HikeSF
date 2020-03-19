@@ -102,7 +102,7 @@ class NewTrailForm extends React.Component {
                 <div className="new-trail-form">
                     <form onSubmit={this.handleSubmit}>
                         <div classaName='trail-form-wrapper'>
-                            <div className='create-trail'>
+                            <div className='create-trail-form'>
                                 Create New Trail
                             </div>
                             <div className='trail-title'>

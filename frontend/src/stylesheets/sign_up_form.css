@@ -37,7 +37,7 @@
 .confirm-password-input {
     height: 2rem;
     width: 15.625rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -46,7 +46,7 @@
 .sign-up-submit-button {
     height: 2rem;
     width: 100%;
-    margin-bottom: 0.625rem;
+    margin-bottom: 2rem;
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
