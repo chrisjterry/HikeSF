@@ -7,17 +7,23 @@ class TrailShow extends React.Component {
   // constructor(props) {
   //   super(props);
   // }
-
-  componentDidMount() {
-    //   debugger
+  componentWillMount() {
     this.props.fetchTrail(this.props.match.params.id);
     window.scrollTo(0, 0);
   }
 
+  componentDidMount() {
+    this.props.fetchWeather({
+      lat: this.props.trail.lat,
+      lng: this.props.trail.lng
+    })
+  }
+
   render() {
-    const { trail } = this.props;
+    const { trail, weather } = this.props;
 
     if (!trail) return null;
+    if (!weather) return null;
     // if (!trail.photos) return null;
 
     return (

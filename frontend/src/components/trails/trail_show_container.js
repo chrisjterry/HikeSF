@@ -7,6 +7,7 @@ const mapStateToProps = (state, ownProps) => {
   // debugger
   return {
     trail: state.entities.trails.current,
+    weather: state.entities.weather
     // currentUser: state.entities.users[state.session.id]
     };
 };
