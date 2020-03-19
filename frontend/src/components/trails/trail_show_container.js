@@ -14,7 +14,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => ({
   fetchTrail: id => dispatch(fetchTrail(id)),
-  fetchWeather: weather => dispatch(fetchWeather(weather))
+  fetchWeather: weatherData => dispatch(fetchWeather(weatherData))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(TrailShow);
