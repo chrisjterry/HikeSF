@@ -46,7 +46,7 @@ class ReviewIndex extends React.Component {
     }
      console.log(this.props)
     return (
-      <div>
+      <div className='reviews-container'>
         <h3>All reviews???</h3>
         {this.trailsList()}
         <NewReviewForm />
