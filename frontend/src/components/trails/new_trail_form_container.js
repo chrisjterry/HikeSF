@@ -2,11 +2,13 @@ import { connect } from "react-redux";
 import { createTrail } from "../../actions/trail_actions";
 import NewTrailForm from "./new_trail_form";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, { location }) => {
     return {
         currentUser: state.session.user,
         // newTrail: state.trails.new,
-        errors: state.errors.trailErrors
+        errors: state.errors.trailErrors,
+        lat: new URLSearchParams(location.search).get('lat'),
+        lng: new URLSearchParams(location.search).get('lng')      
     };
 };
 

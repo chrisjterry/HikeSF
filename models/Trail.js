@@ -30,6 +30,10 @@ const TrailSchema = new Schema({
         type: Number,
         required: true
     },
+    picture_url: {
+        type: String,
+        required: false
+    },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'users'
