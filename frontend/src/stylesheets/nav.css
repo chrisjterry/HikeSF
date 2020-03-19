@@ -3,29 +3,49 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    font-family: Circular,
-    -apple-system,
-    BlinkMacSystemFont,
-    Roboto,
-    Helvetica Neue,
-    sans-serif;
 }
+
+
 
 .right-side-nav-bar {
     display: flex;
-    /* border: 1px solid red; */
 }
-
 .signup, .login {
     display: flex;
-    /* border: 1px solid purple; */
     padding: .6rem;
 }
 
-.signup-link, .login-link, .all-trails, .profile, .log-out {
+.signup-link, .login-link, .all-trails, .profile, .log-out, .create-trail {
     text-decoration: none;
 }
-
 .nav-logo {
     height: 70px;
 }
+
+.logged-in-home-page-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side-logged-in-container {
+    display: flex;
+}
+
+.right-side-nav-logged-in-container {
+    display: flex;
+}
+
+.all-trails {
+    padding: 20px;
+}
+
+.profile {
+    padding: 20px;
+}
+
+.log-out {
+    padding-right: 10px;
+    margin-right: 20px;
+}
+

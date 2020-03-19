@@ -18,10 +18,10 @@ class TrailIndex extends React.Component {
         return (
           <div>
             <h1>HEADER FOR TRAILS INDEX PAGE</h1>
-            <IndexMap
+            {/* <IndexMap
               trails={this.props.trails}
               fetchTrails={this.props.fetchTrails}
-            />
+            /> */}
             {this.props.trails.map((trail, i) => (
               <div className="trails-list">
                 {/* <div>Trail #{i + 1}</div> */}

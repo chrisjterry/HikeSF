@@ -1,0 +1,44 @@
+.new-trail-container {
+    display: flex;
+    justify-content: center;
+    background-image: url('../../src/app/assets/tucky6.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    height: 600px;
+}
+
+
+.trail-title-text, .trail-difficulity-text, .trail-description-text {
+    margin-top: 1.5rem;
+    height: 1.5rem;
+    width: 12.625rem;
+    border-radius: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.trail-submit-button {
+    height: 2rem;
+    width: 100%;
+    margin-bottom: 0.625rem;
+    border-radius: 5px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #0070c9;
+    color: #fff;
+    font-size: .8rem;
+}
+
+.pet-friendly, .paved-trail {
+    color: white;
+}

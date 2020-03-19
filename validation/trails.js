@@ -2,6 +2,7 @@ const Validator = require('validator');
 const validText = require('./valid-text');
 
 module.exports = function validateTrailInput(data) {
+    debugger
     let errors = {};
     data.title = validText(data.title) ? data.title : '';
     data.description = validText(data.description) ? data.description : '';
