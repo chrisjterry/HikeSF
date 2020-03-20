@@ -65,7 +65,7 @@ router.post('/new',
       if (!isValid) {
         return res.status(401).json(errors);
       }
-
+      
       const newTrail = new Trail({
         title: req.body.title,
         description: req.body.description,
@@ -74,6 +74,7 @@ router.post('/new',
         paved: req.body.paved,
         lat: req.body.lat,
         lng: req.body.lng,
+        waypoints: req.body.waypoints,
         picture_url: req.file.location,
         user: req.user.id
       });
