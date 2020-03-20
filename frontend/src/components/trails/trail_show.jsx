@@ -14,16 +14,18 @@ class TrailShow extends React.Component {
   
   componentWillMount() {
     //   debugger
-     this.props.fetchWeather({
-       lat: this.props.trail.lat,
-       lng: this.props.trail.lng
-     });
-    this.props.fetchTrail(this.props.match.params.id)
+    //  this.props.fetchWeather({
+    //    lat: this.props.trail.lat,
+    //    lng: this.props.trail.lng
+    //  });
+    // this.props.fetchTrail(this.props.match.params.id)
     // .then(() => {this.setState({loaded: true})})
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
   }
 
   componentDidMount() {
+        this.props.fetchTrail(this.props.match.params.id);
+
     this.props.fetchWeather({
       lat: this.props.trail.lat,
       lng: this.props.trail.lng
@@ -32,7 +34,7 @@ class TrailShow extends React.Component {
   
   render() {
     const { trail, weather } = this.props;
-    if (!trail.description) return null;
+    if (!trail.difficulty) return null;
     // if (!trail.photos) return null;
     if(!weather) return null;
     // debugger
