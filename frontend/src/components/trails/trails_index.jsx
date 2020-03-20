@@ -21,7 +21,8 @@ class TrailIndex extends React.Component {
         return (
           <div className="trails-index">
             <div className="trails-index-1">
-              <p>Navigate around the map to find your next adventure</p>
+              <p>Navigate around the map to find your next adventure. 
+                ➳</p>
               <div className="index-map">
                 <IndexMap
                   trails={this.props.trails}
