@@ -34,9 +34,13 @@ class NewTrailForm extends React.Component {
     }
 
     addWaypoint(waypoint) {
-        let _waypoints = this.state.waypoints.slice();
-        _waypoints.push(JSON.stringify(waypoint));
-        this.setState({ waypoints: _waypoints });
+        if (!this.state.lat || !this.state.lng) {
+            this.setState({ lat: waypoint.lat, lng: waypoint.lng })
+        } else {
+            let _waypoints = this.state.waypoints.slice();
+            _waypoints.push(JSON.stringify(waypoint));
+            this.setState({ waypoints: _waypoints });
+        }
     }
 
     update(field) {
@@ -111,7 +115,7 @@ class NewTrailForm extends React.Component {
             <div className='new-trail-container'>
                 <div className="new-trail-form">
                     <form onSubmit={this.handleSubmit}>
-                        <div classaName='trail-form-wrapper'>
+                        <div className='trail-form-wrapper'>
                             <div className='create-trail-form'>
                                 Create New Trail
                             </div>
