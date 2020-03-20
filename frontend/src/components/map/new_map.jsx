@@ -13,8 +13,8 @@ class NewMap extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      lat: parseFloat(this.props.lat),
-      lng: parseFloat(this.props.lng)
+      lat: (this.props.lat ? parseFloat(this.props.lat) : null),
+      lng: (this.props.lng ? parseFloat(this.props.lng) : null),
     }
   }
   
@@ -22,18 +22,20 @@ class NewMap extends React.Component {
     const map = this.refs.map;
     const mapOptions = {
       center: {
-        lat: this.state.lat,
-        lng: this.state.lng
+        lat: (this.state.lat ? this.state.lat : 37.773972),
+        lng: (this.state.lng ? this.state.lng : -122.431297)
       },
-      zoom: 16
+      zoom: (this.state.lat ? 16 : 13)
     };
     this.map = new google.maps.Map(map, mapOptions);
     this.registerListeners();
-    const position = new google.maps.LatLng(this.state.lat, this.state.lng);
-    const marker = new google.maps.Marker({
-      position,
-      map: this.map,
-    });
+    if (this.state.lat && this.state.lng) {
+      const position = new google.maps.LatLng(this.state.lat, this.state.lng);
+      const marker = new google.maps.Marker({
+        position,
+        map: this.map,
+      });
+    }
   }
   
   registerListeners() {
