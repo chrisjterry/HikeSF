@@ -1,13 +1,13 @@
 .login-in-container-wrapper {
     display: flex;
     justify-content: center;
-    background-image: url('../app/assets/IMG_8491.jpg');
+    background-image: url('../app/assets/hiketuck.JPG');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
-    height: 700px;
+    height: 600px;
 }
 
 .form-wrapper {
@@ -48,6 +48,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     font-family: 'Sen', sans-serif;
+    font-size: 1rem;
 }
 
 .password-input {
@@ -58,6 +59,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
     font-family: 'Sen', sans-serif;
+    font-size: 1rem;
 }
 
 .sumbit-button {
@@ -69,6 +71,6 @@
     padding-right: 1rem;
     background-color: #0070c9;
     color: #fff;
-    font-size: .8rem;
+    font-size: 1rem;
     font-family: 'Sen', sans-serif;
 }
