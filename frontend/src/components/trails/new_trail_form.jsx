@@ -1,6 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
-import '../../stylesheets/new_trail_form.css'
+import NewMap from '../map/new_map';
+import '../../stylesheets/new_trail_form.css';
 
 class NewTrailForm extends React.Component {
     constructor(props) {
@@ -14,6 +15,7 @@ class NewTrailForm extends React.Component {
             paved: true,
             lat: this.props.lat,
             lng: this.props.lng,
+            waypoints: [],
             errors: {},
             picture_url: null,
             picture: null,
@@ -21,6 +23,7 @@ class NewTrailForm extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleFile = this.handleFile.bind(this);
+        this.addWaypoint = this.addWaypoint.bind(this)
         // this.handleCheckBox = this.handleCheckBox.bind(this);
         this.clearedErrors = false;
     }
@@ -28,6 +31,12 @@ class NewTrailForm extends React.Component {
     componentWillReceiveProps(nextProps) {
         this.setState({ errors: nextProps.errors });
         // this.setState({newTrail: nextProps.newTrail.title});
+    }
+
+    addWaypoint(waypoint) {
+        let _waypoints = this.state.waypoints.slice();
+        _waypoints.push(JSON.stringify(waypoint));
+        this.setState({ waypoints: _waypoints });
     }
 
     update(field) {
@@ -74,6 +83,7 @@ class NewTrailForm extends React.Component {
             paved: this.state.paved.toString(),
             lat: this.state.lat,
             lng: this.state.lng,
+            waypoints: JSON.stringify(this.state.waypoints),
             user: this.props.currentUser,
             date: this.state.date,
             picture: this.state.picture
@@ -105,6 +115,7 @@ class NewTrailForm extends React.Component {
                             <div className='create-trail-form'>
                                 Create New Trail
                             </div>
+                            <NewMap lat={this.state.lat} lng={this.state.lng} addWaypoint={this.addWaypoint} />
                             <div className='trail-title'>
                                 <input className='trail-title-text' type="text" value={this.state.title} onChange={this.update("title")} placeholder="Title"/>
                             </div>
