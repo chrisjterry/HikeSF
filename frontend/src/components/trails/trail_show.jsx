@@ -9,7 +9,7 @@ import "../../stylesheets/trail_show.css";
 class TrailShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = Object.assign({loaded:false}, this.state);
+    // this.state = Object.assign({loaded:false}, this.state);
   }
   
   componentWillMount() {
@@ -18,8 +18,8 @@ class TrailShow extends React.Component {
        lat: this.props.trail.lat,
        lng: this.props.trail.lng
      });
-    this.props.fetchTrail(this.props.match.params.id).
-    then(() => {this.setState({loaded: true})})
+    this.props.fetchTrail(this.props.match.params.id)
+    // .then(() => {this.setState({loaded: true})})
     window.scrollTo(0, 0);
   }
 
@@ -32,16 +32,17 @@ class TrailShow extends React.Component {
   
   render() {
     const { trail, weather } = this.props;
-    if (!trail) return null;
+    if (!trail.description) return null;
     // if (!trail.photos) return null;
     if(!weather) return null;
     // debugger
     
-    if (!this.state.loaded) {
-      return (
-        <div>not loaded</div>
-      );
-    }
+    // if (!this.state.loaded) {
+    //   return (
+    //     <div>not loaded</div>
+    //   );
+    // }
+
     return (
       <div className='trail-show-container'>
         <div className="trail-show">
@@ -63,6 +64,7 @@ class TrailShow extends React.Component {
           </div>
           <div className="trail-descrption">
             Description - {trail.description}
+            Difficulty - {trail.difficulty}
           </div>
           <div className="reviews-container">
             <ReviewsIndexContainer />
