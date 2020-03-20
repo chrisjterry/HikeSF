@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 // import StarRatings from "react-star-ratings";
 import Buttercup1 from "./buttercup1.png";
 import ReviewsIndexContainer from '../reviews/reviews_index_container';
+import ShowMap from '../map/show_map';
 import "../../stylesheets/trail_show.css";
 
 class TrailShow extends React.Component {
@@ -39,6 +40,7 @@ class TrailShow extends React.Component {
       <div className='trail-show-container'>
         <div className="trail-show">
           <h1 className="trail-title">Trail title goes here-{trail.title}</h1>
+          <ShowMap lat={this.props.trail.lat} lng={this.props.trail.lng} waypoints={this.props.trail.waypoints} />
           <div className="trail-show-link">
             <Link className="trail-show-link" to={`/trails/${trail.id}`}>
               <img src={Buttercup1} height="300px" width="300px"></img>
