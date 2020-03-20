@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// import StarRatings from "react-star-ratings";
 import Buttercup1 from "./buttercup1.png";
 import ReviewsIndexContainer from '../reviews/reviews_index_container';
-import '../../stylesheets/trail_show.css'
+import "../../stylesheets/trail_show.css";
 
 class TrailShow extends React.Component {
   constructor(props) {
@@ -15,7 +16,6 @@ class TrailShow extends React.Component {
     then(() => {this.setState({loaded: true})})
     window.scrollTo(0, 0);
   }
-
   componentDidMount() {
     this.props.fetchWeather({
       lat: this.props.trail.lat,
@@ -36,25 +36,34 @@ class TrailShow extends React.Component {
       );
     }
     return (
-      <div className="trail-show">
-        <h1>Trail title goes here-{trail.title}</h1>
-        <Link to={`/trails/${trail.id}`}>
-          <img src={Buttercup1} height="300px" width="300px"></img>
-        </Link>
-        <div className="weather-container">
-          <div className="weather-info">
-            {weather.summary}
-            {weather.temperature}
-            {weather.windSpeed}
-            {weather.precipProbability}
-            {weather.humidity}
+      <div className='trail-show-container'>
+        <div className="trail-show">
+          <h1 className="trail-title">Trail title goes here-{trail.title}</h1>
+          <div className="trail-show-link">
+            <Link className="trail-show-link" to={`/trails/${trail.id}`}>
+              <img src={Buttercup1} height="300px" width="300px"></img>
+            </Link>
+            <div className="weather-container">
+              <div className="weather-info">
+                <p>{weather.summary}</p>
+                <p>{weather.temperature}</p>
+                <p>{weather.windSpeed}</p>
+                <p>{weather.precipProbability}</p>
+                <p>{weather.humidity}</p>
+              </div>
+            </div>
+          </div>
+          <div className="trail-descrption">
+            Description - {trail.description}
+          </div>
+          <div className="trail-rating">Rating - ★★★★★</div>
+          <div className="reviews-container">
+            <ReviewsIndexContainer />
           </div>
         </div>
-        <div>Description - {trail.description}</div>
-        <div>Rating - ★★★★★</div>
-        <ReviewsIndexContainer />
       </div>
     );
   }
 }
 export default TrailShow;
+
