@@ -58,7 +58,6 @@ class TrailShow extends React.Component {
           <div className="trail-descrption">
             Description - {trail.description}
           </div>
-          <div className="trail-rating">Rating - ★★★★★</div>
           <div className="reviews-container">
             <ReviewsIndexContainer />
           </div>
