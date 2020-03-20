@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import IndexMap from "../map/TEST_map_container";
 import Tucker1 from "./tucker1.png";
 import '../../stylesheets/trails_index.css'
-import gray from "./gray.jpg";
+import graycut from "./graycut.png";
 
 
 class TrailIndex extends React.Component {
@@ -19,19 +19,17 @@ class TrailIndex extends React.Component {
     render() {
         // debugger
         return (
-          <div>
-            <div className="index-map">
-              Navigate around the map to find your next adventure!
-              <br />
-              <br />
-              <IndexMap
-                trails={this.props.trails}
-                fetchTrails={this.props.fetchTrails}
-              />
+          <div className="trails-index">
+            <div className="trails-index-1">
+              <p>Navigate around the map to find your next adventure</p>
+              <div className="index-map">
+                <IndexMap
+                  trails={this.props.trails}
+                  fetchTrails={this.props.fetchTrails}
+                />
+              </div>
             </div>
-            {/* <img className="main-page-picture" src={gray} alt="" /> */}
-
-            <div className="trails-index">
+            <div className="trails-index-2">
               <div className="trails-list">
                 {this.props.trails.map((trail, i) => (
                   <div className="trails-list-internal">
@@ -48,16 +46,6 @@ class TrailIndex extends React.Component {
                   </div>
                 ))}
               </div>
-
-              {/* <div className="index-map">
-                Navigate around the map to find your next adventure!
-                <br />
-                <br />
-                <IndexMap
-                  trails={this.props.trails}
-                  fetchTrails={this.props.fetchTrails}
-                />
-              </div> */}
             </div>
           </div>
         );
