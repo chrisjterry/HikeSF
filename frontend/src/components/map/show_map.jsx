@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 const google = window.google;
 
-class NewMap extends React.Component {
+class ShowMap extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,7 +11,7 @@ class NewMap extends React.Component {
       origin: new google.maps.LatLng(parseFloat(this.props.lat), parseFloat(this.props.lng)),
       waypoints: JSON.parse(this.props.waypoints)
         .map(waypoint => JSON.parse(waypoint))
-        .map(waypoint => new google.maps.LatLng(parseFloat(waypoint.lat), parseFloat(waypoint.lng)))
+        .map(waypoint => ({ location: { lat: parseFloat(waypoint.lat), lng: parseFloat(waypoint.lng)}}))
     }
   }
   
@@ -24,14 +24,16 @@ class NewMap extends React.Component {
         lat: this.state.lat,
         lng: this.state.lng
       },
-      zoom: 16
+      zoom: 15
     };
     this.map = new google.maps.Map(map, mapOptions);
-    this.directionsRenderer.setMap(map);
+    this.directionsRenderer.setMap(this.map);
+    this.directionsRenderer.setOptions({ preserveViewport: true });
+    console.log(this.state.waypoints)
     this.directionsService.route({
       origin: this.state.origin,
       destination: this.state.waypoints[this.state.waypoints.length - 1],
-      waypoints: this.state.waypoints,
+      waypoints: this.state.waypoints.slice(0, this.state.waypoints.length - 1),
       travelMode: 'WALKING'
     }, (response, status) => {
       if (status === 'OK') {
@@ -51,4 +53,4 @@ class NewMap extends React.Component {
   }
 }
 
-export default withRouter(NewMap);
+export default withRouter(ShowMap);
