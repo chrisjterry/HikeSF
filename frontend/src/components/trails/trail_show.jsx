@@ -10,6 +10,7 @@ class TrailShow extends React.Component {
     super(props);
     this.state = Object.assign({loaded:false}, this.state);
   }
+  
   componentWillMount() {
     //   debugger
      this.props.fetchWeather({
@@ -20,6 +21,7 @@ class TrailShow extends React.Component {
     then(() => {this.setState({loaded: true})})
     window.scrollTo(0, 0);
   }
+
   componentDidMount() {
     this.props.fetchWeather({
       lat: this.props.trail.lat,
@@ -29,7 +31,7 @@ class TrailShow extends React.Component {
   
   render() {
     const { trail, weather } = this.props;
-    // if (!trail) return null;
+    if (!trail) return null;
     // if (!trail.photos) return null;
     if(!weather) return null;
     // debugger
