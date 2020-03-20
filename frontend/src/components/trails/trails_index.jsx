@@ -30,7 +30,6 @@ class TrailIndex extends React.Component {
             <div className='trails-map'>
             {this.props.trails.map((trail, i) => (
               <div className="trails-list">
-                {/* <div>Trail #{i + 1}</div> */}
                 <div className='left-side-container'>
                   <Link to={`/trails/${trail._id}`}>
                     <img src={Tucker1} height="100px" width="100px"></img>
@@ -39,7 +38,7 @@ class TrailIndex extends React.Component {
                 <div className='right-side-container'>
                   <div className='trails-index-title'>Title - {trail.title}</div>
                   <div className='trails-index-description'>Description - {trail.description}</div>
-                  <div className='trails-index-rating'>Rating - ★★★★★</div>
+                  {/* <div className='trails-index-rating'>Rating - ★★★★★</div> */}
                 </div>
               </div>
             ))}

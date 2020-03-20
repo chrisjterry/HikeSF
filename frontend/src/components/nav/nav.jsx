@@ -40,9 +40,9 @@ class NavBar extends React.Component {
               </Link>
             </div>
             <div className="logout-button">
-              <button className="log-out" onClick={this.logoutUser}>
+              <Link className="log-out" to="/" onClick={this.logoutUser}>
                 Log out
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -50,9 +50,9 @@ class NavBar extends React.Component {
     } else {
       return (
         <div className="nav-bar-container">
-          <div className="left-side-nav-bar">
+          {/* <div className="left-side-nav-bar">
             <h3>HikeSF</h3>
-          </div>
+          </div> */}
           <div className="nav-bar-logo">
             <Link to="/">
               <img className="nav-logo " src={logo} alt="" />
