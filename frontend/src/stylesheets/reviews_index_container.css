@@ -1,0 +1,8 @@
+.reviews-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.reviews-container-review {
+    margin-bottom: 1.25rem;
+}

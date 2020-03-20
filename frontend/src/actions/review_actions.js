@@ -30,6 +30,7 @@ export const fetchUserReviews = userId => dispatch =>
     reviews => dispatch(receiveReviews(reviews)),
     errors => dispatch(receiveReviewErrors(errors))
   );
+  
 export const fetchTrailReviews = trailId => dispatch =>
   ReviewAPIUtil.fetchAllTrailReviews(trailId).then(
     reviews => dispatch(receiveReviews(reviews)),

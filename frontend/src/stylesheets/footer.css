@@ -1,0 +1,10 @@
+.footer {
+    display: flex;
+    justify-content: space-between;
+    justify-content: flex-end;
+    font-family: 'Changa', sans-serif;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+    word-spacing: 3px;
+}

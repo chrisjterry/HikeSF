@@ -23,7 +23,7 @@ router.post('/', passport.authenticate('jwt', { session: false }),
     const { errors, isValid } = validateReviewInput(req.body);
 
     if (!isValid) {
-        return res.status(400).json(errors);
+        return res.status(403).json(errors);
     }
 
     const newReview = new Review({

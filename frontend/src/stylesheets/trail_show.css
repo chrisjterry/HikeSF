@@ -19,14 +19,7 @@
     margin-bottom: 1.5rem;
 }
 
-.trail-show-description,
-.trail-show-rating {
-    margin-bottom: 1.5em;
-}
-
-.weather-container{
-
-    height: 100px;
-    width: 200px;
+.trail-descrption, .trail-rating {
+    margin-bottom: 1.25rem;
 }
 
