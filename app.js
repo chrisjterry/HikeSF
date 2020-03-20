@@ -36,17 +36,27 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post('/api/weather', async (req, res) => {
-    console.log(req.body)
 
     const { lng, lat } = req.body;
 
     const darkSkyURL = `https://api.darksky.net/forecast/${DarkSkyKey}/${lat},${lng}?exclude=[minutely,hourly,daily,flags]`;
 
-    const data = await axios.get(darkSkyURL);
+    // const data = await axios.get(darkSkyURL);
+    // console.log(res)
+    // res.json({
+    //     data: data.data
+    // })
 
-    res.json({
-        data: data.data
-    })
+    axios.get(darkSkyURL)
+        .then(data => {
+            // console.log('Good request: ', req)
+            // console.log('Response data: ', data)
+            return res.json({data: data.data})
+        })
+        .catch(err => {
+            // console.log('Bad request: ', req)
+            return res.status(404).json(err)
+        })
 })
 
 

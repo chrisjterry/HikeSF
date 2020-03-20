@@ -35,7 +35,7 @@ class ReviewIndex extends React.Component {
 
 
   reviewsList() {
-    console.log(this.props.reviews)
+    // console.log(this.props.reviews)
     if (Object.keys(this.props.reviews.data).length < 1) {
       return(
         <div>No reviews yet</div>
@@ -84,7 +84,7 @@ class ReviewIndex extends React.Component {
         <div>not loaded</div>
       );
     }
-     console.log(this.props)
+    //  console.log(this.props)
     return (
       <div className='reviews-container'>
         <h2 className='reviews-container-review'>Reviews for {this.props.currentTrail.title}</h2>
