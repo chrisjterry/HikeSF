@@ -21,6 +21,7 @@
     border-radius: 5px;
     height: 60%;
     justify-content: flex-start;
+    background: white;
 }
 
 .email-password-container {
@@ -34,8 +35,9 @@
     padding-bottom: 1rem;
     padding-top: 1rem;
     font-size: 2rem;
-    color: white;
+    color: black;
     margin-bottom: 1.5rem;
+    font-family: 'Sen', sans-serif;
 }
 
 .email-input {
@@ -45,6 +47,7 @@
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
+    font-family: 'Sen', sans-serif;
 }
 
 .password-input {
@@ -54,6 +57,7 @@
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
+    font-family: 'Sen', sans-serif;
 }
 
 .sumbit-button {
@@ -66,4 +70,5 @@
     background-color: #0070c9;
     color: #fff;
     font-size: .8rem;
+    font-family: 'Sen', sans-serif;
 }

@@ -1,14 +1,14 @@
 .signup-form-container {
     display: flex;
     justify-content: center;
-    background-image: url('../app/assets/butter4.jpg');
+    background-image: url('../app/assets/fortf.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-color: #464646;
     height: 800px;
-
+    font-family: 'Sen', sans-serif;
 }
 
 .sign-up-form-container {
@@ -19,7 +19,9 @@
     margin-top: 10px;
     padding: 20px;
     border-radius: 5px;
-    height: 70%
+    height: 70%;
+    background: white;
+    
 }
 
 .sign-up-text {
@@ -29,7 +31,8 @@
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 2rem;
-    color: #fff;
+    color: black;
+
 }
 
 .sign-up-email-input,
@@ -41,6 +44,7 @@
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
+    font-family: 'Sen', sans-serif;
 }
 
 .sign-up-submit-button {
@@ -53,4 +57,5 @@
     background-color: #0070c9;
     color: #fff;
     font-size: .8rem;
+    font-family: 'Sen', sans-serif;
 }
