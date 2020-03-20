@@ -51,7 +51,7 @@ class NavBar extends React.Component {
       return (
         <div className="nav-bar-container">
           <div className="left-side-nav-bar">
-            <h3>HikeSF</h3>
+            <h3 className='left-side-title'>HikeSF</h3>
           </div>
           <div className="nav-bar-logo">
             <Link to="/">

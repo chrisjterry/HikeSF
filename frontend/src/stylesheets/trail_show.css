@@ -1,21 +1,32 @@
 .trail-show-container {
     display: flex;
     justify-content: center;
+    /* border: 1px solid black; */
 }
 
-.trail-show {
+.trail-show-wrapper {
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    align-items: flex-start;
+    /* align-items: flex-start; */
+    width: 80%;
 
 }
 
-.trail-title {
+.trail-show-title {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
+.trail-show-description,
+.trail-show-rating {
+    margin-bottom: 1.5em;
+}
 
+.weather-container{
+
+    height: 100px;
+    width: 200px;
+}
 

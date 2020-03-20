@@ -1,5 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router-dom";
+import '../../stylesheets/review_form_container.css'
 
 class NewReviewForm extends React.Component {
   constructor(props) {
@@ -56,29 +57,22 @@ class NewReviewForm extends React.Component {
   render() {
     // debugger
     return (
-      <div>
-        <form onSubmit={this.handleSubmit}>
-          <div>
-            <br />
-            <input
-              type="text"
-              value={this.state.text}
-              onChange={this.update("text")}
-              placeholder="Review text goes here"
-            />
-            <br />
+      <div className='review-form-container-wrapper'>
+        <div className='review-form-container'>
+          <form onSubmit={this.handleSubmit}>
+            <div className='review-form-text'>
+              <input className='review-form-text-input' type="text" value={this.state.text} onChange={this.update("text")} placeholder="Review text goes here"/>
+            </div>
             {/* note to vic: turn into stars */}
-            <input
-              type="rating"
-              value={this.state.rating}
-              onChange={this.update("rating")}
-              placeholder="rating"
-            />
-            <br />
-            <input type="submit" value="Create New Review" />
+            <div className='review-rating'>
+              <input className='review-form-rating' type="rating" value={this.state.rating} onChange={this.update("rating")} placeholder="Rating"/>
+            </div>
+            <div className='review-form-submit'>
+              <input className='review-submit-button' type="submit" value="Create New Review" />
+            </div>
             {/* {this.renderErrors()} */}
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     );
   }

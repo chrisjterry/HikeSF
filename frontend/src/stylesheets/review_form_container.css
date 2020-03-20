@@ -1,0 +1,19 @@
+.review-form-container {
+    margin-top: 1.25rem;
+}
+
+.review-form-text-input,
+.review-form-rating {
+    width: 300px;
+    border-radius: 5px;
+    height: 1.5rem;
+    margin-bottom: .8rem;
+}
+
+.review-submit-button {
+    background-color: #0070c9;
+    border-radius: 5px;
+    width: 306px;
+    height: 2rem;
+    color: #ffffff
+}
