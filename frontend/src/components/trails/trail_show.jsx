@@ -12,6 +12,10 @@ class TrailShow extends React.Component {
   }
   componentWillMount() {
     //   debugger
+     this.props.fetchWeather({
+       lat: this.props.trail.lat,
+       lng: this.props.trail.lng
+     });
     this.props.fetchTrail(this.props.match.params.id).
     then(() => {this.setState({loaded: true})})
     window.scrollTo(0, 0);
