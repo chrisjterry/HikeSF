@@ -48,22 +48,22 @@ const MainPage = ({ currentUser }) => {
           <div>⚘</div>
         </div>
         <div>
-          <Link
-            className="all-trails"
-            to={"/trails/5e7406189a1eaf1e4a2416ce"}
-          >
+          <Link className="all-trails" to={"/trails/5e72f2a0828a5e3235314e24"}>
             View current weather conditions before heading out
           </Link>
           <div>❄</div>
         </div>
         <div>
-          Loved the trail? Leave a review
+          <Link className="all-trails" to={"/trails/5e72f2a0828a5e3235314e24"}>
+            Loved the trail? Leave a review
+          </Link>
           <div>✰</div>
         </div>
         <div>
           <Link className="create-trail" to={"/trails/new"}>
             Create your own trails and share the magic!
           </Link>
+          <br/>
           <div>✎</div>
         </div>
       </div>

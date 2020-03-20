@@ -9,6 +9,7 @@ import SignupFormContainer from "./session/signup_form_container";
 import TrailsIndexContainer from "./trails/trails_index_container";
 import TrailShowContainer from "./trails/trail_show_container";
 import NewTrailContainer from "./trails/new_trail_form_container";
+import '../stylesheets/footer.css'
 
 
 const App = () => (
@@ -24,11 +25,9 @@ const App = () => (
       <ProtectedRoute exact path="/trails/:id" component={TrailShowContainer} />
       <Route path="/" component={MainPageContainer} />
     </Switch>
-    <footer className='footer'>
-      Thank you for visiting HikeSF. put github link. developers.
-      {/* <Link to="https://github.com/chrisjterry/HikeSF">
-        <i className="fab fa-github-alt"></i>
-      </Link> */}
+    <footer className="footer">
+      Thank you for visiting HikeSF! Check out our GitHub repository 
+      <Link to="https://github.com/chrisjterry/HikeSF"> 👥</Link>
     </footer>
   </div>
 );

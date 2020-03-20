@@ -34,7 +34,7 @@
     font-family: 'Changa', sans-serif;
     height: 150px;
     width: 100%;
-    color: whitesmoke;
+    color: rgb(214, 215, 216);
     text-transform: uppercase;
 
 }
@@ -47,6 +47,6 @@
     width: 200px;
 }
 
-.submain div:first-child:hover {
-    text-decoration: underline;
+.submain div:hover {
+    color: white;
 }
