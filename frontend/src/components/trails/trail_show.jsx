@@ -16,6 +16,8 @@ class TrailShow extends React.Component {
   }
   
   componentDidMount() {
+        this.props.fetchTrail(this.props.match.params.id);
+
     this.props.fetchWeather({
       lat: this.props.trail.lat,
       lng: this.props.trail.lng
@@ -49,6 +51,7 @@ class TrailShow extends React.Component {
           </div>
           <div className="trail-descrption">
             Description - {trail.description}
+            Difficulty - {trail.difficulty}
           </div>
           <div className="reviews-container">
             <ReviewsIndexContainer />

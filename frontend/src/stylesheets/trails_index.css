@@ -1,13 +1,86 @@
-.trails-index-container {
+/* .trails-index-1 {
+    background-image: linear-gradient(rgb(128, 128, 128), rgb(30, 34, 28));
+    padding: 10px;
+
+} */
+
+.trails-index{
     display: flex;
     flex-direction: column;
 }
 
-.trails-list {
+.trails-index-1{
     display: flex;
+    background-image: url('../app/assets/graycut.png');
+    width: 100%;
+    height: 600px;
 }
 
-.trals-header-text {
-    font-size: 2rem;
+.trails-index-1 p{
+    font-family: 'Pacifico', cursive;
+    width: 30%;
+    font-size: 80px;
+    color: rgb(240, 240, 245);
+    padding: 60px;
+    word-spacing: 10px;
+    text-align: center;
 }
+
+.trails-index-2{
+    display: flex;
+    /* flex-wrap: wrap; */
+    /* padding: 40px; */
+    /* background-image: url('../app/assets/gray.jpg'); */
+    background-image: linear-gradient(rgb(128, 128, 128), rgb(30, 34, 28));
+    font-family: 'Sen', sans-serif;
+    color: rgb(244, 247, 255);
+}
+
+.trails-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    flex-direction: column;
+}
+
+.index-map {
+    width: 60%;
+    padding: 10px 0px 10px 0px;
+    color: rgb(68, 67, 73);
+    font-family: 'Changa', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    right: 10px;
+    bottom: 20px;
+    margin: 4px;
+    /* position: absolute;  */
+    /* overflow: visible; */
+
+}
+
+.map {
+    height: 430px;
+    width: 700px;
+    padding: 20px;
+    /* position: absolute;  */
+    overflow: visible;
+}
+
+.trails-list-internal {
+    display: flex;
+    /* padding-bottom: 10px; */
+    padding: 20px;
+}
+
+.trail-text {
+    padding-left: 30px;
+}
+
+.trail-title {
+    text-transform: uppercase;
+}
+
 
