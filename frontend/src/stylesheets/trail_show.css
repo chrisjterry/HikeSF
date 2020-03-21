@@ -73,3 +73,7 @@
     height: 150px;
 }
 
+.weather-title {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}

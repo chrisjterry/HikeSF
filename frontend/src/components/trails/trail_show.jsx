@@ -33,7 +33,7 @@ class TrailShow extends React.Component {
     return (
       <div className='trail-show-container'>
         <div className="trail-show">
-          <h1 className="trail-title">Trail title goes here-{trail.title}</h1>
+          <h1 className="trail-title">{trail.title}</h1>
           
             <div className='show-page-picture-container'>
               <Link className="trail-show-link" to={`/trails/${trail.id}`}>
@@ -58,6 +58,7 @@ class TrailShow extends React.Component {
                     </div>
                   
                     <div className="weather-info">
+                      <h1 className='weather-title'>Weather</h1>
                       <p>Condition: {weather.summary}</p>
                       <p>Temperature: {weather.temperature}°F</p>
                       <p>Wind: {weather.windSpeed} mph</p>
