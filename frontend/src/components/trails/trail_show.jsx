@@ -31,47 +31,70 @@ class TrailShow extends React.Component {
     if(!Object.keys(weather).length || trail._id !== this.props.match.params.id) return null;
     
     return (
-      <div className='trail-show-container'>
+      <div className="trail-show-container">
         <div className="trail-show">
-          <h1 className="trail-title">{trail.title}</h1>
-          
-            <div className='show-page-picture-container'>
+          <div className="trail-show-top">
+            <h1 className="trail-title">{trail.title}</h1>
+            <div className="show-page-picture-container">
               <Link className="trail-show-link" to={`/trails/${trail.id}`}>
-                <img className='trail-show-pic' src={trail.picture_url} height="300px" width="300px"></img>
+                <img
+                  className="trail-show-pic"
+                  src={trail.picture_url}
+                  // height="300px"
+                  // width="300px"
+                ></img>
               </Link>
             </div>
-            <div className='main-body-container'>
-                  <div className='trail-description-container'>
-                    <div className="trail-descrption">
-                      <div className='trail-show-description'>
-                        Description - {trail.description}
-                      </div>
-                      <div className='trail-show-difficulity'>
-                        Difficulty - {trail.difficulty}
-                      </div>
-                    </div>
-                  </div>  
-
-                  <div className='map-weather-container'>
-                    <div className='show-page-map'>
-                      <ShowMap lat={this.props.trail.lat} lng={this.props.trail.lng} waypoints={this.props.trail.waypoints} />
-                    </div>
-                  
-                    <div className="weather-info">
-                      <h1 className='weather-title'>Weather</h1>
-                      <p>Condition: {weather.summary}</p>
-                      <p>Temperature: {weather.temperature}°F</p>
-                      <p>Wind: {weather.windSpeed} mph</p>
-                      <p>Chance of Rain: {weather.precipProbability}</p>
-                      <p>Humidity: {weather.humidity}</p>
-                    </div>
-                </div>
-            </div>
-           
-          
-          <div className="reviews-container">
-            <ReviewsIndexContainer />
           </div>
+
+          <br />
+          <br />
+          <div className="main-body-container">
+            <div className="trail-description-container">
+              <div className="trail-description">
+                <div className="trail-show-description">
+                  〆 About this trail
+                  <p>{trail.description}</p>
+                </div>
+                <div className="trail-show-difficulity">
+                  〆 DIFFICULTY
+                  <p>{trail.difficulty}</p>
+                </div>
+                <br />
+                <div className="reviews-container">
+                  <ReviewsIndexContainer />
+                </div>
+              </div>
+            </div>
+
+            <div className="map-weather-container">
+              <div className="show-page-map">
+                <ShowMap
+                  lat={this.props.trail.lat}
+                  lng={this.props.trail.lng}
+                  waypoints={this.props.trail.waypoints}
+                />
+              </div>
+
+              <div className="weather-info">
+                  <p>☼ {weather.summary}</p>
+                  <br />
+                  <p>℉ {weather.temperature}</p>
+                  <br />
+                  <p>⇶ {weather.windSpeed} mph</p>
+                  <br />
+                  <p>☂ {weather.precipProbability * 100}% chance</p>
+                  <br />
+                  <p>♨ {weather.humidity * 100} relative humidity</p>
+                  <br />
+                  <p>☺ 100% chance of having a great time</p>
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="reviews-container">
+            <ReviewsIndexContainer />
+          </div> */}
         </div>
       </div>
     );

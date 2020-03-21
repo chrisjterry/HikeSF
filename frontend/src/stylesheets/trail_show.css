@@ -1,6 +1,7 @@
 .trail-show-container {
     display: flex;
     justify-content: center;
+    background-image: linear-gradient(white, gray);
 }
 
 .trail-show {
@@ -12,7 +13,13 @@
 }
 
 .trail-title {
+    font-size: 60px;
     margin-bottom: 1rem;
+    /* font-family: 'Dokdo', cursive; */
+    /* font-family: 'Pacifico', cursive; */
+    font-family: 'Sen', sans-serif;
+    letter-spacing: 10px;
+    color: rgb(6, 6, 41);
 }
 
 .trail-show-title {
@@ -21,17 +28,18 @@
 }
 
 .show-page-map {
-   margin: 1rem;
+   margin-top: 1rem;
 }
 
 .trail-show-pic {
     width: 100%;
-    height: 350px;
+    height: 400px;
 }
 
 .map-weather-container {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
 }
 
 .main-body-container {
@@ -41,39 +49,45 @@
 
 .show-map {
     height: 350px;
-    width: 350px;
+    width: 380px;
 }
 
-.trail-descrption {
+.trail-description {
     display: flex;
     flex-direction: column;
 }
 
-.trail-show-description {
+.trail-show-description, .trail-show-difficulity {
     width: 100%;
     height: auto;
+    font-size: 20px;
+    text-transform: uppercase;
     padding-bottom: 1.5rem;
 }
 
-.trail-show-difficulity {
-    width: 100%;
-    height: auto;
+.trail-show-description p, .trail-show-difficulity p {
+    font-size: 15px;
+    text-transform: capitalize;
+    color: rgb(44, 44, 53);
 }
 
-.trail-title, .trail-descrption, .weather-info, .reviews-container{
+.trail-description, .weather-info, .reviews-container{
     font-family: 'Sen', sans-serif;
 }
 
 .weather-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
     margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     height: 150px;
+    font-size: 15px;
+    color: whitesmoke;
 }
 
 .weather-title {
     font-size: 1.7rem;
     margin-bottom: 1rem;
+}
+.trail-show-top {
+    display: flex;
 }

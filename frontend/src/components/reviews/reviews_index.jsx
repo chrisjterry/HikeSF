@@ -15,10 +15,10 @@ class ReviewIndex extends React.Component {
   calcAvgRating() {
     let avg;
     let ratingsSum = 0;
-      this.props.reviews.data.map(review => 
+      this.props.reviews.map(review => 
         ratingsSum += review.rating
       )
-    avg = Math.floor(ratingsSum / (this.props.reviews.data.length));
+    avg = Math.floor(ratingsSum / (this.props.reviews.length));
     this.setState({ avg_rating: avg});
   }
 
@@ -36,7 +36,7 @@ class ReviewIndex extends React.Component {
 
   reviewsList() {
     // console.log(this.props.reviews)
-    if (Object.keys(this.props.reviews.data).length < 1) {
+    if (Object.keys(this.props.reviews).length < 1) {
       return(
         <div>No reviews yet</div>
       )
@@ -53,7 +53,7 @@ class ReviewIndex extends React.Component {
             starSpacing="1px"
             starRatedColor="green"
           />
-          {this.props.reviews.data.map(review => (
+          {this.props.reviews.map(review => (
             <div>
               {review.text}
               <br />

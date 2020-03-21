@@ -39,7 +39,7 @@ class NewReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    debugger;
+    // debugger;
     let review = {
       text: this.state.text,
       rating: this.state.rating.toString(),

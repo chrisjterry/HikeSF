@@ -11,27 +11,55 @@
 
 .trails-index-1{
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     background-image: url('../app/assets/graycut.png');
     width: 100%;
     height: 600px;
 }
 
-.trails-index-1 p{
-    font-family: 'Pacifico', cursive;
-    width: 30%;
-    font-size: 80px;
+.trails-index-1 div p:nth-child(1){
+    font-family: 'Sen', sans-serif;
+    letter-spacing: 30px;
+    word-spacing: 0px;
+    /* width: 30%; */
+    font-size: 38px;
     color: rgb(240, 240, 245);
-    padding: 60px;
-    word-spacing: 10px;
+    /* padding: 60px; */
     text-align: center;
+    text-transform: uppercase;
+    width: 50px;
+    height: 50px;
+    font-weight: bolder;
 }
+
+.trails-index-1 div p:nth-child(2){
+    font-family: 'Sen', sans-serif;
+    letter-spacing: 30px;
+    word-spacing: 0px;
+    /* width: 30%; */
+    font-size: 38px;
+    color: rgba(240, 240, 245, 0.26);
+    /* padding: 60px; */
+    text-align: center;
+    text-transform: uppercase;
+    width: 50px;
+    height: 50px;
+}
+
+.trails-index-1 div{
+    padding-bottom: 70px;
+}
+
+
+
 
 .trails-index-2{
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* padding: 40px; */
     /* background-image: url('../app/assets/gray.jpg'); */
-    background-image: linear-gradient(rgb(128, 128, 128), rgb(30, 34, 28));
+    background-image: linear-gradient(rgb(206, 206, 211), rgb(54, 54, 54));
     font-family: 'Sen', sans-serif;
     color: rgb(244, 247, 255);
 }
@@ -39,40 +67,60 @@
 .trails-list {
     display: flex;
     flex-wrap: wrap;
-    width: 40%;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 40%; */
+    /* flex-direction: column; */
+    border: solid 35px whitesmoke;
+    /* margin: 10px; */
 }
 
 .index-map {
-    width: 60%;
-    padding: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     color: rgb(68, 67, 73);
     font-family: 'Changa', sans-serif;
     font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    position: fixed;
     z-index: 1;
-    right: 10px;
-    bottom: 20px;
-    margin: 4px;
-    /* position: absolute;  */
-    /* overflow: visible; */
+    /* border: solid 3px blue; */
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
 
 }
 
 .map {
+    margin-left: 500px;
     height: 430px;
-    width: 700px;
+    width: 600px;
     padding: 20px;
-    /* position: absolute;  */
-    overflow: visible;
+    border: solid 6x whitesmoke;
+    border-radius: 5px;
 }
+/* .index-page-map {
+    margin-left: 500px;
+    height: 430px;
+    width: 600px;
+    padding: 20px;
+    border: solid 6x whitesmoke;
+    border-radius: 5px;
+} */
 
 .trails-list-internal {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     /* padding-bottom: 10px; */
-    padding: 20px;
+    padding: 20px 20px 0 20px;
+    width: 400px;
+    height: 400px;
+}
+
+.index-img {
+    border-radius: 8px;
 }
 
 .trails-header-text {
@@ -82,7 +130,8 @@
 
 .trails-list {
     display: flex;
-    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    /* margin-bottom: 2rem; */
 }
 .trals-header-text {
     font-size: 2rem;
@@ -95,13 +144,14 @@
     padding-left: 30px;
 }
 
-.trail-title {
+.index-trail-title {
+    font-size: 40px;
     text-transform: uppercase;
 }
 
-
-.trail-title {
-    text-transform: uppercase;
+.index-trail-description {
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.507);
 }
 
 
