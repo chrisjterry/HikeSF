@@ -52,7 +52,7 @@ class NewMap extends React.Component {
 
   render() {
     return (
-      <div className="map" ref="map">
+      <div className="create-trail-map" ref="map">
         Map
       </div>
     );

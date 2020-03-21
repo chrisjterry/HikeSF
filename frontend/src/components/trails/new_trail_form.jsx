@@ -240,7 +240,7 @@ class NewTrailForm extends React.Component {
                     {/* </div> */}
                   </div>
                   <div className="right-create">
-                      <div>
+                      <div className='new-trail-map'>
                         <NewMap
                         lat={this.state.lat}
                         lng={this.state.lng}

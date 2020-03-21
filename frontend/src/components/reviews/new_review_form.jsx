@@ -96,7 +96,7 @@ class NewReviewForm extends React.Component {
               </div>
               <br />
               <div className='review-form-submit'>
-                <input type="submit" value="Create Review" />
+                <input className='review-form-submit-button' type="submit" value="Create Review" />
               </div>
               {this.renderErrors()}
               </div>

@@ -48,8 +48,13 @@
 }
 
 .show-map {
-    height: 350px;
+    height: 100%;
     width: 380px;
+}
+
+.show-page-map {
+    height: 400px;
+    width: 400px;
 }
 
 .trail-description {
@@ -84,7 +89,10 @@
     color: whitesmoke;
 }
 
-
+.weather-title {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
 .trail-show-top {
     display: flex;
 }
