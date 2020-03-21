@@ -84,7 +84,7 @@
 
 .top-form {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 24px
 }
 
