@@ -240,12 +240,14 @@ class NewTrailForm extends React.Component {
                     {/* </div> */}
                   </div>
                   <div className="right-create">
-                    <NewMap
-                      lat={this.state.lat}
-                      lng={this.state.lng}
-                      addWaypoint={this.addWaypoint}
-                      className="new-trail-map"
-                    />
+                      <div>
+                        <NewMap
+                        lat={this.state.lat}
+                        lng={this.state.lng}
+                        addWaypoint={this.addWaypoint}
+                        />
+
+                      </div>
                     {this.state.picture_url ? (
                       <img src={this.state.picture_url} className="uploaded" />
                     ) : (

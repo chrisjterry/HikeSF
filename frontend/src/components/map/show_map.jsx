@@ -45,7 +45,7 @@ class ShowMap extends React.Component {
   
   render() {
     return (
-      <div className="show-map" ref="map">
+      <div className="create-map show-map index-page-map" ref="map">
         Map
       </div>
     );

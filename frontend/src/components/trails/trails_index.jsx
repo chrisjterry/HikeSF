@@ -42,13 +42,14 @@ class TrailIndex extends React.Component {
                           src={trail.picture_url}
                           height="300px"
                           width="300px"
+                          className="index-img"
                         ></img>
                       </Link>
                     </div>
                 
                     {/* <div> */}
                       <div className="index-trail-title">{trail.title}</div>
-                      <div>{trail.description}</div>
+                      <div className="index-trail-description">{trail.description}</div>
                     {/* </div> */}
                   </div>
                 ))}
