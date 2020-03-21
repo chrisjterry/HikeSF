@@ -33,7 +33,7 @@ class TrailShow extends React.Component {
     return (
       <div className='trail-show-container'>
         <div className="trail-show">
-          <h1 className="trail-title">Trail title goes here-{trail.title}</h1>
+          <h1 className="trail-title">{trail.title}</h1>
           <ShowMap lat={this.props.trail.lat} lng={this.props.trail.lng} waypoints={this.props.trail.waypoints} />
           <div className="trail-show-link">
             <Link className="trail-show-link" to={`/trails/${trail.id}`}>

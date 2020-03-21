@@ -67,6 +67,8 @@
     padding: 20px;
     /* position: absolute;  */
     overflow: visible;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
 }
 
 .trails-list-internal {

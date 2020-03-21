@@ -96,7 +96,11 @@ class NewTrailForm extends React.Component {
         Object.keys(trail).forEach( key => {
             if (trail[key]) formData.append(`${key}`, trail[key])
         });
-        this.props.createTrail(formData);
+        this.props.createTrail(formData)
+        .then(() => {
+              if (this.props.errors.length === 0)
+                this.props.history.push(`/trails`);
+            });
     }
 
     renderErrors() {
@@ -112,49 +116,119 @@ class NewTrailForm extends React.Component {
     render() {
         // debugger
         return (
-            <div className='new-trail-container'>
-                <div className="new-trail-form">
-                    <form onSubmit={this.handleSubmit}>
-                        <div className='trail-form-wrapper'>
-                            <div className='create-trail-form'>
-                                Create New Trail
-                            </div>
-                            <NewMap lat={this.state.lat} lng={this.state.lng} addWaypoint={this.addWaypoint} />
-                            <div className='trail-title'>
-                                <input className='trail-title-text' type="text" value={this.state.title} onChange={this.update("title")} placeholder="Title"/>
-                            </div>
-                            <div className='trail-description'>
-                                <input className='trail-description-text' type="text" value={this.state.description} onChange={this.update("description")} placeholder="Description"/>
-                            </div>
-                            <div className='trail-difficulity'>
-                                <input className='trail-difficulity-text' type="difficulty" value={this.state.difficulty} onChange={this.update("difficulty")} placeholder="Difficulty"/>
-                            </div>
-                            <div className='bottom-container'>
-                                <div className='trail-pet-friendly'>
-                                    <label className='pet-friendly'> Pet friendly? 
-                                        {/* <input type="checkbox" value={this.state.petFriendly} /> */}
-                                        <input className='pet-friendly' type="checkbox" value={this.state.petFriendly} onClick={this.togglePet.bind(this)} checked={this.state.petFriendly} />
-                                    </label>
-                                </div>
-                                <div className='trail-paved'>
-                                    <label className='paved-trail'> Paved?
-                                        {/* <input type="checkbox" value={this.state.paved} /> */}
-                                        <input className='trail-paved-text' type="checkbox" value={this.state.paved} onClick={this.togglePaved.bind(this)} checked={this.state.paved} />
-                                    </label>
-                                </div>
-                            </div>
-                            <div className='input-file'>
-                                <input className='file-input' onChange={this.handleFile} id='photo-upload' type="file"/>
-                                { this.state.picture_url ? <img src={this.state.picture_url} /> : null } 
-                            </div>   
-                            <div className='trail-submit'>
-                                <input className='trail-submit-button' type="submit" value="Create New Trail"/>
-                                {this.renderErrors()}
-                            </div>
-                        </div>
-                    </form>
+          <div>
+            <div className="new-trail-form">
+              <form onSubmit={this.handleSubmit}>
+                {/* <div className="trail-form-wrapper"> */}
+                <div className="top-form">
+                  <div className="top-form-header">
+                    <h1>Create New Trail</h1>
+                    <br />
+                    <br />
+                    <div>
+                      1. Select the path by clicking on the map to place markers ➤
+                    </div>
+
+                    <br />
+                    <div>2. Fill in trail details below</div>
+                    {/* <div className="details"> */}
+                    <br />
+                    <div className="trail-title">
+                      <input
+                        className="trail-title-text"
+                        type="text"
+                        value={this.state.title}
+                        onChange={this.update("title")}
+                        placeholder="...trail title"
+                      />
+                    </div>
+                    <div className="trail-description">
+                      <input
+                        className="trail-description-text"
+                        type="textarea"
+                        value={this.state.description}
+                        onChange={this.update("description")}
+                        placeholder="...trail description"
+                      />
+                    </div>
+                    <br/>
+                    <div className="dropdown">
+                      <button type="button" className="dropbtn">
+                        Difficulty Level ☰
+                      </button>
+                      <div className="dropdown-content">
+                        <p>EASY (All experience levels welcome)</p>
+                        <p>MEDIUM (Most experience levels welcome)</p>
+                        <p>
+                          HARD (Maybe just stay home, eat chips, and regret
+                          everything you've done)
+                        </p>
+                      </div>
+                      {/* <input className='trail-difficulity-text' type="difficulty" value={this.state.difficulty} onChange={this.update("difficulty")} placeholder="Difficulty"/> */}
+                    </div>
+                    <div className="bottom-container">
+                      <div className="trail-pet-friendly">
+                        <label className="pet-friendly">
+                          {" "}
+                          Pet friendly?
+                          {/* <input type="checkbox" value={this.state.petFriendly} /> */}
+                          <input
+                            className="pet-friendly"
+                            type="checkbox"
+                            value={this.state.petFriendly}
+                            onClick={this.togglePet.bind(this)}
+                            checked={this.state.petFriendly}
+                          />
+                        </label>
+                      </div>
+                      <div className="trail-paved">
+                        <label className="paved-trail">
+                          {" "}
+                          Paved?
+                          {/* <input type="checkbox" value={this.state.paved} /> */}
+                          <input
+                            className="trail-paved-text"
+                            type="checkbox"
+                            value={this.state.paved}
+                            onClick={this.togglePaved.bind(this)}
+                            checked={this.state.paved}
+                          />
+                        </label>
+                      </div>
+                    </div>
+                    <div className="input-file">
+                      <input
+                        className="file-input"
+                        onChange={this.handleFile}
+                        id="photo-upload"
+                        type="file"
+                      />
+                      {this.state.picture_url ? (
+                        <img src={this.state.picture_url} />
+                      ) : null}
+                    </div>
+                    {/* </div> */}
+                  </div>
+                  <NewMap
+                    lat={this.state.lat}
+                    lng={this.state.lng}
+                    addWaypoint={this.addWaypoint}
+                    className="new-trail-map"
+                  />
                 </div>
+
+                <div className="trail-submit">
+                  <input
+                    className="trail-submit-button"
+                    type="submit"
+                    value="Create New Trail"
+                  />
+                  {this.renderErrors()}
+                </div>
+                {/* </div> */}
+              </form>
             </div>
+          </div>
         );
     }
 }

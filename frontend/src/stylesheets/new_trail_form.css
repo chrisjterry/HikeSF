@@ -1,4 +1,4 @@
-.new-trail-container {
+/* .new-trail-container {
     display: flex;
     justify-content: center;
     background-image: url('../../src/app/assets/tucky6.jpg');
@@ -61,5 +61,88 @@
 
 .input-file {
     margin-bottom: 1rem;
+} */
+
+.new-trail-form {
+    background-color: rgb(178, 180, 185);
 }
 
+.top-form {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px
+}
+
+.top-form-header {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+}
+
+.top-form-header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 80px;
+    width: 20rem;
+    text-align: center;
+    color: rgb(17, 22, 49);
+}
+
+.top-form-header div {
+    font-family: 'Sen', sans-serif;
+
+}
+
+.new-trail-map {
+    height: 100px;
+    width: 150px;
+}
+
+.trail-title-text {
+    width: 10rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.trail-description-text {
+    width: 10rem;
+    height: 5rem;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content p:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
