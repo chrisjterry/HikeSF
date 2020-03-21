@@ -202,15 +202,6 @@
     border-radius: 5px;
 }
 
-.new-trail-map {
-    width: 100%;
-    height: auto;
-}
-
-.create-map {
-    width: 400px;
-    height:100%;
-}
 .not-uploaded {
     margin-top: 30px;
     height: 250px;
