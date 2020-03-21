@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { Link } from "react-router-dom";
 import IndexMap from "../map/TEST_map_container";
 import Tucker1 from "./tucker1.png";
@@ -7,14 +7,14 @@ import graycut from "./graycut.png";
 
 
 class TrailIndex extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    // }
+  // constructor(props) {
+  //     super(props);
+  // }
 
-    componentDidMount() {
-        this.props.fetchTrails();
-        window.scrollTo(0,0);
-    }
+  componentDidMount() {
+    this.props.fetchTrails();
+    window.scrollTo(0, 0);
+  }
 
     render() {
         // debugger
