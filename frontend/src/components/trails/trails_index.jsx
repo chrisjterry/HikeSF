@@ -21,37 +21,41 @@ class TrailIndex extends React.Component {
         return (
           <div className="trails-index">
             <div className="trails-index-1">
-              <p>Navigate around the map to find your next adventure. ➳</p>
-              <div className="index-map">
+              <div>
+                <p>Navigate around the map to find your next adventure.</p>
+                <p>around the map to find your next adventure.</p>
+              </div>
+              {/* <div className="index-map"> */}
                 <IndexMap
                   trails={this.props.trails}
                   fetchTrails={this.props.fetchTrails}
                 />
-              </div>
+              {/* </div> */}
             </div>
             <div className="trails-index-2">
               <div className="trails-list">
-                  {this.props.trails.map((trail, i) => (
-                    <div className="trails-list-internal">
-                      <div>
-                        <Link to={`/trails/${trail._id}`}>
-                          <img
-                            src={trail.picture_url}
-                            height="100px"
-                            width="100px"
-                          ></img>
-                        </Link>
-                      </div>
-                      <div className="trail-text">
-                        <div className="trail-title">{trail.title}</div>
-                        <div>{trail.description}</div>
-                      </div>
+                {this.props.trails.map((trail, i) => (
+                  <div className="trails-list-internal">
+                    <div>
+                      <Link to={`/trails/${trail._id}`}>
+                        <img
+                          src={trail.picture_url}
+                          height="300px"
+                          width="300px"
+                        ></img>
+                      </Link>
                     </div>
-                  ))}
-                </div>
+                
+                    {/* <div> */}
+                      <div className="index-trail-title">{trail.title}</div>
+                      <div>{trail.description}</div>
+                    {/* </div> */}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-      );
+        );
   }
 }
 
