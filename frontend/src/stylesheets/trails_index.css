@@ -11,20 +11,42 @@
 
 .trails-index-1{
     display: flex;
+    justify-content: space-evenly;
     background-image: url('../app/assets/graycut.png');
     width: 100%;
     height: 600px;
 }
 
-.trails-index-1 p{
-    font-family: 'Pacifico', cursive;
+.trails-index-1 p:nth-child(odd){
+    font-family: 'Sen', sans-serif;
+    letter-spacing: 30px;
+    word-spacing: 0px;
     width: 30%;
-    font-size: 80px;
+    font-size: 40px;
     color: rgb(240, 240, 245);
     padding: 60px;
-    word-spacing: 10px;
     text-align: center;
+    text-transform: uppercase;
+    width: 50px;
+    height: 50px;
+    font-weight: bolder;
 }
+
+.trails-index-1 p:nth-child(2){
+    font-family: 'Sen', sans-serif;
+    letter-spacing: 30px;
+    word-spacing: 0px;
+    width: 30%;
+    font-size: 40px;
+    color: rgba(240, 240, 245, 0.26);
+    padding: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 50px;
+    height: 50px;
+}
+
+
 
 .trails-index-2{
     display: flex;
@@ -44,31 +66,25 @@
 }
 
 .index-map {
-    width: 60%;
-    padding: 10px 0px 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
     color: rgb(68, 67, 73);
     font-family: 'Changa', sans-serif;
     font-size: 20px;
-    text-transform: uppercase;
-    text-align: center;
-    position: fixed;
     z-index: 1;
-    right: 10px;
-    bottom: 20px;
-    margin: 4px;
-    /* position: absolute;  */
-    /* overflow: visible; */
+    /* border: solid 3px blue; */
+    margin-left: 200px;
+     font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
 
 }
 
 .map {
     height: 430px;
-    width: 700px;
+    width: 600px;
     padding: 20px;
-    /* position: absolute;  */
-    overflow: visible;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
 }
 
 .trails-list-internal {
@@ -97,12 +113,8 @@
     padding-left: 30px;
 }
 
-.trail-title {
-    text-transform: uppercase;
-}
-
-
-.trail-title {
+.index-trail-title {
+    font-size: 40px;
     text-transform: uppercase;
 }
 
