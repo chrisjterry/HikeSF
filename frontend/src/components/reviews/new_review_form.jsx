@@ -52,17 +52,21 @@ class NewReviewForm extends React.Component {
     this.props.createReview(review);
   }
 
-  //   renderErrors() {
-  //     return (
-  //       <ul>
-  //         {Object.keys(this.state.errors).map((error, i) => (
-  //           <li key={`error-${i}`}>
-  //             {i + 1}. {error}
-  //           </li>
-  //         ))}
-  //       </ul>
-  //     );
-  //   }
+    renderErrors() {
+      if (Object.values(this.props.errors).length) {
+        return (
+          <ul>
+            {Object.values(this.props.errors).map((error, i) => (
+              <li key={`error-${i}`}>
+                {i + 1}. {error}
+              </li>
+            ))}
+          </ul>
+        );
+      } else {
+        return null;
+      }
+    }
 
   render() {
     return (
@@ -94,7 +98,7 @@ class NewReviewForm extends React.Component {
               <div className='review-form-submit'>
                 <input type="submit" value="Create Review" />
               </div>
-              {/* {this.renderErrors()} */}
+              {this.renderErrors()}
               </div>
             </form>
         </div>
