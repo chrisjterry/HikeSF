@@ -83,9 +83,9 @@ class TrailShow extends React.Component {
                   <br />
                   <p>⇶ {weather.windSpeed} mph</p>
                   <br />
-                  <p>☂ {weather.precipProbability * 100}% chance</p>
+                  <p>☂ {Math.floor(weather.precipProbability * 100)}% chance</p>
                   <br />
-                  <p>♨ {weather.humidity * 100} relative humidity</p>
+                  <p>♨ {Math.floor(weather.humidity * 100)}% relative humidity</p>
                   <br />
                   <p>☺ 100% chance of having a great time</p>
               </div>
