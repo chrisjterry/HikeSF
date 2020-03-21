@@ -9,34 +9,27 @@ import "../../stylesheets/trail_show.css";
 class TrailShow extends React.Component {
   constructor(props) {
     super(props);
-    this.state = Object.assign({ loaded: false }, this.state);
+  }
+    
+  componentDidMount() {
+    this.props.fetchTrail(this.props.match.params.id)
   }
   
-  componentWillMount() {
-    //   debugger
-     this.props.fetchWeather({
-       lat: this.props.trail.lat,
-       lng: this.props.trail.lng
-     });
-    this.props.fetchTrail(this.props.match.params.id).
-    then(() => {this.setState({loaded: true})})
-    window.scrollTo(0, 0);
-  }
-  componentDidMount() {
-    this.props.fetchWeather({
-      lat: this.props.trail.lat,
-      lng: this.props.trail.lng
-    });
+  componentDidUpdate() {
+    console.log(!Object.keys(this.props.weather).length)
+    if (this.props.trail.lat && !Object.keys(this.props.weather).length) {
+      this.props.fetchWeather({
+        lat: this.props.trail.lat,
+        lng: this.props.trail.lng
+      })
+      window.scrollTo(0, 0);
+    }
   }
   render() {
     const { trail, weather } = this.props;
-    if (!trail) return null;
-    // if (!trail.photos) return null;
-    if (!weather) return null;
-    // debugger
-    if (!this.state.loaded) {
-      return <div>not loaded</div>;
-    }
+    // console.log(weather)
+    if(!Object.keys(weather).length || !Object.keys(trail).length) return null;
+    
     return (
       <div className='trail-show-container'>
         <div className="trail-show">
@@ -58,6 +51,7 @@ class TrailShow extends React.Component {
           </div>
           <div className="trail-descrption">
             Description - {trail.description}
+            Difficulty - {trail.difficulty}
           </div>
           <div className="reviews-container">
             <ReviewsIndexContainer />
