@@ -91,6 +91,14 @@
 .trail-text {
     padding-left: 30px;
 }
+.trail-text {
+    padding-left: 30px;
+}
+
+.trail-title {
+    text-transform: uppercase;
+}
+
 
 .trail-title {
     text-transform: uppercase;
