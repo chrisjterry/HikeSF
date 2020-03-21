@@ -126,7 +126,8 @@ class NewTrailForm extends React.Component {
                     <br />
                     <br />
                     <div>
-                      1. Select the path by clicking on the map to place markers ➤
+                      1. Select the path by clicking on the map to place markers
+                      ➤
                     </div>
 
                     <br />
@@ -151,51 +152,70 @@ class NewTrailForm extends React.Component {
                         placeholder="...trail description"
                       />
                     </div>
-                    <br/>
+                    <br />
+                    <br />
                     <div className="dropdown">
                       <button type="button" className="dropbtn">
                         Difficulty Level ☰
                       </button>
                       <div className="dropdown-content">
-                        <p>EASY (All experience levels welcome)</p>
-                        <p>MEDIUM (Most experience levels welcome)</p>
-                        <p>
-                          HARD (Maybe just stay home, eat chips, and regret
-                          everything you've done)
-                        </p>
+                        <label>
+                          <input
+                            type="radio"
+                            value="easy"
+                            onChange={this.update("difficulty")}
+                          />{" "}
+                          easy
+                        </label>
+                        <label>
+                          <input
+                            type="radio"
+                            value="moderate"
+                            onChange={this.update("difficulty")}
+                          />{" "}
+                          moderate
+                        </label>
+
+                        <label>
+                          <input
+                            type="radio"
+                            value="hard"
+                            onChange={this.update("difficulty")}
+                          />{" "}
+                          hard
+                        </label>
                       </div>
                       {/* <input className='trail-difficulity-text' type="difficulty" value={this.state.difficulty} onChange={this.update("difficulty")} placeholder="Difficulty"/> */}
                     </div>
-                    <div className="bottom-container">
-                      <div className="trail-pet-friendly">
-                        <label className="pet-friendly">
-                          {" "}
-                          Pet friendly?
-                          {/* <input type="checkbox" value={this.state.petFriendly} /> */}
-                          <input
-                            className="pet-friendly"
-                            type="checkbox"
-                            value={this.state.petFriendly}
-                            onClick={this.togglePet.bind(this)}
-                            checked={this.state.petFriendly}
-                          />
-                        </label>
-                      </div>
-                      <div className="trail-paved">
-                        <label className="paved-trail">
-                          {" "}
-                          Paved?
-                          {/* <input type="checkbox" value={this.state.paved} /> */}
-                          <input
-                            className="trail-paved-text"
-                            type="checkbox"
-                            value={this.state.paved}
-                            onClick={this.togglePaved.bind(this)}
-                            checked={this.state.paved}
-                          />
-                        </label>
-                      </div>
+                    <br />
+                    <div className="trail-pet-friendly">
+                      <label className="pet-friendly">
+                        Pet friendly?
+                        {/* <input type="checkbox" value={this.state.petFriendly} /> */}
+                        <input
+                          className="pet-friendly"
+                          type="checkbox"
+                          value={this.state.petFriendly}
+                          onClick={this.togglePet.bind(this)}
+                          checked={this.state.petFriendly}
+                        />
+                      </label>
                     </div>
+                    <br />
+                    <div className="trail-paved">
+                      <label className="paved-trail">
+                        Paved?
+                        {/* <input type="checkbox" value={this.state.paved} /> */}
+                        <input
+                          className="trail-paved-text"
+                          type="checkbox"
+                          value={this.state.paved}
+                          onClick={this.togglePaved.bind(this)}
+                          checked={this.state.paved}
+                        />
+                      </label>
+                    </div>
+                    <br />
                     <div className="input-file">
                       <input
                         className="file-input"
@@ -203,28 +223,34 @@ class NewTrailForm extends React.Component {
                         id="photo-upload"
                         type="file"
                       />
-                      {this.state.picture_url ? (
+                      {/* {this.state.picture_url ? (
                         <img src={this.state.picture_url} />
-                      ) : null}
+                      ) : null} */}
+                    </div>
+                    <br />
+                    <div className="trail-submit">
+                      <input
+                        className="trail-submit-button"
+                        type="submit"
+                        value="create!"
+                      />
+                      {this.renderErrors()}
                     </div>
                     {/* </div> */}
                   </div>
-                  <NewMap
-                    lat={this.state.lat}
-                    lng={this.state.lng}
-                    addWaypoint={this.addWaypoint}
-                    className="new-trail-map"
-                  />
+                  <div className="right-create">
+                    <NewMap
+                      lat={this.state.lat}
+                      lng={this.state.lng}
+                      addWaypoint={this.addWaypoint}
+                      className="new-trail-map"
+                    />
+                    {this.state.picture_url ? (
+                      <img src={this.state.picture_url} className="uploaded"/>
+                    ) : null}
+                  </div>
                 </div>
 
-                <div className="trail-submit">
-                  <input
-                    className="trail-submit-button"
-                    type="submit"
-                    value="Create New Trail"
-                  />
-                  {this.renderErrors()}
-                </div>
                 {/* </div> */}
               </form>
             </div>
