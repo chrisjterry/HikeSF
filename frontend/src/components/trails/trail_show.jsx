@@ -33,26 +33,32 @@ class TrailShow extends React.Component {
     return (
       <div className="trail-show-container">
         <div className="trail-show">
-          <h1 className="trail-title">{trail.title}</h1>
-
-          <div className="show-page-picture-container">
-            <Link className="trail-show-link" to={`/trails/${trail.id}`}>
-              <img
-                className="trail-show-pic"
-                src={trail.picture_url}
-                // height="300px"
-                // width="300px"
-              ></img>
-            </Link>
+          <div className="trail-show-top">
+            <h1 className="trail-title">{trail.title}</h1>
+            <div className="show-page-picture-container">
+              <Link className="trail-show-link" to={`/trails/${trail.id}`}>
+                <img
+                  className="trail-show-pic"
+                  src={trail.picture_url}
+                  // height="300px"
+                  // width="300px"
+                ></img>
+              </Link>
+            </div>
           </div>
+
+          <br />
+          <br />
           <div className="main-body-container">
             <div className="trail-description-container">
               <div className="trail-description">
                 <div className="trail-show-description">
-                  DESCRIPTION - {trail.description}
+                  〆 About this trail
+                  <p>{trail.description}</p>
                 </div>
                 <div className="trail-show-difficulity">
-                  DIFFICULTY - {trail.difficulty}
+                  〆 DIFFICULTY
+                  <p>{trail.difficulty}</p>
                 </div>
                 <br />
                 <div className="reviews-container">
@@ -71,15 +77,17 @@ class TrailShow extends React.Component {
               </div>
 
               <div className="weather-info">
-                <p>CONDITION: {weather.summary}</p>
-                <br />
-                <p>TEMPERATURE: {weather.temperature}°F</p>
-                <br />
-                <p>WINDSPEED: {weather.windSpeed} mph</p>
-                <br />
-                <p>CHANCE OF RAIN: {weather.precipProbability}</p>
-                <br />
-                <p>HUMIDITY: {weather.humidity}</p>
+                  <p>☼ {weather.summary}</p>
+                  <br />
+                  <p>℉ {weather.temperature}</p>
+                  <br />
+                  <p>⇶ {weather.windSpeed} mph</p>
+                  <br />
+                  <p>☂ {weather.precipProbability}% chance</p>
+                  <br />
+                  <p>♨ {weather.humidity} relative humidity</p>
+                  <br />
+                  <p>☺ 100% chance of having a great time</p>
               </div>
             </div>
           </div>
