@@ -28,7 +28,7 @@ class TrailShow extends React.Component {
   render() {
     const { trail, weather } = this.props;
     // console.log(weather)
-    if(!Object.keys(weather).length || !Object.keys(trail).length) return null;
+    if(!Object.keys(weather).length || trail._id !== this.props.match.params.id) return null;
     
     return (
       <div className='trail-show-container'>
