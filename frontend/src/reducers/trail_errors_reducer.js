@@ -11,13 +11,13 @@ import {
     Object.freeze(state);
     switch (action.type) {
       case RECEIVE_TRAIL_ERRORS:
-        return action.errors;
+        return action.errors.response.data;
       case RECEIVE_TRAILS:
         return _nullErrors;
     case RECEIVE_TRAIL:
         return _nullErrors;
     case RECEIVE_NEW_TRAIL:
-        return _nullErrors;
+        return _nullErrors; 
       default:
         return state;
     }

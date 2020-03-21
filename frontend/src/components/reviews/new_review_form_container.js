@@ -5,8 +5,8 @@ import NewReviewForm from "./new_review_form";
 const mapStateToProps = state => {
   return {
     currentUser: state.session.user,
-    currentTrail: state.entities.trails.current
-    // errors: state.errors.reviewErrors
+    currentTrail: state.entities.trails.current,
+    errors: state.errors.reviewErrors
   };
 };
 

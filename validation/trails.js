@@ -32,14 +32,10 @@ module.exports = function validateTrailInput(data) {
         errors.paved = 'Trail paving status must be indicated';
     }
 
-    if (!Validator.isNumeric(data.lat)) {
-        errors.lat = 'Latitude must be a valid number';
+    if (!Validator.isNumeric(data.lat) || !Validator.isNumeric(data.lng)) {
+        errors.start = 'Missing starting point';
     }
 
-    if (!Validator.isNumeric(data.lng)) {
-        errors.lng = 'Longitude must be a valid number';
-    }
-  
     return {
       errors,
       isValid: Object.keys(errors).length === 0

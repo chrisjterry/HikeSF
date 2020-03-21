@@ -55,15 +55,18 @@ router.post('/new',
     upload.single('picture'),
     passport.authenticate('jwt', { session: false }),
     (req, res) => {
-        req.body.petFriendly = req.body.petFriendly.toString()
-        req.body.paved = req.body.paved.toString();
-        req.body.lat = req.body.lat.toString();
-        req.body.lng = req.body.lng.toString();
+        if (req.body.petFriendly) req.body.petFriendly = req.body.petFriendly.toString()
+        if (req.body.paved) req.body.paved = req.body.paved.toString();
+        if (req.body.lat) req.body.lat = req.body.lat.toString();
+        if (req.body.lng) req.body.lng = req.body.lng.toString();
         
       const { errors, isValid } = validateTrailInput(req.body);
-  
+      
       if (!isValid) {
         return res.status(401).json(errors);
+      }
+      if (!req.file) {
+          return res.status(401).json({ photo: 'A photo of the hike must be uploaded' })
       }
       
       const newTrail = new Trail({
