@@ -8,9 +8,11 @@
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
-    /* align-items: flex-start; */
     width: 60%;
-    border: 1px solid green;
+}
+
+.trail-title {
+    margin-bottom: 1rem;
 }
 
 .trail-show-title {
@@ -18,9 +20,8 @@
     margin-bottom: 1.5rem;
 }
 
-.show-page-picture-container {
-    /* display: flex;
-    border: 1px solid blue; */
+.show-page-map {
+   margin: 1rem;
 }
 
 .trail-show-pic {
@@ -28,17 +29,47 @@
     height: 350px;
 }
 
+.map-weather-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-body-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .show-map {
     height: 350px;
     width: 350px;
 }
 
-.show-page-map {
-    border: 1px solid red;
-    padding: 15px;
+.trail-descrption {
+    display: flex;
+    flex-direction: column;
 }
 
-
-.weather-info{
-    border: 1px solid blue;
+.trail-show-description {
+    width: 100%;
+    height: auto;
+    padding-bottom: 1.5rem;
 }
+
+.trail-show-difficulity {
+    width: 100%;
+    height: auto;
+}
+
+.trail-title, .trail-descrption, .weather-info, .reviews-container{
+    font-family: 'Sen', sans-serif;
+}
+
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    height: 150px;
+}
+
