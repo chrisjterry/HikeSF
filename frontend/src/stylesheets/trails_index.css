@@ -96,6 +96,8 @@
     height: 430px;
     width: 600px;
     padding: 20px;
+    border: solid 6x whitesmoke;
+    border-radius: 5px;
 }
 
 .trails-list-internal {
@@ -107,6 +109,10 @@
     padding: 20px 20px 0 20px;
     width: 400px;
     height: 400px;
+}
+
+.index-img {
+    border-radius: 8px;
 }
 
 .trails-header-text {
@@ -133,6 +139,11 @@
 .index-trail-title {
     font-size: 40px;
     text-transform: uppercase;
+}
+
+.index-trail-description {
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.507);
 }
 
 
