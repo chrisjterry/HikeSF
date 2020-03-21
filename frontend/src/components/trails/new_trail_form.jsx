@@ -113,13 +113,13 @@ class NewTrailForm extends React.Component {
         // debugger
         return (
             <div className='new-trail-container'>
-                <div className="new-trail-form">
+                <div className="new-trail-form-whole-wrapper">
+                    <div className='create-trail-form-container'>
                     <form onSubmit={this.handleSubmit}>
                         <div className='trail-form-wrapper'>
                             <div className='create-trail-form'>
                                 Create New Trail
                             </div>
-                            <NewMap lat={this.state.lat} lng={this.state.lng} addWaypoint={this.addWaypoint} />
                             <div className='trail-title'>
                                 <input className='trail-title-text' type="text" value={this.state.title} onChange={this.update("title")} placeholder="Title"/>
                             </div>
@@ -153,6 +153,10 @@ class NewTrailForm extends React.Component {
                             </div>
                         </div>
                     </form>
+                    </div>
+                    <div className='new-trail-map-container'>
+                        <NewMap className='new-trail-map' lat={this.state.lat} lng={this.state.lng} addWaypoint={this.addWaypoint} />
+                    </div>
                 </div>
             </div>
         );

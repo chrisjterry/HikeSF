@@ -8,19 +8,27 @@
     background-size: cover;
     background-color: #464646;
     height: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.new-trail-form {
+.new-trail-form-whole-wrapper {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.create-trail-form-container {
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.486);
     margin-top: 10px;
     padding: 20px;
     border-radius: 5px;
     height: 60%;
     justify-content: flex-start;
-    background: white; 
+    background: white;
 }
 
 .trail-title-text, .trail-difficulity-text, .trail-description-text {
@@ -69,3 +77,20 @@
     margin-bottom: 1rem;
 }
 
+.new-trail-map-container {
+    height: 400px;
+    width: 400px;
+    box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.486);
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.new-trail-map {
+    width: 100%;
+    height: auto;
+}
+
+.create-map {
+    width: 400px;
+    height:100%;
+}
