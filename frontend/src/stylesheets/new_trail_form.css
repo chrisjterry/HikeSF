@@ -210,9 +210,15 @@
 .create-map {
     width: 400px;
     height:100%;
+}
 .not-uploaded {
     margin-top: 30px;
     height: 250px;
     width: 200px;
     opacity: 60%;
+}
+
+.create-trail-map {
+    height: 400px;
+    width: 600px;
 }
