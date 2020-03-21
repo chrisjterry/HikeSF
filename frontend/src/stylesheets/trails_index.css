@@ -99,6 +99,14 @@
     border: solid 6x whitesmoke;
     border-radius: 5px;
 }
+/* .index-page-map {
+    margin-left: 500px;
+    height: 430px;
+    width: 600px;
+    padding: 20px;
+    border: solid 6x whitesmoke;
+    border-radius: 5px;
+} */
 
 .trails-list-internal {
     display: flex;
