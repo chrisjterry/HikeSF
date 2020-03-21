@@ -34,12 +34,17 @@ class TrailShow extends React.Component {
       <div className='trail-show-container'>
         <div className="trail-show">
           <h1 className="trail-title">Trail title goes here-{trail.title}</h1>
-          <ShowMap lat={this.props.trail.lat} lng={this.props.trail.lng} waypoints={this.props.trail.waypoints} />
-          <div className="trail-show-link">
-            <Link className="trail-show-link" to={`/trails/${trail.id}`}>
-              <img src={Buttercup1} height="300px" width="300px"></img>
-            </Link>
-            <div className="weather-container">
+          
+            <div className='show-page-picture-container'>
+              <Link className="trail-show-link" to={`/trails/${trail.id}`}>
+                <img className='trail-show-pic' src={trail.picture_url} height="300px" width="300px"></img>
+              </Link>
+            </div>
+            <div>
+              <div className='show-page-map'>
+                <ShowMap lat={this.props.trail.lat} lng={this.props.trail.lng} waypoints={this.props.trail.waypoints} />
+              </div>
+              
               <div className="weather-info">
                 <p>Condition: {weather.summary}</p>
                 <p>Temperature: {weather.temperature}°F</p>
@@ -48,7 +53,8 @@ class TrailShow extends React.Component {
                 <p>Humidity: {weather.humidity}</p>
               </div>
             </div>
-          </div>
+            
+    
           <div className="trail-descrption">
             Description - {trail.description}
             Difficulty - {trail.difficulty}

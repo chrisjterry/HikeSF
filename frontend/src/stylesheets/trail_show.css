@@ -1,17 +1,16 @@
 .trail-show-container {
     display: flex;
     justify-content: center;
-    /* border: 1px solid black; */
 }
 
-.trail-show-wrapper {
+.trail-show {
     display: flex;
     flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     /* align-items: flex-start; */
-    width: 80%;
-
+    width: 60%;
+    border: 1px solid green;
 }
 
 .trail-show-title {
@@ -19,7 +18,27 @@
     margin-bottom: 1.5rem;
 }
 
-.trail-descrption, .trail-rating {
-    margin-bottom: 1.25rem;
+.show-page-picture-container {
+    /* display: flex;
+    border: 1px solid blue; */
 }
 
+.trail-show-pic {
+    width: 100%;
+    height: 350px;
+}
+
+.show-map {
+    height: 350px;
+    width: 350px;
+}
+
+.show-page-map {
+    border: 1px solid red;
+    padding: 15px;
+}
+
+
+.weather-info{
+    border: 1px solid blue;
+}
