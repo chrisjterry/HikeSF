@@ -1,7 +1,7 @@
 /* .new-trail-container {
     display: flex;
     justify-content: center;
-    background-image: url('../../src/app/assets/tucky6.jpg');
+    background-image: url('../../src/app/assets/dark_forest_fog_display.jpg');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -20,6 +20,7 @@
     border-radius: 5px;
     height: 60%;
     justify-content: flex-start;
+    background: white; 
 }
 
 .trail-title-text, .trail-difficulity-text, .trail-description-text {
@@ -29,11 +30,14 @@
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
+    font-family: 'Sen', sans-serif;
+    font-size: 1rem;
 }
 
 .create-trail-form {
     font-size: 2rem;
-    color: #fff;
+    color: black;
+    font-family: 'Sen', sans-serif;
 }
 
 .bottom-container {
@@ -52,11 +56,13 @@
     padding-right: 1rem;
     background-color: #0070c9;
     color: #fff;
-    font-size: .8rem;
+    font-size: 1rem;
+    font-family: 'Sen', sans-serif;
 }
 
 .pet-friendly, .paved-trail {
-    color: white;
+    color: black;
+    font-family: 'Sen', sans-serif;
 }
 
 .input-file {

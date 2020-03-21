@@ -29,7 +29,6 @@ class ShowMap extends React.Component {
     this.map = new google.maps.Map(map, mapOptions);
     this.directionsRenderer.setMap(this.map);
     this.directionsRenderer.setOptions({ preserveViewport: true });
-    console.log(this.state.waypoints)
     this.directionsService.route({
       origin: this.state.origin,
       destination: this.state.waypoints[this.state.waypoints.length - 1],
@@ -46,7 +45,7 @@ class ShowMap extends React.Component {
   
   render() {
     return (
-      <div className="map" ref="map">
+      <div className="show-map" ref="map">
         Map
       </div>
     );
