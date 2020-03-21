@@ -70,7 +70,7 @@
 } */
 
 .new-trail-form {
-    background-color: rgb(178, 180, 185);
+    background-image: linear-gradient(white, rgb(178, 180, 185));
 }
 
 .top-form {
