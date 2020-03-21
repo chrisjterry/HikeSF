@@ -2,6 +2,7 @@ import React from "react";
 import { withRouter } from "react-router-dom";
 import NewMap from '../map/new_map';
 import '../../stylesheets/new_trail_form.css';
+import imagehere from './imagehere.png'
 
 class NewTrailForm extends React.Component {
     constructor(props) {
@@ -246,8 +247,10 @@ class NewTrailForm extends React.Component {
                       className="new-trail-map"
                     />
                     {this.state.picture_url ? (
-                      <img src={this.state.picture_url} className="uploaded"/>
-                    ) : null}
+                      <img src={this.state.picture_url} className="uploaded" />
+                    ) : (
+                      <img src={imagehere} className="not-uploaded" />
+                    )}
                   </div>
                 </div>
 
