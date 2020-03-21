@@ -188,3 +188,10 @@
     height: 300px;
     width: 450px;
 }
+
+.not-uploaded {
+    margin-top: 30px;
+    height: 250px;
+    width: 200px;
+    opacity: 60%;
+}
