@@ -1,3 +1,10 @@
+# Demo and Screenshots
+[Live Demo](https://hike-sf.herokuapp.com/#/)
+
+![Splash](./screenshots/splash.png)
+![Trails](./screenshots/trails.png)
+![Trail](./screenshots/trail.png)
+
 # Background and Overview
 HikeSF is a web application that empowers outdoor enthusiasts in and around the San Francisco Bay area to share their favorite hiking trails. In the first entirely crowd-sourced application of its kind, HikeSF allows users to post, experience, and review hikes all in one place. To that effect, our team is building:
 
