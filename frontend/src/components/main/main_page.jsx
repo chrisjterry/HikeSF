@@ -42,27 +42,19 @@ const MainPage = ({ currentUser }) => {
       </div>
       <div className="submain">
         <div>
-          <Link className="all-trails" to={"/trails"}>
             Browse trails created by fellow HikeSF hikers
-          </Link>
           <div>⚘</div>
         </div>
         <div>
-          <Link className="all-trails" to={"/trails/5e72f2a0828a5e3235314e24"}>
             View current weather conditions before heading out
-          </Link>
           <div>❄</div>
         </div>
         <div>
-          <Link className="all-trails" to={"/trails/5e72f2a0828a5e3235314e24"}>
-            Loved the trail? Leave a review
-          </Link>
+            Read reviews and leave reviews
           <div>✰</div>
         </div>
         <div>
-          <Link className="create-trail" to={"/trails/new"}>
             Create your own trails and share the magic!
-          </Link>
           <br/>
           <div>✎</div>
         </div>
