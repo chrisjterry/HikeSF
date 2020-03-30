@@ -1,6 +1,6 @@
 import React from "react";
 import { AuthRoute, ProtectedRoute } from "../util/route_util";
-import { Route, Switch, Link } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import MainPageContainer from "./main/main_page_container";
 import NavContainer from "./nav/nav_container";
@@ -23,11 +23,11 @@ const App = () => (
       <ProtectedRoute exact path="/trails" component={TrailsIndexContainer} />
       <ProtectedRoute exact path="/trails/new" component={NewTrailContainer} />
       <ProtectedRoute exact path="/trails/:id" component={TrailShowContainer} />
-      <Route path="/" component={MainPageContainer} />
+      <Route exact path="/" component={MainPageContainer} />
     </Switch>
     <footer className="footer">
       Thank you for visiting HikeSF! Check out our GitHub repository 
-      <Link to="https://github.com/chrisjterry/HikeSF"> 👥</Link>
+      <a href="https://github.com/chrisjterry/HikeSF"> 👥</a>
     </footer>
   </div>
 );
