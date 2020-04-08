@@ -1,85 +1,5 @@
-/* .new-trail-container {
-    display: flex;
-    justify-content: center;
-    background-image: url('../../src/app/assets/dark_forest_fog_display.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-color: #464646;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.new-trail-form-whole-wrapper {
-    display: flex;
-    flex-direction: row;
-
-}
-
-.create-trail-form-container {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.486);
-    margin-top: 10px;
-    padding: 20px;
-    border-radius: 5px;
-    height: 60%;
-    justify-content: flex-start;
-    background: white;
-    margin-right: 1.5rem;
-}
-
-.trail-title-text, .trail-difficulity-text, .trail-description-text {
-    margin-top: 1.5rem;
-    height: 1.5rem;
-    width: 12.625rem;
-    border-radius: 5px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-family: 'Sen', sans-serif;
-    font-size: 1rem;
-}
-
-.create-trail-form {
-    font-size: 2rem;
-    color: black;
-    font-family: 'Sen', sans-serif;
-}
-
-.bottom-container {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
-
-.trail-submit-button {
-    height: 2rem;
-    width: 100%;
-    margin-bottom: 0.625rem;
-    border-radius: 5px;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background-color: #0070c9;
-    color: #fff;
-    font-size: 1rem;
-    font-family: 'Sen', sans-serif;
-}
-
-.pet-friendly, .paved-trail {
-    color: black;
-    font-family: 'Sen', sans-serif;
-}
-
-.input-file {
-    margin-bottom: 1rem;
-} */
-
 .new-trail-form {
-    background-image: linear-gradient(white, rgb(178, 180, 185));
+    background-color: rgb(232, 232, 244);
 }
 
 .top-form {
@@ -111,22 +31,106 @@
 .trail-title-text {
     width: 10rem;
     height: 2rem;
-    text-align: center;
+    /* text-align: center; */
+    padding: 0 0.5rem 0 0.5rem;
     border-radius: 5px;
+    border: 3px solid rgb(17, 22, 49);
 }
 
 .trail-description-text {
     width: 10rem;
     height: 5rem;
-    text-align: center;
+    /* text-align: center; */
+    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
     border-radius: 5px;
+    border: 3px solid rgb(17, 22, 49);
 }
 
-.dropbtn {
-    /* background-color: linear-gradient(blue, red); */
+.diff:checked {
+    color: green
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.checkmark-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.checkbox-container:hover input ~ .checkmark {
+  background-color: rgb(214, 214, 218);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+  background-color: rgb(12, 33, 52);
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox-container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.radio-container .checkmark-radio:after {
+  top: 9px;
+  left: 9px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* .dropbtn {
     width: 10rem;
     height: 3rem;
-    /* font-size: 16px; */
     border: none;
     border-radius: 5px;
 }
@@ -159,7 +163,7 @@
 
 .dropdown:hover .dropdown-content {display: block; }
 
-.dropdown:hover .dropbtn {background-color: rgb(194, 196, 209);}
+.dropdown:hover .dropbtn {background-color: rgb(194, 196, 209);} */
 
 .input-file {
     display: flex;
@@ -172,14 +176,18 @@
 
 .trail-submit-button {
     border: none;
-    /* height: 3rem;
-    width: 6rem; */
     text-align: center;
     font-family: 'Pacifico', cursive;
     color: rgb(17, 22, 49);
     background-color: transparent;
     font-size: 30px;
+    cursor: pointer;
 }
+
+.trail-submit-button:hover {
+    color: rgb(133, 143, 181);
+}
+
 
 .right-create {
     display: flex;
