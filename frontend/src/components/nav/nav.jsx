@@ -22,7 +22,7 @@ class NavBar extends React.Component {
                 All Trails
               </Link>
             </div>
-            <div className="create-trail">
+            <div className="create-trail-wrap">
               <Link className="create-trail" to={"/trails/new"}>
                 Create New Trail
               </Link>

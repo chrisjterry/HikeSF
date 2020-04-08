@@ -17,9 +17,21 @@
     padding: .6rem;
 }
 
+.create-trail-wrap {
+    margin: 20px;
+}
 .signup-link, .login-link, .all-trails, .profile, .log-out, .create-trail {
     text-decoration: none;
+    margin: 20px;
+    border-bottom: 3px solid white;
 }
+
+
+.signup-link:hover, .login-link:hover, .all-trails:hover, .profile:hover, .create-trail:hover, .log-out:hover {
+    border-bottom: 3px solid #5d6578;
+    transition: all .35s ease-in-out;
+}
+
 .nav-logo {
     height: 70px;
 }
@@ -44,22 +56,8 @@
     display: flex;
 }
 
-.all-trails {
-    padding: 20px;
-}
-
-.profile {
-    padding: 20px;
-}
-
-.log-out {
-    /* padding-right: 10px
-    margin-right: 20px; */
-    padding: 20px;
-}
-
-.login-link {
-    /* margin-right: 20px; */
+.trails-link {
+    margin: 20px;
 }
 
 .left-side-title {
