@@ -21,7 +21,7 @@ const MainPage = ({ currentUser }) => {
   const loggedInHome = () => (
     <div>
       <div className="main-page-logged-in">
-        <div>
+        <div className='main-page-logged-in-inside-container'>
           {/* <img className="main-page-picture" src={fog} alt="" /> */}
           <br />
           <br />
