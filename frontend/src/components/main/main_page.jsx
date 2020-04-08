@@ -21,7 +21,7 @@ const MainPage = ({ currentUser }) => {
   const loggedInHome = () => (
     <div>
       <div className="main-page-logged-in">
-        <div className='main-page-logged-in-inside-container'>
+        <div className="main-page-logged-in-inside-container">
           {/* <img className="main-page-picture" src={fog} alt="" /> */}
           <br />
           <br />
@@ -39,23 +39,28 @@ const MainPage = ({ currentUser }) => {
           <br />
           <br />
         </div>
+        <div className="create-trail-wrap">
+          <Link className="create-trail" to={"/trails/new"}>
+            Create New Trail
+          </Link>
+        </div>
       </div>
       <div className="submain">
         <div>
-            Browse trails created by fellow HikeSF hikers
+          Browse trails created by fellow HikeSF hikers
           <div>⚘</div>
         </div>
         <div>
-            View current weather conditions before heading out
+          View current weather conditions before heading out
           <div>❄</div>
         </div>
         <div>
-            Read reviews and leave reviews
+          Read reviews and leave reviews
           <div>✰</div>
         </div>
         <div>
-            Create your own trails and share the magic!
-          <br/>
+          Create your own trails and share the magic!
+          <br />
           <div>✎</div>
         </div>
       </div>

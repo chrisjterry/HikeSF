@@ -22,7 +22,7 @@
     letter-spacing: 3px;
     width: 50%;
     text-transform: uppercase;
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
 
 .main-page-subheader {
@@ -55,3 +55,21 @@
     width: 200px;
 }
 
+.create-trail-wrap {
+    display: flex;
+    align-items: center;
+    width: 17%;
+}
+
+.create-trail {
+    text-decoration: none;
+    font-family: 'Pacifico', cursive;
+    color: #fafafa;
+    font-size: 3rem;
+}
+
+.create-trail:hover {
+    cursor: pointer;
+    transition: 0.5s;
+    text-shadow: 1px 1px 10px white, 0 0 15px white, 0 0 20px white;
+}

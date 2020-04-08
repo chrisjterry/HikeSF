@@ -17,17 +17,15 @@
     padding: .6rem;
 }
 
-.create-trail-wrap {
-    margin: 20px;
-}
-.signup-link, .login-link, .all-trails, .profile, .log-out, .create-trail {
+
+.signup-link, .login-link, .all-trails, .profile, .log-out {
     text-decoration: none;
     margin: 20px;
     border-bottom: 3px solid white;
 }
 
 
-.signup-link:hover, .login-link:hover, .all-trails:hover, .profile:hover, .create-trail:hover, .log-out:hover {
+.signup-link:hover, .login-link:hover, .all-trails:hover, .profile:hover, .log-out:hover {
     border-bottom: 3px solid #5d6578;
     transition: all .35s ease-in-out;
 }
