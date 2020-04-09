@@ -21,3 +21,39 @@
     sans-serif;
 }
 
+.pulsate-1 {
+    -webkit-animation: pulsate1 4s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+
+.pulsate-2 {
+    -webkit-animation: pulsate2 4s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.5;
+}
+
+@-webkit-keyframes pulsate1 {
+    0% { 
+        opacity: 0.5;
+    }
+    50% { 
+        opacity: 1.0;
+    }
+    100% { 
+        opacity: 0.5;
+    }
+}
+
+@-webkit-keyframes pulsate2 {
+    0% { 
+        opacity: 1.0;
+    }
+    50% { 
+        opacity: 0.5;
+    }
+    100% { 
+        opacity: 1.0;
+    }
+}
+

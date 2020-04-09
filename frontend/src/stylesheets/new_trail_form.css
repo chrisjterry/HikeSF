@@ -46,10 +46,6 @@
     border: 3px solid rgb(17, 22, 49);
 }
 
-.diff:checked {
-    color: green
-}
-
 .checkbox-container {
   display: block;
   position: relative;
