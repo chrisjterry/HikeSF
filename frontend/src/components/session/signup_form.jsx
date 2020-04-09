@@ -14,7 +14,7 @@ class SignupForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearedErrors = false;
-    
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -144,6 +144,9 @@ class SignupForm extends React.Component {
                 value="Sign Up!"
               />
               {this.renderErrors()}
+            </div>
+            <div className="demo-user" onClick={this.handleDemo}>
+              Demo User
             </div>
           </div>
         </form>
