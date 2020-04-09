@@ -74,7 +74,7 @@
     font-family: 'Sen', sans-serif;
 }
 
-.sumbit-button:hover {
+.sumbit-button:hover, .demo-user:hover {
     transition: all .2s ease-in-out;
     background-color: rgb(219, 219, 219);
 }
@@ -90,4 +90,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
