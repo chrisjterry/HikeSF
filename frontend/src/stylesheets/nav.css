@@ -10,6 +10,7 @@
     font-family: 'Changa', sans-serif; 
     /* background-color: transparent; */
     background-color: yellow;
+    z-index: 1;
 }
 
 .right-nav, .left-nav{
