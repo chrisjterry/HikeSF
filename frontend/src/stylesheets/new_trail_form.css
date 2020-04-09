@@ -4,8 +4,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
-  margin: 0;
-  padding: 0;
+  padding-top: 5rem;
 }
 
 .new-trail-form {
@@ -43,6 +42,16 @@
   padding: 0.8rem 0.5rem 0.8rem 0.5rem;
   border-radius: 5px;
   border: 3px solid rgb(225, 228, 245);
+}
+
+.little-buttons {
+  display: flex;
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
 }
 
 .checkbox-container {
@@ -184,10 +193,10 @@
 }
 
 .uploaded {
-    margin-top: 25px;
-    height: 300px;
-    width: 450px;
+    height: 15rem;
+    width: 25rem;
     border-radius: 0.7rem;
+    padding-bottom: 1.2rem;
 }
 
 /* .new-trail-map-container {
@@ -199,11 +208,11 @@
 } */
 
 .not-uploaded {
-    margin-top: 30px;
-    height: 250px;
-    width: 200px;
+    height: 13rem;
+    width: 10rem;
     opacity: 60%;
     border-radius: 0.7rem;
+    padding-bottom: 1.2rem;
 }
 
 .create-trail-map {

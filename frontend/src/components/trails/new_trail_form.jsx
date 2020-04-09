@@ -128,18 +128,20 @@ class NewTrailForm extends React.Component {
               <div>
                 1. SELECT THE PATH BY CLICKING ON THE TRAIL TO PLACE MARKERS ➤
               </div>
+              <br />
               <div>2. FILL IN TRAIL DETAILS BELOW</div>
-              {/* <div className="details"> */}
               <div>
-              <input
-                // className="trail-title-text"
-                className="create-title-text"
-                type="text"
-                value={this.state.title}
-                onChange={this.update("title")}
-                placeholder="...trail title"
-              />
+                <br />
+                <input
+                  // className="trail-title-text"
+                  className="create-title-text"
+                  type="text"
+                  value={this.state.title}
+                  onChange={this.update("title")}
+                  placeholder="...trail title"
+                />
               </div>
+              <br />
               <div>
                 <textarea
                   rows="5"
@@ -152,68 +154,78 @@ class NewTrailForm extends React.Component {
                   placeholder="...trail description"
                 ></textarea>
               </div>
-              <div>
-                <label className="checkbox-container radio-container">
-                  <input
-                    type="radio"
-                    value="easy"
-                    name="difficulty"
-                    // checked
-                    className="diff"
-                    onChange={this.update("difficulty")}
-                  />{" "}
-                  <span className="checkmark checkmark-radio"></span>
-                  Easy
-                </label>
-                <label className="checkbox-container radio-container">
-                  <input
-                    type="radio"
-                    value="moderate"
-                    name="difficulty"
-                    onChange={this.update("difficulty")}
-                  />{" "}
-                  <span className="checkmark checkmark-radio"></span>
-                  Moderate
-                </label>
-
-                <label className="checkbox-container radio-container">
-                  <input
-                    type="radio"
-                    value="hard"
-                    name="difficulty"
-                    onChange={this.update("difficulty")}
-                  />{" "}
-                  <span className="checkmark checkmark-radio"></span>
-                  Hard
-                </label>
+              <br />
+              <div className="little-buttons">
+                <div>
+                  <label className="checkbox-container radio-container">
+                    <input
+                      type="radio"
+                      value="easy"
+                      name="difficulty"
+                      // checked
+                      className="diff"
+                      onChange={this.update("difficulty")}
+                    />{" "}
+                    <span className="checkmark checkmark-radio"></span>
+                    Easy
+                  </label>
+                  <br />
+                  <label className="checkbox-container radio-container">
+                    <input
+                      type="radio"
+                      value="moderate"
+                      name="difficulty"
+                      onChange={this.update("difficulty")}
+                    />{" "}
+                    <span className="checkmark checkmark-radio"></span>
+                    Moderate
+                  </label>
+                  <br />
+                  <label className="checkbox-container radio-container">
+                    <input
+                      type="radio"
+                      value="hard"
+                      name="difficulty"
+                      onChange={this.update("difficulty")}
+                    />{" "}
+                    <span className="checkmark checkmark-radio"></span>
+                    Hard
+                  </label>
+                </div>
+                <br />
+                <div className="checkboxes">
+                  <div>
+                    <label className="checkbox-container">
+                      {/* <input type="checkbox" value={this.state.petFriendly} /> */}
+                      <input
+                        type="checkbox"
+                        value={this.state.petFriendly}
+                        onClick={this.togglePet.bind(this)}
+                        checked={this.state.petFriendly}
+                      />
+                      <span className="checkmark small-box"></span>
+                      Pet friendly?
+                    </label>
+                  </div>
+                  <br />
+                  <div>
+                    <label className="checkbox-container">
+                      {/* <input type="checkbox" value={this.state.paved} /> */}
+                      <input
+                        type="checkbox"
+                        value={this.state.paved}
+                        onClick={this.togglePaved.bind(this)}
+                        checked={this.state.paved}
+                      />
+                      <span className="checkmark small-box"></span>
+                      Paved?
+                    </label>
+                  </div>
+                </div>
               </div>
-              <div>
-                <label className="checkbox-container">
-                  {/* <input type="checkbox" value={this.state.petFriendly} /> */}
-                  <input
-                    type="checkbox"
-                    value={this.state.petFriendly}
-                    onClick={this.togglePet.bind(this)}
-                    checked={this.state.petFriendly}
-                  />
-                  <span className="checkmark small-box"></span>
-                  Pet friendly?
-                </label>
-              </div>
-              <div>
-                <label className="checkbox-container">
-                  {/* <input type="checkbox" value={this.state.paved} /> */}
-                  <input
-                    type="checkbox"
-                    value={this.state.paved}
-                    onClick={this.togglePaved.bind(this)}
-                    checked={this.state.paved}
-                  />
-                  <span className="checkmark small-box"></span>
-                  Paved?
-                </label>
-              </div>
+              <br />
               <div>3. UPLOAD AN IMAGE</div>
+              <br />
               <br />
               <div>
                 <label className="input-label">
