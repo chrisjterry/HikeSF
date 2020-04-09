@@ -184,7 +184,7 @@ componentDidMount() {
     changeRating={this.changeRating}
     starDimension="20px"
     starSpacing="1px"
-    starRatedColor="green"
+    starRatedColor="blue"
 />
 ```
 

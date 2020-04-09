@@ -1,7 +1,9 @@
 .trail-show-container {
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(white, gray);
+    background-color: rgb(228, 228, 247);
+    padding-top: 3rem;
+    /* background-image: linear-gradient(white, red); */
 }
 
 .trail-show {
@@ -15,6 +17,7 @@
 .trail-title {
     font-size: 60px;
     margin-bottom: 1rem;
+    padding-right: 1rem;
     /* font-family: 'Dokdo', cursive; */
     /* font-family: 'Pacifico', cursive; */
     font-family: 'Sen', sans-serif;
