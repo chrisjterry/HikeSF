@@ -15,66 +15,64 @@ class NavBar extends React.Component {
   getLinks() {
     if (this.props.loggedIn) {
       return (
-        <div className="logged-in-home-page-container">
+        <div className="nav">
+          {/* <div className="logged-in-home-page-container"> */}
           {/* <div className="left-side-logged-in-container">
           </div> */}
-          <div className='left-div'>
+          <div className="left-nav">
             <a href="https://github.com/chrisjterry/HikeSF">
               <i className="fab fa-github-alt"></i>
             </a>
-            <Link className="view-trails" to={"/trails"}>
-                View Trails
+            <Link className="nav-link" to={"/trails"}>
+              View Trails
             </Link>
-            <Link className="new-trail" to={"/trails/new"}>
-                Create a Trail
+            <Link className="nav-link" to={"/trails/new"}>
+              Create a Trail
             </Link>
           </div>
           <div className="nav-bar-logo">
             <Link to="/">
-              <img className="nav-logo-loggedin " src={logo} alt="" />
+              <img className="nav-logo" src={logo} alt="" />
             </Link>
           </div>
-          <div className="right-side-nav-logged-in-container">
-            <div className="profile-link">
-              <Link className="profile" to={"/profile"}>
-                Profile
-              </Link>
-            </div>
-            <div className="logout-button">
-              <Link className="log-out" to="/" onClick={this.logoutUser}>
-                Log out
-              </Link>
-            </div>
+          <div className="right-nav">
+            {/* <div> */}
+            <Link className="nav-link" to={"/profile"}>
+              Profile
+            </Link>
+            {/* </div> */}
+            {/* <div className="logout-button"> */}
+            <Link className="nav-link" to="/" onClick={this.logoutUser}>
+              Log out
+            </Link>
+            {/* </div> */}
           </div>
         </div>
       );
     } else {
       return (
-        <div className="nav-bar-container">
-          {/* <div className="left-side-nav-bar">
-            <h3>HikeSF</h3>
-          </div> */}
-          <div className="github-icon">
+        <div className="nav">
+          {/* <div className="github-icon"> */}
             <a href="https://github.com/chrisjterry/HikeSF">
               <i className="fab fa-github-alt"></i>
             </a>
-          </div>
+          {/* </div> */}
           <div className="nav-bar-logo">
             <Link to="/">
               <img className="nav-logo " src={logo} alt="" />
             </Link>
           </div>
-          <div className="right-side-nav-bar">
-            <div className="signup">
-              <Link className="signup-link" to={"/register"}>
+          <div className="right-nav">
+            {/* <div className="signup"> */}
+              <Link className="nav-link" to={"/register"}>
                 Sign up
               </Link>
-            </div>
-            <div className="login">
-              <Link className="login-link" to={"/login"}>
+            {/* </div> */}
+            {/* <div className="login"> */}
+              <Link className="nav-link" to={"/login"}>
                 Log in
               </Link>
-            </div>
+            {/* </div> */}
           </div>
         </div>
       );
@@ -82,8 +80,7 @@ class NavBar extends React.Component {
   }
   render() {
     return (
-      <div className='nav-bar-parent'>
-        {/* <h1>This is HikeSF</h1> */}
+      <div>
         {this.getLinks()}
       </div>
     );

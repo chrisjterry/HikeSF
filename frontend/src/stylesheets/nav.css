@@ -1,82 +1,38 @@
-.nav-bar-container, .logged-in-home-page-container {
+/* .nav-bar-container, .logged-in-home-page-container { */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    /* box-sizing: border-box; */
+    /* margin: 5px 20px; */
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-family: 'Changa', sans-serif; 
+    /* background-color: transparent; */
+    background-color: yellow;
+}
+
+.right-nav, .left-nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    margin: 5px 20px;
-    position: absolute;
-    width: 100%;
-    z-index: 99;
-    font-family: 'Changa', sans-serif;  
-    margin: 0 auto;
-    padding: 20px;
 }
 
-.right-side-nav-bar, .github-icon {
-    display: flex;
-    font-family: 'Changa', sans-serif;
-    min-width: 300px;
-}
-
-.right-side-nav-bar {
-    justify-content: flex-end;
-}
-
-.signup, .login {
-    display: flex;
-}
-
-.signup-link, .login-link, .profile, .log-out, .view-trails, .new-trail {
+/* .signup-link, .login-link, .profile, .log-out, .view-trails, .new-trail { */
+.nav-link{
     text-decoration: none;
     margin: 20px;
-    border-bottom: 3px solid white;
-    display: flex;
+    border-bottom: 0.2rem solid white;
 }
 
-
-.signup-link:hover, .login-link:hover, .profile:hover, .log-out:hover, .view-trails:hover, .new-trail:hover {
+/* .signup-link:hover, .login-link:hover, .profile:hover, .log-out:hover, .view-trails:hover, .new-trail:hover { */
+.nav-link:hover {
     border-bottom: 3px solid #5d6578;
     transition: all .35s ease-in-out;
 }
 
 .nav-logo {
-    height: 8vh;
+    height: 10vh;
 }
-
-.logout {
-    border-bottom: 3px solid #5d6578;
-}
-
-.logout-button {
-    font-family: 'Changa', sans-serif;
-}
-
-.left-side-logged-in-container {
-    display: flex;
-}
-
-.right-side-nav-logged-in-container, .left-div {
-    display: flex;
-    align-items: center;
-    min-width: 350px;
-}
-
-.right-side-nav-logged-in-container {
-    justify-content: flex-end;
-}
-
-.trails-link {
-    margin: 20px;
-}
-
-.left-side-title {
-    margin-left: 1.25rem;
-}
-
-.nav-logo-loggedin {
-    height: 8vh;
-}
-
 
 .fab {
     font-size: 1.75rem;
