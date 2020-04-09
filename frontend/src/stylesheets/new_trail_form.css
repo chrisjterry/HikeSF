@@ -1,11 +1,25 @@
 .new-trail-form {
-    background-color: rgb(232, 232, 244);
+    /* background-color: rgb(232, 232, 244); */
+    background: url('../app/assets/fog.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* changes */
+    height: 109vh;
+    width: 100vw;
 }
 
 .top-form {
     display: flex;
     justify-content: space-evenly;
-    padding: 24px
+    padding: 24px;
+
+    /* changes */
+    position: absolute;
+    top: 9%;
+    left: 15%;
+    color: #fafafa;
 }
 
 .top-form-header {
@@ -20,7 +34,7 @@
     font-size: 80px;
     width: 20rem;
     text-align: center;
-    color: rgb(17, 22, 49);
+    color: #fafafa
 }
 
 .top-form-header div {
@@ -124,6 +138,10 @@
   background: white;
 }
 
+.small-box {
+  border: 1px solid #fafafa;
+}
+
 /* .dropbtn {
     width: 10rem;
     height: 3rem;
@@ -190,11 +208,11 @@
 .trail-submit-button {
     text-align: center;
     font-family: 'Pacifico', cursive;
-    color: rgb(17, 22, 49);
+    color: #fafafa;
     background-color: transparent;
     font-size: 30px;
     cursor: pointer;
-    border: 2px solid rgb(17, 22, 49);
+    border: 1px solid #fafafa;
     padding: 0.5rem;
     border-radius: 1rem;
     width: 10rem;
@@ -210,7 +228,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* align-items: flex-start; */
+
+    /* changes */
+    position: absolute;
+    left: 100%;
 }
 
 .uploaded {

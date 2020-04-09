@@ -1,0 +1,13 @@
+.user-trails {
+    display: flex;
+    background: url('../app/assets/fog.jpg');
+    height: 85vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.user-trails-list {
+    display: flex;
+}
+

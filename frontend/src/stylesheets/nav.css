@@ -4,6 +4,11 @@
     justify-content: space-between;
     box-sizing: border-box;
     margin: 5px 10px 5px 20px;
+    position: absolute;
+    width: 95vw;
+    z-index: 99;
+
+
 }
 
 
@@ -17,16 +22,11 @@
     padding: .6rem;
 }
 
-.log-out, .profile {
-    display: flex;
-    padding: .6rem;
-}
-
-
 .signup-link, .login-link, .profile, .log-out {
     text-decoration: none;
     margin: 20px;
     border-bottom: 3px solid white;
+    display: flex;
 }
 
 
@@ -45,7 +45,16 @@
     align-items: center;
     font-family: 'Changa', sans-serif;  
     margin: 5px 10px 5px 20px;
+
+    /* changes */
+    position: absolute;
+    width: 97vw;
+    z-index: 99;
 }   
+
+.logout {
+    border-bottom: 3px solid #5d6578;
+}
 
 .logout-button {
     font-family: 'Changa', sans-serif;
@@ -57,6 +66,7 @@
 
 .right-side-nav-logged-in-container {
     display: flex;
+    align-items:center
 }
 
 .trails-link {
@@ -69,4 +79,9 @@
 
 .nav-logo-loggedin {
     height: 8vh;
+}
+
+
+.fab {
+    font-size: 1.75rem;
 }

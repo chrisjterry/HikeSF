@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom"
+import '../../stylesheets/profile.css'
 
 class Profile extends React.Component {
     // constructor(props) {
@@ -28,9 +29,9 @@ class Profile extends React.Component {
                     <div className="user-trails-list">
                         {this.props.trails.map((trail, i) => (
                             <div className="user-trails-internal">
-                                <div>
+                                <div className='user-trails-internal-child'>
                                     <Link to={`/trails/${trail._id}`}>
-                                        <img 
+                                        <img className='profile-pic'
                                             src={trail.picture_url}
                                             height="300px" 
                                             width="300px"

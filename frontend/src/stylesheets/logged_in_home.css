@@ -5,7 +5,13 @@
     display: flex;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 70vh;
+    /* height: 70vh; */
+
+
+
+
+    position: relative;
+    height: 100vh;
 }
 
 .main-inner {
@@ -58,6 +64,12 @@
     width: 100%;
     color: rgb(214, 215, 216);
     text-transform: uppercase;
+
+
+
+
+    position: absolute;
+    bottom: 0%;
 }
 .submain div {
     display: flex;

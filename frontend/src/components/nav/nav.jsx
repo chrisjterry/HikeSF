@@ -18,6 +18,11 @@ class NavBar extends React.Component {
         <div className="logged-in-home-page-container">
           {/* <div className="left-side-logged-in-container">
           </div> */}
+          <div className='github-icon'>
+            <a href="https://github.com/chrisjterry/HikeSF">
+              <i className="fab fa-github-alt"></i>
+            </a>
+          </div>
           <div className="nav-bar-logo">
             <Link to="/">
               <img className="nav-logo-loggedin " src={logo} alt="" />
@@ -43,6 +48,11 @@ class NavBar extends React.Component {
           {/* <div className="left-side-nav-bar">
             <h3>HikeSF</h3>
           </div> */}
+          <div className="github-icon">
+            <a href="https://github.com/chrisjterry/HikeSF">
+              <i className="fab fa-github-alt"></i>
+            </a>
+          </div>
           <div className="nav-bar-logo">
             <Link to="/">
               <img className="nav-logo " src={logo} alt="" />
