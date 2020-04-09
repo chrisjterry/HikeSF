@@ -92,8 +92,8 @@ router.delete('/:id',
         Trail.findById(req.params.id)
             .then(trail => {
                 if (trail.user.equals(req.user.id)) {
-                    trail.remove();
-                    Trail.find()
+                    trail.remove()
+                    Trail.find({user: req.user.id})
                         .sort({ date: -1 })
                         .then(trails => res.json(trails))
                         .catch(err => res.status(404).json({ noTrailsFound: 'No hikes found' }));
@@ -103,5 +103,12 @@ router.delete('/:id',
             })
     }
 );
+
+router.get(`/user/:userId`, (req, res) =>{
+    Trail.find({user: req.params.userId})
+        .sort({ date: -1 })
+        .then(trails => res.json(trails))
+        .catch(err => res.status(404).json({ noTrailsFound: 'This user has not created a trail yet'}));
+});
 
 module.exports = router;

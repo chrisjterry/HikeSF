@@ -1,6 +1,7 @@
 const User = require('./models/User');
 const Trail = require('./models/Trail');
 const Review = require('./models/Review');
+const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const db = require('./config/keys').mongoURI;
 mongoose
@@ -14,7 +15,7 @@ Review.collection.remove({});
 
 new User({
     email: 'jordan@gmail.com',
-    password: 'password',
+    password: bcrypt.hashSync('password', bcrypt.genSaltSync(10)),
 }).save((err, newUser) => {
     if(err) console.log(err);
     new Trail({
@@ -43,7 +44,7 @@ new User({
 
 new User({
     email: 'jeff@gmail.com',
-    password: 'password',
+    password: bcrypt.hashSync('password', bcrypt.genSaltSync(10)),
 }).save((err, newUser) => {
     if(err) console.log(err);
     new Trail({
@@ -72,7 +73,7 @@ new User({
 
 new User({
     email: 'victoria@gmail.com',
-    password: 'password',
+    password: bcrypt.hashSync('password', bcrypt.genSaltSync(10)),
 }).save((err, newUser) => {
     if(err) console.log(err);
     new Trail({
@@ -101,7 +102,7 @@ new User({
 
 new User({
     email: 'chris@gmail.com',
-    password: 'password',
+    password: bcrypt.hashSync('password', bcrypt.genSaltSync(10)),
 }).save((err, newUser) => {
     if(err) console.log(err);
     new Trail({

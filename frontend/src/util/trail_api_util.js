@@ -11,3 +11,11 @@ export const fetchOneTrail = id => {
 export const createNewTrail = data => {
   return axios.post('/api/trails/new', data)
 }
+
+export const getUserTrails = userId => {
+  return axios.get(`/api/trails/user/${userId}`)
+}
+
+export const deleteTrail = id => {
+  return axios.delete(`/api/trails/${id}`)
+}

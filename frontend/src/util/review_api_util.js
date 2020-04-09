@@ -1,7 +1,7 @@
 import axios from "axios";
 
-export const fetchAllUserReviews =  user_id => {
-  return axios.get(`/api/reviews/user/${user_id}`);
+export const fetchAllUserReviews =  userId => {
+  return axios.get(`/api/reviews/user/${userId}`);
 };
 export const fetchAllTrailReviews = trail_id => {
   return axios.get(`/api/reviews/trail/${trail_id}`);

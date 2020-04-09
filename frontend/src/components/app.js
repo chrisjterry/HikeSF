@@ -9,6 +9,7 @@ import SignupFormContainer from "./session/signup_form_container";
 import TrailsIndexContainer from "./trails/trails_index_container";
 import TrailShowContainer from "./trails/trail_show_container";
 import NewTrailContainer from "./trails/new_trail_form_container";
+import ProfileContainer from "./profile/profile_container";
 import '../stylesheets/footer.css'
 
 
@@ -23,6 +24,7 @@ const App = () => (
       <ProtectedRoute exact path="/trails" component={TrailsIndexContainer} />
       <ProtectedRoute exact path="/trails/new" component={NewTrailContainer} />
       <ProtectedRoute exact path="/trails/:id" component={TrailShowContainer} />
+      <ProtectedRoute exact path="/profile" component={ProfileContainer} />
       <Route exact path="/" component={MainPageContainer} />
     </Switch>
     <footer className="footer">
