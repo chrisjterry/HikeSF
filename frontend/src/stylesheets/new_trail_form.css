@@ -1,63 +1,48 @@
+.new-trail {
+  display: flex;
+  background: url('../app/assets/fog.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .new-trail-form {
-    /* background-color: rgb(232, 232, 244); */
-    background: url('../app/assets/fog.jpg');
-    height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    /* changes */
-    height: 109vh;
-    width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Sen', sans-serif;
+  padding: 2rem;
+  font-size: 0.85rem;
+  width: 50%;
+  color: whitesmoke;
 }
 
-.top-form {
-    display: flex;
-    justify-content: space-evenly;
-    padding: 24px;
-
-    /* changes */
-    position: absolute;
-    top: 9%;
-    left: 15%;
-    color: #fafafa;
+.new-trail-form h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 4rem;
+  /* width: 20rem; */
+  text-align: center;
+  color: #fafafa
 }
 
-.top-form-header {
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-between; */
-    align-items: center;
-}
-
-.top-form-header h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 80px;
-    width: 20rem;
-    text-align: center;
-    color: #fafafa
-}
-
-.top-form-header div {
-    font-family: 'Sen', sans-serif;
-
-}
-
-.trail-title-text {
-    width: 10rem;
-    height: 2rem;
-    /* text-align: center; */
-    padding: 0 0.5rem 0 0.5rem;
-    border-radius: 5px;
-    border: 3px solid rgb(17, 22, 49);
+.create-title-text {
+  width: 10rem;
+  height: 2rem;
+  padding: 0 0.5rem 0 0.5rem;
+  border-radius: 5px;
+  border: 3px solid rgb(225, 228, 245);
+  /* font-size: 0.3rem; */
 }
 
 .trail-description-text {
-    width: 10rem;
-    height: 5rem;
-    /* text-align: center; */
-    padding: 0.8rem 0.5rem 0.8rem 0.5rem;
-    border-radius: 5px;
-    border: 3px solid rgb(17, 22, 49);
+  width: 10rem;
+  height: 5rem;
+  padding: 0.8rem 0.5rem 0.8rem 0.5rem;
+  border-radius: 5px;
+  border: 3px solid rgb(225, 228, 245);
 }
 
 .checkbox-container {
@@ -142,43 +127,6 @@
   border: 1px solid #fafafa;
 }
 
-/* .dropbtn {
-    width: 10rem;
-    height: 3rem;
-    border: none;
-    border-radius: 5px;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  font-size: 10px;
-}
-
-.dropdown-content label {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  right: 0;
-  left: auto;
-}
-
-.dropdown-content p:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block; }
-
-.dropdown:hover .dropbtn {background-color: rgb(194, 196, 209);} */
-
 .input-file {
     display: flex;
     /* justify-content: center;
@@ -193,8 +141,8 @@
 }
 
 .input-label {
-    color: rgba(3, 4, 18, 0.995);
-    border: 2px solid rgba(3, 4, 18, 0.995);
+    color: rgba(208, 221, 241, 0.651);
+    border: 2px solid rgba(208, 221, 241, 0.651);
     padding: 0.3rem;
     border-radius: 0.2rem;
     cursor: pointer;
@@ -210,7 +158,7 @@
     font-family: 'Pacifico', cursive;
     color: #fafafa;
     background-color: transparent;
-    font-size: 30px;
+    font-size: 1.7rem;
     cursor: pointer;
     border: 1px solid #fafafa;
     padding: 0.5rem;
@@ -225,37 +173,41 @@
 
 
 .right-create {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
     /* changes */
-    position: absolute;
-    left: 100%;
+    /* position: absolute;
+    left: 100%; */
 }
 
 .uploaded {
     margin-top: 25px;
     height: 300px;
     width: 450px;
+    border-radius: 0.7rem;
 }
 
-.new-trail-map-container {
+/* .new-trail-map-container {
     height: 400px;
     width: 400px;
     box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.486);
     margin-top: 10px;
     border-radius: 5px;
-}
+} */
 
 .not-uploaded {
     margin-top: 30px;
     height: 250px;
     width: 200px;
     opacity: 60%;
+    border-radius: 0.7rem;
 }
 
 .create-trail-map {
-    height: 400px;
-    width: 600px;
+    height: 20rem;
+    width: 35rem;
+    border-radius: 0.7rem;
 }
