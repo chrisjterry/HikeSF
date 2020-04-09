@@ -36,14 +36,14 @@ class TrailShow extends React.Component {
           <div className="trail-show-top">
             {/* <h1 className="trail-title">{trail.title}</h1> */}
             <div className="show-page-picture-container">
-              <Link className="trail-show-link" to={`/trails/${trail.id}`}>
+              <div className="trail-show-link" to={`/trails/${trail.id}`}>
                 <img
                   className="trail-show-pic"
                   src={trail.picture_url}
                   // height="300px"
                   // width="300px"
                 ></img>
-              </Link>
+              </div>
             </div>
           </div>
 

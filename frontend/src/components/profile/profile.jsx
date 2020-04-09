@@ -39,14 +39,15 @@ class Profile extends React.Component {
                                         />
                                     </Link>
                                 </div>
-
-                                <div className="user-trail-title">{trail.title}</div>
-                                <div className="user-trail-description">{trail.description}</div>
-                                <button className='delete-trail-button' onClick={() => this.props.removeTrail(trail._id)}>Delete Trail</button>
+                                <div className='profile-desc-container'>
+                                    <div className="user-trail-title">{trail.title}</div>
+                                    {/* <br/> */}
+                                    <div className="user-trail-description">{trail.description}</div>
+                                    <button className='delete-trail-button' onClick={() => this.props.removeTrail(trail._id)}>Delete Trail</button>
+                                </div>
                             </div>
                         ))}
                     </div>
-                  ))}
                 </div>
             //   </div>
             );
