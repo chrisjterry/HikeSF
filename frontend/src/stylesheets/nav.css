@@ -9,7 +9,7 @@
     width: 100%;
     font-family: 'Changa', sans-serif; 
     /* background-color: transparent; */
-    background-color: yellow;
+    background-color: rgba(227, 229, 249, 0);
     z-index: 1;
 }
 
