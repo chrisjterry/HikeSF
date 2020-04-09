@@ -5,7 +5,14 @@ import { Link } from "react-router-dom";
 import '../../stylesheets/main_page.css';
 import '../../stylesheets/logged_in_home.css';
 
-const MainPage = ({ currentUser }) => {
+const MainPage = ({ currentUser, history }) => {
+
+  const handleClick = e => {
+    if (!Object.keys(currentUser).length) {
+      e.preventDefault();
+      history.push('/register')
+    }
+  }
 
   const loggedOutHome = () => (
    <div className='main-page-whole-wrapper'>
@@ -25,12 +32,12 @@ const MainPage = ({ currentUser }) => {
           <div className="main-page-header">Ready for your next adventure?</div>
           <div className='right-side-trails-wrapper'>
             <div className="trails-link">
-              <Link className="all-trails pulsate-2" to={"/trails"}>
+              <Link className="all-trails pulsate-2" to={"/trails"} onClick={handleClick}>
                 All Trails
               </Link>
             </div>
             <div className="create-trail-wrap">
-              <Link className="create-trail pulsate-1" to={"/trails/new"}>
+              <Link className="create-trail pulsate-1" to={"/trails/new"} onClick={handleClick}>
                 Create Trail
               </Link>
             </div>
