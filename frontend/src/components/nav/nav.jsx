@@ -16,21 +16,11 @@ class NavBar extends React.Component {
     if (this.props.loggedIn) {
       return (
         <div className="logged-in-home-page-container">
-          <div className="left-side-logged-in-container">
-            <div className="trails-link">
-              <Link className="all-trails" to={"/trails"}>
-                All Trails
-              </Link>
-            </div>
-            <div className="create-trail">
-              <Link className="create-trail" to={"/trails/new"}>
-                Create New Trail
-              </Link>
-            </div>
-          </div>
+          {/* <div className="left-side-logged-in-container">
+          </div> */}
           <div className="nav-bar-logo">
             <Link to="/">
-              <img className="nav-logo " src={logo} alt="" />
+              <img className="nav-logo-loggedin " src={logo} alt="" />
             </Link>
           </div>
           <div className="right-side-nav-logged-in-container">
