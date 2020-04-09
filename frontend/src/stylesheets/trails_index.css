@@ -156,3 +156,8 @@
 }
 
 
+.map {
+    position: relative;
+    overflow: hidden;
+    height: 33vh;
+}

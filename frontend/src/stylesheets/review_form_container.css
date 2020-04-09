@@ -30,3 +30,8 @@
     border-radius: 5px;
     color: #ffffff;
 }
+
+.review-form-submit-button:hover {
+    transition: all .2s ease-in-out;
+    background-color: rgb(219, 219, 219);
+}
