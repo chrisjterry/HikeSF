@@ -41,14 +41,14 @@ class Profile extends React.Component {
                           />
                         </Link>
                         <div className="user-trail-words">
-                            <div className="user-trail-desc">{trail.title}</div>
-                            <div>{trail.description}</div>
-                            <button
+                          <div className="user-trail-title">{trail.title}</div>
+                          <div className="user-trail-desc">{trail.description}</div>
+                          <button
                             className="delete-trail-button"
                             onClick={() => this.props.removeTrail(trail._id)}
-                            >
+                          >
                             DELETE
-                            </button>
+                          </button>
                         </div>
                       </div>
                     </div>
