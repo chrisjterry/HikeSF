@@ -1,28 +1,32 @@
-.nav-bar-container {
+.nav-bar-container, .logged-in-home-page-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    margin: 5px 10px 5px 20px;
+    margin: 5px 20px;
     position: absolute;
-    width: 95vw;
+    width: 100%;
     z-index: 99;
-
-
+    font-family: 'Changa', sans-serif;  
+    margin: 0 auto;
+    padding: 20px;
 }
 
-
-
-.right-side-nav-bar {
+.right-side-nav-bar, .github-icon {
     display: flex;
     font-family: 'Changa', sans-serif;
-}
-.signup, .login {
-    display: flex;
-    padding: .6rem;
+    min-width: 300px;
 }
 
-.signup-link, .login-link, .profile, .log-out {
+.right-side-nav-bar {
+    justify-content: flex-end;
+}
+
+.signup, .login {
+    display: flex;
+}
+
+.signup-link, .login-link, .profile, .log-out, .view-trails, .new-trail {
     text-decoration: none;
     margin: 20px;
     border-bottom: 3px solid white;
@@ -30,7 +34,7 @@
 }
 
 
-.signup-link:hover, .login-link:hover, .profile:hover, .log-out:hover {
+.signup-link:hover, .login-link:hover, .profile:hover, .log-out:hover, .view-trails:hover, .new-trail:hover {
     border-bottom: 3px solid #5d6578;
     transition: all .35s ease-in-out;
 }
@@ -38,19 +42,6 @@
 .nav-logo {
     height: 8vh;
 }
-
-.logged-in-home-page-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-family: 'Changa', sans-serif;  
-    margin: 5px 10px 5px 20px;
-
-    /* changes */
-    position: absolute;
-    width: 97vw;
-    z-index: 99;
-}   
 
 .logout {
     border-bottom: 3px solid #5d6578;
@@ -64,9 +55,14 @@
     display: flex;
 }
 
-.right-side-nav-logged-in-container {
+.right-side-nav-logged-in-container, .left-div {
     display: flex;
-    align-items:center
+    align-items: center;
+    min-width: 350px;
+}
+
+.right-side-nav-logged-in-container {
+    justify-content: flex-end;
 }
 
 .trails-link {
@@ -84,4 +80,5 @@
 
 .fab {
     font-size: 1.75rem;
+    padding: 20px;
 }
