@@ -58,7 +58,7 @@
 .sign-up-submit-button {
     height: 2rem;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 10px;
     border-radius: 5px;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -71,4 +71,13 @@
 .sign-up-submit-button:hover {
     transition: all .2s ease-in-out;
     background-color: rgb(219, 219, 219);
+}
+
+.demo-user {
+    min-height: 32px;
+    margin-bottom: 16px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+    border-image: initial;
 }
