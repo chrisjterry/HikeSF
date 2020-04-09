@@ -90,7 +90,7 @@ class NewReviewForm extends React.Component {
                   changeRating={this.changeRating}
                   starDimension="20px"
                   starSpacing="1px"
-                  starRatedColor="blue"
+                  starRatedColor="yellow"
                   name="rating"
                 />
               </div>

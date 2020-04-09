@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     background-color: rgb(228, 228, 247);
-    padding-top: 3rem;
+    padding: 3rem 0 3rem 0;
     /* background-image: linear-gradient(white, red); */
 }
 
@@ -42,7 +42,9 @@
 .map-weather-container {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-end; */
+    text-align: center;
+    padding-left: 2rem
 }
 
 .main-body-container {
@@ -65,6 +67,10 @@
     flex-direction: column;
 }
 
+.trail-info-head {
+    font-size: 25px;
+    color: rgb(166, 177, 205);
+}
 .trail-show-description, .trail-show-difficulity {
     width: 100%;
     height: auto;
@@ -89,7 +95,7 @@
     margin-bottom: 2rem;
     height: 150px;
     font-size: 15px;
-    color: whitesmoke;
+    color: rgb(4, 17, 45);
 }
 
 .weather-title {

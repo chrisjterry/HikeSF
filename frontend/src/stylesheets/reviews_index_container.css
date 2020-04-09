@@ -5,4 +5,7 @@
 
 .reviews-container-review {
     margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: rgb(166, 177, 205);
 }

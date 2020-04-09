@@ -34,7 +34,7 @@ class TrailShow extends React.Component {
       <div className="trail-show-container">
         <div className="trail-show">
           <div className="trail-show-top">
-            <h1 className="trail-title">{trail.title}</h1>
+            {/* <h1 className="trail-title">{trail.title}</h1> */}
             <div className="show-page-picture-container">
               <Link className="trail-show-link" to={`/trails/${trail.id}`}>
                 <img
@@ -51,13 +51,15 @@ class TrailShow extends React.Component {
           <br />
           <div className="main-body-container">
             <div className="trail-description-container">
+              <h1 className="trail-title">{trail.title}</h1>
+
               <div className="trail-description">
                 <div className="trail-show-description">
-                  〆 About this trail
+                  <div className="trail-info-head">ABOUT THIS TRAIL</div>
                   <p>{trail.description}</p>
                 </div>
                 <div className="trail-show-difficulity">
-                  〆 DIFFICULTY
+                  <div className="trail-info-head">DIFFICULTY</div>
                   <p>{trail.difficulty}</p>
                 </div>
                 <br />
@@ -77,17 +79,17 @@ class TrailShow extends React.Component {
               </div>
 
               <div className="weather-info">
-                  <p>☼ {weather.summary}</p>
-                  <br />
-                  <p>℉ {weather.temperature}</p>
-                  <br />
-                  <p>⇶ {weather.windSpeed} mph</p>
-                  <br />
-                  <p>☂ {Math.floor(weather.precipProbability * 100)}% chance</p>
-                  <br />
-                  <p>♨ {Math.floor(weather.humidity * 100)}% relative humidity</p>
-                  <br />
-                  <p>☺ 100% chance of having a great time</p>
+                <p>☼ {weather.summary}</p>
+                <br />
+                <p>℉ {weather.temperature}</p>
+                <br />
+                <p>⇶ {weather.windSpeed} mph</p>
+                <br />
+                <p>☂ {Math.floor(weather.precipProbability * 100)}% chance</p>
+                <br />
+                <p>♨ {Math.floor(weather.humidity * 100)}% relative humidity</p>
+                <br />
+                <p>☺ 100% chance of having a great time</p>
               </div>
             </div>
           </div>

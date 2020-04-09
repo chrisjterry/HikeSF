@@ -51,7 +51,7 @@ class ReviewIndex extends React.Component {
             changeRating={this.changeRating}
             starDimension="20px"
             starSpacing="1px"
-            starRatedColor="green"
+            starRatedColor="yellow"
           />
           {this.props.reviews.map(review => (
             <div>
@@ -64,7 +64,7 @@ class ReviewIndex extends React.Component {
                 changeRating={this.changeRating}
                 starDimension="20px"
                 starSpacing="1px"
-                starRatedColor="green"
+                starRatedColor="yellow"
               />
               <br />
               {review.date.split("T").shift()}
@@ -86,8 +86,10 @@ class ReviewIndex extends React.Component {
     }
     //  console.log(this.props)
     return (
-      <div className='reviews-container'>
-        <h2 className='reviews-container-review'>Reviews for {this.props.currentTrail.title}</h2>
+      <div className="reviews-container">
+        <h2 className='reviews-container-review'>
+          Reviews for {this.props.currentTrail.title}
+        </h2>
         {this.reviewsList()}
         <NewReviewForm />
       </div>
