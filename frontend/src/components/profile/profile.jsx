@@ -25,29 +25,39 @@ class Profile extends React.Component {
             return (<div>No trails created yet</div>)
         } else {
             return (
-                <div className="user-trails">
-                    <div className="user-trails-list">
-                        {this.props.trails.map((trail, i) => (
-                            <div className="user-trails-internal">
-                                <div className='user-trails-internal-child'>
-                                    <Link to={`/trails/${trail._id}`}>
-                                        <img className='profile-pic'
-                                            src={trail.picture_url}
-                                            height="300px" 
-                                            width="300px"
-                                            className="user-trail-image"
-                                        />
-                                    </Link>
-                                </div>
-
-                                <div className="user-trail-title">{trail.title}</div>
-                                <div className="user-trail-description">{trail.description}</div>
-                                <button className='delete-trail-button' onClick={() => this.props.removeTrail(trail._id)}>Delete Trail</button>
-                            </div>
-                        ))}
+              <div className="user-trails">
+                <div className="user-trails-list">
+                  {this.props.trails.map((trail, i) => (
+                    <div className="user-trails-internal">
+                      {/* <div className='user-trails-internal-child'> */}
+                      <Link to={`/trails/${trail._id}`}>
+                        <img
+                          className="profile-pic"
+                          src={trail.picture_url}
+                          height="300px"
+                          width="300px"
+                          className="user-trail-image"
+                        />
+                      </Link>
+                      {/* </div> */}
+                      <br />
+                      <div className="user-trail-title">{trail.title}</div>
+                      <br />
+                      <div className="user-trail-description">
+                        {trail.description}
+                      </div>
+                      <br />
+                      <button
+                        className="delete-trail-button"
+                        onClick={() => this.props.removeTrail(trail._id)}
+                      >
+                        Delete Trail
+                      </button>
                     </div>
+                  ))}
                 </div>
-            //   </div>
+              </div>
+              //   </div>
             );
         }
     }
