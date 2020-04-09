@@ -78,3 +78,16 @@
     transition: all .2s ease-in-out;
     background-color: rgb(219, 219, 219);
 }
+
+.demo-user {
+    height: 2rem;
+    margin-bottom: 0.625rem;
+    border-radius: 5px;
+    background-color: #0070c9;
+    color: #fff;
+    font-size: 1rem;
+    font-family: 'Sen', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
