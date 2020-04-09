@@ -210,7 +210,7 @@ class NewTrailForm extends React.Component {
                           onClick={this.togglePet.bind(this)}
                           checked={this.state.petFriendly}
                           />
-                        <span className="checkmark"></span>
+                        <span className="checkmark small-box"></span>
                           Pet friendly?
                       </label>
                     </div>
@@ -224,7 +224,7 @@ class NewTrailForm extends React.Component {
                           onClick={this.togglePaved.bind(this)}
                           checked={this.state.paved}
                           />
-                        <span className="checkmark"></span>
+                        <span className="checkmark small-box"></span>
                           Paved?
                       </label>
                     </div>

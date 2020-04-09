@@ -9,11 +9,12 @@ class SignupForm extends React.Component {
       email: "",
       password: "",
       password2: "",
-      errors: {}
+      errors: {},
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.clearedErrors = false;
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -25,9 +26,9 @@ class SignupForm extends React.Component {
   }
 
   update(field) {
-    return e => {
+    return (e) => {
       this.setState({
-        [field]: e.currentTarget.value
+        [field]: e.currentTarget.value,
       });
     };
   }
@@ -37,17 +38,50 @@ class SignupForm extends React.Component {
     let user = {
       email: this.state.email,
       password: this.state.password,
-      password2: this.state.password2
+      password2: this.state.password2,
     };
 
-    this.props.signup(user, this.props.history)
-      .then(() => {
-        if (this.props.signedIn === true)
-          this.props.login({
-            email: this.state.email,
-            password: this.state.password
+    this.props.signup(user, this.props.history).then(() => {
+      if (this.props.signedIn === true)
+        this.props.login({
+          email: this.state.email,
+          password: this.state.password,
+        });
+    });
+  }
+
+  handleDemo(e, speed = 110) {
+    e.preventDefault();
+    const user = { email: "jeff@gmail.com", password: "password" };
+    let { email, password } = user;
+    if (this.state.email !== email) {
+      const inputUser = setInterval(() => {
+        if (this.state.email !== email) {
+          const temp = email.slice(0, this.state.email.length + 1);
+          this.setState({ email: temp });
+        } else {
+          clearInterval(inputUser);
+          animatePassword();
+        }
+      }, speed);
+    }
+
+    const animatePassword = () => {
+      const inputPassword = setInterval(() => {
+        if (this.state.password !== password)
+          this.setState({
+            password: password.slice(0, this.state.password.length + 1),
           });
-      });
+        else {
+          clearInterval(inputPassword);
+          login();
+        }
+      }, speed);
+    };
+    const login = () => {
+      this.props.login(this.state);
+      this.setState({ username: "", password: "" });
+    };
   }
 
   renderErrors() {
@@ -75,21 +109,44 @@ class SignupForm extends React.Component {
       <div className="signup-form-container">
         <form onSubmit={this.handleSubmit}>
           <div className="sign-up-form-container">
-            <div className='sign-up-text'>
-              Please Sign Up
+            <div className="sign-up-text">Please Sign Up</div>
+            <div className="sign-up-email">
+              <input
+                className="sign-up-email-input"
+                type="text"
+                value={this.state.email}
+                onChange={this.update("email")}
+                placeholder="Email"
+              />
             </div>
-            <div className='sign-up-email'>
-              <input className='sign-up-email-input' type="text" value={this.state.email} onChange={this.update("email")} placeholder="Email" />
+            <div className="sign-up-password">
+              <input
+                className="sign-up-password-input"
+                type="password"
+                value={this.state.password}
+                onChange={this.update("password")}
+                placeholder="Password"
+              />
             </div>
-            <div className='sign-up-password'>
-              <input className='sign-up-password-input' type="password" value={this.state.password} onChange={this.update("password")} placeholder="Password" />
+            <div className="confirm-password">
+              <input
+                className="confirm-password-input"
+                type="password"
+                value={this.state.password2}
+                onChange={this.update("password2")}
+                placeholder="Confirm Password"
+              />
             </div>
-            <div className='confirm-password'>
-              <input className='confirm-password-input' type="password" value={this.state.password2} onChange={this.update("password2")} placeholder="Confirm Password" />
-            </div>
-            <div className='sign-up-submit'>
-              <input className='sign-up-submit-button' type="submit" value="Sign Up!" />
+            <div className="sign-up-submit">
+              <input
+                className="sign-up-submit-button"
+                type="submit"
+                value="Sign Up!"
+              />
               {this.renderErrors()}
+            </div>
+            <div className="demo-user" onClick={this.handleDemo}>
+              Demo User
             </div>
           </div>
         </form>

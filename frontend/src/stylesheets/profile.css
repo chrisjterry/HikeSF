@@ -1,3 +1,16 @@
+.user-trails {
+    display: flex;
+    background: url('../app/assets/fog.jpg');
+    height: 85vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.user-trails-list {
+    display: flex;
+}
+
 .user-trails h1 {
     color: rgb(12, 22, 65);
     font-family: 'Pacifico', cursive;
