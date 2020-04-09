@@ -29,6 +29,7 @@
     /* border: 0.2rem solid rgb(12, 22, 65); */
     position: absolute;
     top: 9%;
+    width: 20%;
 }
 
 .user-trails-each {
@@ -37,6 +38,7 @@
 
 .user-trail-image {
     border-radius: 3rem;
+    padding-bottom: 1rem;
 }
 
 .user-trail-words {
@@ -53,10 +55,7 @@
     padding-bottom: 1rem;
 }
 
-.user-trail-desc {
-    color: rgb(17, 66, 75);
-    padding-bottom: 1rem;
-}
+
 
 .delete-trail-button {
     /* background: yellow; */
@@ -84,4 +83,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.user-trail-description {
+    padding-bottom: 1rem;
+    color: rgb(12, 22, 65);
 }
