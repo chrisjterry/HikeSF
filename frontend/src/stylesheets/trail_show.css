@@ -5,9 +5,14 @@
     padding: 3rem 0 3rem 0;
     /* background-image: linear-gradient(white, red); */
     background: url('../app/assets/fog.jpg');
-    height: 100vh;
+    /* height: 100vh; */
     background-size: cover;
     background-repeat: no-repeat;
+    
+    /* change */
+    position: relative;
+    height: 113vh;
+    width: 100%;
 }
 
 .trail-show {
@@ -16,6 +21,10 @@
     margin-left: auto;
     margin-right: auto;
     width: 60%;
+
+    /* changes */
+    position: absolute;
+    top: 9%;
 }
 
 .trail-title {
@@ -26,7 +35,7 @@
     /* font-family: 'Pacifico', cursive; */
     font-family: 'Sen', sans-serif;
     letter-spacing: 10px;
-    color: rgb(6, 6, 41);
+    color: rgb(166, 177, 205);
 }
 
 .trail-show-title {
@@ -86,7 +95,7 @@
 .trail-show-description p, .trail-show-difficulity p {
     font-size: 15px;
     text-transform: capitalize;
-    color: rgb(44, 44, 53);
+    color: #fafafa;
 }
 
 .trail-description, .weather-info, .reviews-container{
@@ -99,7 +108,7 @@
     margin-bottom: 2rem;
     height: 150px;
     font-size: 15px;
-    color: rgb(4, 17, 45);
+    color: #fafafa;
 }
 
 .weather-title {
@@ -109,3 +118,8 @@
 .trail-show-top {
     display: flex;
 }
+
+.reviews-container {
+    color: #fafafa
+}
+
