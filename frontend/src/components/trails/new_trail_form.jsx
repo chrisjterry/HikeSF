@@ -231,17 +231,21 @@ class NewTrailForm extends React.Component {
                     <br />
                     <div>3. UPLOAD AN IMAGE</div>
                     <br />
-                    <div className="input-file">
-                      <input
-                        className="file-input"
-                        onChange={this.handleFile}
-                        id="photo-upload"
-                        type="file"
-                      />
+                    <div>
+                      <label className="input-label"> Import Image
+                        <input
+                          className="file-input"
+                          onChange={this.handleFile}
+                          id="photo-upload"
+                          type="file"
+                        />
+                      </label>
                       {/* {this.state.picture_url ? (
                         <img src={this.state.picture_url} />
                       ) : null} */}
                     </div>
+                    <br />
+                    <br />
                     <br />
                     <div className="trail-submit">
                       <input
