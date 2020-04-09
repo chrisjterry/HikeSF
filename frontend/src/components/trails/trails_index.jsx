@@ -31,7 +31,7 @@ class TrailIndex extends React.Component {
                   fetchTrails={this.props.fetchTrails}
                 />
               {/* </div> */}
-            </div>
+              </div>
             <div className="trails-index-2">
               <div className="trails-list">
                 {this.props.trails.map((trail, i) => (
@@ -54,7 +54,7 @@ class TrailIndex extends React.Component {
                   </div>
                 ))}
               </div>
-            </div>
+            </div>                  
           </div>
         );
   }

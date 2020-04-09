@@ -1,9 +1,13 @@
 .trail-show-container {
     display: flex;
     justify-content: center;
-    background-color: rgb(228, 228, 247);
+    /* background-color: rgb(228, 228, 247); */
     padding: 3rem 0 3rem 0;
     /* background-image: linear-gradient(white, red); */
+    background: url('../app/assets/fog.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .trail-show {

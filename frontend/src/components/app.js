@@ -28,10 +28,10 @@ const App = () => (
       <Route exact path="/" component={MainPageContainer} />
     </Switch>
     <footer className="footer">
-      Thank you for visiting HikeSF! Check out our GitHub repository 
+      {/* Thank you for visiting HikeSF! Check out our GitHub repository 
       <a href="https://github.com/chrisjterry/HikeSF">
         < i className = "fab fa-github-alt" ></i>
-      </a>
+      </a> */}
     </footer>
   </div>
 );
