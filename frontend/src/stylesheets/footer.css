@@ -7,4 +7,12 @@
     padding: 5px;
     margin: 5px;
     word-spacing: 3px;
+    align-items: center;
+}
+
+.fab {
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 25px;
+    color: #545aaa
 }

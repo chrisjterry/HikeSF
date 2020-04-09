@@ -29,7 +29,9 @@ const App = () => (
     </Switch>
     <footer className="footer">
       Thank you for visiting HikeSF! Check out our GitHub repository 
-      <a href="https://github.com/chrisjterry/HikeSF"> 👥</a>
+      <a href="https://github.com/chrisjterry/HikeSF">
+        < i class = "fab fa-github-alt" ></i>
+      </a>
     </footer>
   </div>
 );

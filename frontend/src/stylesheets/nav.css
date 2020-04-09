@@ -17,20 +17,35 @@
     padding: .6rem;
 }
 
-.signup-link, .login-link, .all-trails, .profile, .log-out, .create-trail {
-    text-decoration: none;
+.log-out, .profile {
+    display: flex;
+    padding: .6rem;
 }
+
+
+.signup-link, .login-link, .profile, .log-out {
+    text-decoration: none;
+    margin: 20px;
+    border-bottom: 3px solid white;
+}
+
+
+.signup-link:hover, .login-link:hover, .profile:hover, .log-out:hover {
+    border-bottom: 3px solid #5d6578;
+    transition: all .35s ease-in-out;
+}
+
 .nav-logo {
-    height: 70px;
+    height: 8vh;
 }
 
 .logged-in-home-page-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Changa', sans-serif;
-
-}
+    font-family: 'Changa', sans-serif;  
+    margin: 5px 10px 5px 20px;
+}   
 
 .logout-button {
     font-family: 'Changa', sans-serif;
@@ -44,23 +59,14 @@
     display: flex;
 }
 
-.all-trails {
-    padding: 20px;
-}
-
-.profile {
-    padding: 20px;
-}
-
-.log-out {
-    /* padding-right: 10px;
-    margin-right: 20px; */
-}
-
-.login-link {
-    /* margin-right: 20px; */
+.trails-link {
+    margin: 20px;
 }
 
 .left-side-title {
     margin-left: 1.25rem;
+}
+
+.nav-logo-loggedin {
+    height: 8vh;
 }

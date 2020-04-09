@@ -9,11 +9,12 @@ class LoginForm extends React.Component {
     this.state = {
       email: "",
       password: "",
-      errors: {}
+      errors: {},
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.renderErrors = this.renderErrors.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
@@ -25,9 +26,9 @@ class LoginForm extends React.Component {
   }
 
   update(field) {
-    return e =>
+    return (e) =>
       this.setState({
-        [field]: e.currentTarget.value
+        [field]: e.currentTarget.value,
       });
   }
 
@@ -36,10 +37,44 @@ class LoginForm extends React.Component {
 
     let user = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     };
 
     this.props.login(user);
+  }
+
+  handleDemo(e, speed = 110) {
+    e.preventDefault();
+    const user = { email: "jeff@gmail.com", password: "password" };
+    let { email, password } = user;
+    if (this.state.email !== email) {
+      const inputUser = setInterval(() => {
+        if (this.state.email !== email) {
+          const temp = email.slice(0, this.state.email.length + 1);
+          this.setState({ email: temp });
+        } else {
+          clearInterval(inputUser);
+          animatePassword();
+        }
+      }, speed);
+    }
+
+    const animatePassword = () => {
+      const inputPassword = setInterval(() => {
+        if (this.state.password !== password)
+          this.setState({
+            password: password.slice(0, this.state.password.length + 1),
+          });
+        else {
+          clearInterval(inputPassword);
+          login();
+        }
+      }, speed);
+    };
+    const login = () => {
+      this.props.login(this.state);
+      this.setState({ username: "", password: "" });
+    };
   }
 
   renderErrors() {
@@ -54,22 +89,39 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-      <div className='login-in-container-wrapper'>
-        <div className='form-wrapper'>
+      <div className="login-in-container-wrapper">
+        <div className="form-wrapper">
           <form onSubmit={this.handleSubmit}>
-            <div className='email-password-container'>
-              <div className='sign-in-text'>
-                Please Sign In
+            <div className="email-password-container">
+              <div className="sign-in-text">Please Sign In</div>
+              <div className="email">
+                <input
+                  className="email-input"
+                  type="text"
+                  value={this.state.email}
+                  onChange={this.update("email")}
+                  placeholder="Email"
+                />
               </div>
-              <div className='email'>
-                <input className='email-input' type="text" value={this.state.email} onChange={this.update("email")} placeholder="Email"/>
+              <div className="password">
+                <input
+                  className="password-input"
+                  type="password"
+                  value={this.state.password}
+                  onChange={this.update("password")}
+                  placeholder="Password"
+                />
               </div>
-              <div className='password'>
-                <input className='password-input' type="password" value={this.state.password} onChange={this.update("password")} placeholder="Password"/>
-              </div>
-              <div className='submit-button-container'>
-                <input className='sumbit-button' type="submit" value="Sign In" />
+              <div className="submit-button-container">
+                <input
+                  className="sumbit-button"
+                  type="submit"
+                  value="Sign In"
+                />
                 {this.renderErrors()}
+              </div>
+              <div className='demo-user' onClick={this.handleDemo}>
+                Demo User
               </div>
             </div>
           </form>
