@@ -18,10 +18,16 @@ class NavBar extends React.Component {
         <div className="logged-in-home-page-container">
           {/* <div className="left-side-logged-in-container">
           </div> */}
-          <div className='github-icon'>
+          <div className='left-div'>
             <a href="https://github.com/chrisjterry/HikeSF">
               <i className="fab fa-github-alt"></i>
             </a>
+            <Link className="view-trails" to={"/trails"}>
+                View Trails
+            </Link>
+            <Link className="new-trail" to={"/trails/new"}>
+                Create a Trail
+            </Link>
           </div>
           <div className="nav-bar-logo">
             <Link to="/">
@@ -76,7 +82,7 @@ class NavBar extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className='nav-bar-parent'>
         {/* <h1>This is HikeSF</h1> */}
         {this.getLinks()}
       </div>
