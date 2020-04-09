@@ -39,10 +39,17 @@ const MainPage = ({ currentUser }) => {
           <br />
           <br />
         </div>
-        <div className="create-trail-wrap">
-          <Link className="create-trail" to={"/trails/new"}>
-            Create New Trail
-          </Link>
+        <div className='right-side-trails-wrapper'>
+          <div className="create-trail-wrap">
+            <Link className="create-trail" to={"/trails/new"}>
+              Create New Trail
+            </Link>
+          </div>
+          <div className="trails-link">
+            <Link className="all-trails" to={"/trails"}>
+              All Trails
+            </Link>
+          </div>
         </div>
       </div>
       <div className="submain">

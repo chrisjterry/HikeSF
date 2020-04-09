@@ -45,7 +45,7 @@ class LoginForm extends React.Component {
 
   handleDemo(e, speed = 110) {
     e.preventDefault();
-    const user = { email: "jeff1@gmail.com", password: "123456" };
+    const user = { email: "jeff@gmail.com", password: "password" };
     let { email, password } = user;
     if (this.state.email !== email) {
       const inputUser = setInterval(() => {
