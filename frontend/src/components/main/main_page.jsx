@@ -21,34 +21,19 @@ const MainPage = ({ currentUser }) => {
   const loggedInHome = () => (
     <div>
       <div className="main-page-logged-in">
-        <div className="main-page-logged-in-inside-container">
-          {/* <img className="main-page-picture" src={fog} alt="" /> */}
-          <br />
-          <br />
-          <br />
-          <br />
-          <div className="main-page-header">Ready to get lost?</div>
-          <br />
-          <br />
-
-          <div className="main-page-subheader">
-            get to know San Francisco like you've never known it before.
-          </div>
-          <br />
-          <br />
-          <br />
-          <br />
-        </div>
-        <div className='right-side-trails-wrapper'>
-          <div className="create-trail-wrap">
-            <Link className="create-trail" to={"/trails/new"}>
-              Create New Trail
-            </Link>
-          </div>
-          <div className="trails-link">
-            <Link className="all-trails" to={"/trails"}>
-              All Trails
-            </Link>
+        <div className='main-inner'>
+          <div className="main-page-header">Ready for your next adventure?</div>
+          <div className='right-side-trails-wrapper'>
+            <div className="trails-link">
+              <Link className="all-trails pulsate-2" to={"/trails"}>
+                All Trails
+              </Link>
+            </div>
+            <div className="create-trail-wrap">
+              <Link className="create-trail pulsate-1" to={"/trails/new"}>
+                Create Trail
+              </Link>
+            </div>
           </div>
         </div>
       </div>
