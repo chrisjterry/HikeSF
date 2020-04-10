@@ -18,6 +18,31 @@ class TrailIndex extends React.Component {
 
     render() {
         // debugger
+
+        const trailsList = this.props.trails.length ? (
+          this.props.trails.map((trail, i) => (
+            <div className="trails-list-internal">
+              <div>
+                <Link to={`/trails/${trail._id}`}>
+                  <img
+                    src={trail.picture_url}
+                    height="300px"
+                    width="300px"
+                    className="index-img"
+                  ></img>
+                </Link>
+              </div>
+          
+              {/* <div> */}
+                <div className="index-trail-title">{trail.title}</div>
+                <div className="index-trail-description">{trail.description}</div>
+              {/* </div> */}
+            </div>
+          ))
+        ) : (
+          <h1>No trails here</h1>
+        );
+
         return (
           <div className="trails-index">
             <div className="trails-index-1">
@@ -34,25 +59,7 @@ class TrailIndex extends React.Component {
               </div>
             <div className="trails-index-2">
               <div className="trails-list">
-                {this.props.trails.map((trail, i) => (
-                  <div className="trails-list-internal">
-                    <div>
-                      <Link to={`/trails/${trail._id}`}>
-                        <img
-                          src={trail.picture_url}
-                          height="300px"
-                          width="300px"
-                          className="index-img"
-                        ></img>
-                      </Link>
-                    </div>
-                
-                    {/* <div> */}
-                      <div className="index-trail-title">{trail.title}</div>
-                      <div className="index-trail-description">{trail.description}</div>
-                    {/* </div> */}
-                  </div>
-                ))}
+                {trailsList}
               </div>
             </div>                  
           </div>

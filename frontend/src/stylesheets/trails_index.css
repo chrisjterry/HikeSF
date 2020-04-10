@@ -70,10 +70,11 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* width: 40%; */
+    width: 100%;
     /* flex-direction: column; */
-    border: solid 35px whitesmoke;
+    border: solid 20px whitesmoke;
     /* margin: 10px; */
+    padding-bottom: 20px;
 }
 
 .index-map {
@@ -160,4 +161,12 @@
     position: relative;
     overflow: hidden;
     height: 33vh;
+}
+
+.trails-list > h1 {
+    font-family: 'Pacifico', cursive;
+    color: #fafafa;
+    font-size: 3rem;
+    text-decoration: none;
+    padding-top: 20px;
 }

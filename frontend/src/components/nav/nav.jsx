@@ -53,9 +53,11 @@ class NavBar extends React.Component {
       return (
         <div className="nav">
           {/* <div className="github-icon"> */}
+          <div className='left-nav'>
             <a href="https://github.com/chrisjterry/HikeSF">
               <i className="fab fa-github-alt"></i>
             </a>
+          </div>
           {/* </div> */}
           <div className="nav-bar-logo">
             <Link to="/">
