@@ -5,14 +5,11 @@
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
-}
-
-.user-trails-list {
-    display: flex;
+    padding-top: 3rem;
 }
 
 .user-trails h1 {
-    color: rgb(12, 22, 65);
+    color: rgb(153, 165, 221);
     font-family: 'Pacifico', cursive;
     text-align: center;
     font-size: 8vw;
@@ -25,20 +22,25 @@
     flex-wrap: wrap;
     padding: 3rem;
     font-family: 'Sen', sans-serif;
-    /* background-color: rgba(182, 199, 207, 0.363); */
+    background-color: none;
     /* border: 0.2rem solid rgb(12, 22, 65); */
     position: absolute;
     top: 9%;
     width: 20%;
 }
 
-.user-trails-each {
+.user-trails-internal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     padding: 2rem;
 }
 
 .user-trail-image {
     border-radius: 3rem;
     padding-bottom: 1rem;
+    border-radius: 10rem;
 }
 
 .user-trail-words {

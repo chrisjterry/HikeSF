@@ -27,7 +27,7 @@ new User({
         lat: '37.794446',
         lng: '-122.393375',
         waypoints: JSON.stringify(["{\"lat\":37.80761468740656,\"lng\":-122.41052597338867}","{\"lat\":37.805850835522065,\"lng\":-122.42271423339844}","{\"lat\":37.80710538712925,\"lng\":-122.42835760116577}"]),
-        picture_url: 'https://hike-sf.s3.us-west-1.amazonaws.com/1584826842275.jpg',
+        picture_url: 'https://hike-sf-seeds.s3-us-west-1.amazonaws.com/embarcadero.jpg',
         user: newUser._id
     }).save((err, newTrail) => {
         if(err) console.log(err);
@@ -56,7 +56,7 @@ new User({
         lat: '37.764049286471234',
         lng: '-122.50984025721034',
         waypoints: JSON.stringify(["{\"lat\":37.76635623697312,\"lng\":-122.4529201272456}","{\"lat\":37.774294310865834,\"lng\":-122.45480840239209}","{\"lat\":37.77083422958041,\"lng\":-122.51085584196728}","{\"lat\":37.76942564512426,\"lng\":-122.4862289428711}","{\"lat\":37.76942564512426,\"lng\":-122.4862289428711}"]),
-        picture_url: 'https://hike-sf.s3.us-west-1.amazonaws.com/1584827347561.jpg',
+        picture_url: 'https://hike-sf-seeds.s3-us-west-1.amazonaws.com/goldengate.jpg',
         user: newUser._id
     }).save((err, newTrail) => {
         if(err) console.log(err);
@@ -85,7 +85,7 @@ new User({
         lat: '37.73921032629333',
         lng: '-122.45784044265747',
         waypoints: JSON.stringify(["{\"lat\":37.739458753265815,\"lng\":-122.4545228896576}","{\"lat\":37.738992110503766,\"lng\":-122.45294575075684}","{\"lat\":37.73893034004947,\"lng\":-122.45386004447937}","{\"lat\":37.738864843785436,\"lng\":-122.45437268595276}"]),
-        picture_url: 'https://hike-sf.s3.us-west-1.amazonaws.com/1584827566570.jpg',
+        picture_url: 'https://hike-sf-seeds.s3-us-west-1.amazonaws.com/davidson.jpg',
         user: newUser._id
     }).save((err, newTrail) => {
         if(err) console.log(err);
@@ -114,7 +114,7 @@ new User({
         lat: '37.7439016148603',
         lng: '-122.44226822584324',
         waypoints: JSON.stringify(["{\"lat\":37.742007737453754,\"lng\":-122.44119564651068}","{\"lat\":37.74092111810636,\"lng\":-122.44121653583775}","{\"lat\":37.74200416729339,\"lng\":-122.44323923742594}"]),
-        picture_url: 'https://hike-sf.s3.us-west-1.amazonaws.com/1584828750966.jpg',
+        picture_url: 'https://hike-sf-seeds.s3-us-west-1.amazonaws.com/glencanyon.jpg',
         user: newUser._id
     }).save((err, newTrail) => {
         if(err) console.log(err);
