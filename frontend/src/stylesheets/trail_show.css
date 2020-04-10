@@ -11,8 +11,10 @@
     
     /* change */
     position: relative;
-    height: 113vh;
+    height: 100vh;
     width: 100%;
+    min-height: calc(100vh - 100px);
+    padding-top: 210px;
 }
 
 .trail-show {
