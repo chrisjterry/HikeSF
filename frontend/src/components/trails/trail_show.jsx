@@ -25,6 +25,7 @@ class TrailShow extends React.Component {
       window.scrollTo(0, 0);
     }
   }
+  
   render() {
     const { trail, weather } = this.props;
     // console.log(weather)
