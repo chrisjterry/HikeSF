@@ -72,6 +72,8 @@ export const login = user => dispatch =>
       dispatch(receiveErrors(err.response.data));
     });
 ```
+![login](./screenshots/login.png)
+![login](./screenshots/home.png)
 
 ### Ability to create and review hiking trails
 Users can create trails via an input form alongside an interactive Google Maps display, which allows them add waypoints to the trail. Users can also review trails that other users have created, giving them a 1-5 star rating.
@@ -113,6 +115,8 @@ router.post('/new',
     }
 );
 ```
+![newTrail](./screenshots/newTrail.png)
+![trailShow](./screenshots/trailShow.png)
 
 **Reviews Creation Backend:**
 ```
@@ -134,6 +138,7 @@ router.post('/', passport.authenticate('jwt', { session: false }),
     newReview.save().then(review => res.json(review));
 });
 ```
+![newReview](./screenshots/newReview.png)
 
 ### Interactive map display via Google Maps API
 When viewing a trail, all data stored in the relevant trail and review collections of MongoDB are retreived and sent to the frontend. The trail waypoints, having been stringified prior to storage, are parsed and displayed on a Google Maps component. The React Star Ratings library is used to display star ratings based on the integer stored in the database.
@@ -176,6 +181,7 @@ componentDidMount() {
     );
 }
 ```
+![googleMapsAPI](./screenshots/googleMapsAPI.png)
 
 **Star Ratings React Component:**
 ```
@@ -222,6 +228,7 @@ app.post('/api/weather', async (req, res) => {
         });
 })
 ```
+![weather](./screenshots/weather.png)
 
 ### Image hosting via AWS
 Multer-S3 middleware was utilized to upload trail images to AWS S3.
