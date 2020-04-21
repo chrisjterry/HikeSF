@@ -16,7 +16,7 @@ class TrailShow extends React.Component {
   }
   
   componentDidUpdate() {
-    console.log(!Object.keys(this.props.weather).length)
+    // console.log(!Object.keys(this.props.weather).length)
     if (this.props.trail.lat && !Object.keys(this.props.weather).length) {
       this.props.fetchWeather({
         lat: this.props.trail.lat,

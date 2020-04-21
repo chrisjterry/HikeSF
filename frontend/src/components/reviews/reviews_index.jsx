@@ -44,7 +44,9 @@ class ReviewIndex extends React.Component {
       // return(<div>You got some Reviews</div>)
       return (
         <div>
-          Average Rating -
+          AVERAGE RATING
+          <br />
+          <br />
           <StarRatings
             // rating={this.state.rating || 5}
             rating={this.state.avg_rating}
@@ -53,11 +55,13 @@ class ReviewIndex extends React.Component {
             starSpacing="1px"
             starRatedColor="yellow"
           />
+          <br/>
+          <br/>
+          ALL RATINGS
+          <br />
+          <br />
           {this.props.reviews.map(review => (
             <div>
-              {review.text}
-              <br />
-              {/* {review.rating} */}
               <StarRatings
                 // rating={this.state.rating || 5}
                 rating={review.rating}
@@ -67,6 +71,9 @@ class ReviewIndex extends React.Component {
                 starRatedColor="yellow"
               />
               <br />
+              {review.text}
+              <br />
+              {/* {review.rating} */}
               {review.date.split("T").shift()}
               <br />
               {review.user.email}
