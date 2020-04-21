@@ -180,6 +180,9 @@
     border: 2px solid rgb(133, 143, 181);
 }
 
+.trail-submit-button:focus {
+  outline: none;
+}
 
 .right-create {
   display: flex;

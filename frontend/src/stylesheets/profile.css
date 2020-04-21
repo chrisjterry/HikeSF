@@ -7,11 +7,15 @@
     background-repeat: no-repeat;
     overflow: hidden;
     padding-top: 3rem;
+
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .user-trails h1 {
-    color: #ffffff;
+    color: black;
     font-family: 'Pacifico', cursive;
     text-align: center;
     font-size: 8vw;
@@ -30,6 +34,7 @@
     /* border: 0.2rem solid rgb(12, 22, 65); */
     /* position: absolute; */
     justify-content: space-around;
+    color: black;
 }
 
 .user-trails-internal {
@@ -57,8 +62,9 @@
     font-size: 1.8vw;
     color: #ffffff;
     padding-bottom: 1rem;
+    max-width: 15rem;
+    text-align: center;
 }
-
 
 
 .delete-trail-button {
