@@ -86,15 +86,16 @@ class NewReviewForm extends React.Component {
               <div className='review-rating'> 
                 <StarRatings
                   className='review-form-rating'
-                  // rating={0.5 || this.state.rating}
-                  rating={0}
+                  rating={this.state.rating || 0}
+                  // rating={0}
                   changeRating={this.changeRating}
                   starDimension="20px"
                   starSpacing="1px"
                   starRatedColor="yellow"
+                  starColor="black"
                   name="rating"
                   emptyStarColor="green"
-                  // value={3}
+                  // value={0}
                 />
               </div>
               <br />
