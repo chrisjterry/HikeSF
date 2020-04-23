@@ -40,18 +40,6 @@ class NewReviewForm extends React.Component {
 
   clearForm() {
     document.getElementById("review-input").value = '';
-    document.getElementById("review-stars").innerHTML = 
-      <StarRatings
-        className='review-form-rating'
-        rating={this.state.rating || 0}
-        // rating={0}
-        changeRating={this.changeRating}
-        starDimension="20px"
-        starSpacing="1px"
-        starRatedColor="yellow"
-        name="rating"
-      // value={0}
-      />
   }
 
   handleSubmit(e) {
