@@ -58,6 +58,7 @@ class TrailIndex extends React.Component {
               {/* <div className="index-map"> */}
                 <IndexMap
                   trails={this.props.trails}
+                  key={this.props.trails.length}
                   fetchTrails={this.props.fetchTrails}
                 />
               {/* </div> */}
