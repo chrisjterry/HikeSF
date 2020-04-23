@@ -252,11 +252,6 @@ class NewTrailForm extends React.Component {
                 />
                 {this.renderErrors()}
               </div>
-              {/* </div> */}
-              {/* </div> */}
-              {/* </div> */}
-
-              {/* </div> */}
             </form>
             <div className="right-create">
               <div className="new-trail-map">

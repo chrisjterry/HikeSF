@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import StarRatings from "react-star-ratings";
-import Buttercup1 from "./buttercup1.png";
+// import Buttercup1 from "./buttercup1.png";
 import ReviewsIndexContainer from '../reviews/reviews_index_container';
 import ShowMap from '../map/show_map';
 import "../../stylesheets/trail_show.css";

@@ -14,6 +14,7 @@ class NewReviewForm extends React.Component {
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clearForm = this.clearForm.bind(this);
       this.changeRating = this.changeRating.bind(this);
     // this.handleCheckBox = this.handleCheckBox.bind(this);
     // this.clearedErrors = false;
@@ -37,6 +38,14 @@ class NewReviewForm extends React.Component {
       });
   }
 
+  clearForm() {
+    this.setState({
+      rating: 0
+    });
+
+    document.getElementById("review-input").value = '';
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     // debugger;
@@ -49,7 +58,12 @@ class NewReviewForm extends React.Component {
       // date: ''
     };
 
-    this.props.createReview(review);
+    this.props.createReview(review)
+    .then(() => {
+      this.clearForm()
+    }
+    )
+
   }
 
     renderErrors() {
@@ -72,26 +86,29 @@ class NewReviewForm extends React.Component {
     return (
       <div className='review-form-container-wrapper'>
         <div className='review-form-container'>
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit} id='new-review'>
             <div className='review-form-text'>
               <br />
               <input
                 className='review-form-text-input'
+                id='review-input'
                 type="textarea"
                 value={this.state.text}
                 onChange={this.update("text")}
                 placeholder="Tell us about this trail!"
               />
               <br />
-              <div className='review-rating'> 
+              <div className='review-rating' id='review-stars'> 
                 <StarRatings
                   className='review-form-rating'
-                  rating={this.state.rating || 5}
+                  rating={this.state.rating || 0}
+                  // rating={0}
                   changeRating={this.changeRating}
                   starDimension="20px"
                   starSpacing="1px"
                   starRatedColor="yellow"
                   name="rating"
+                  // value={0}
                 />
               </div>
               <br />
