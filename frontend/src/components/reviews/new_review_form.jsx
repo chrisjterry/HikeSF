@@ -39,6 +39,10 @@ class NewReviewForm extends React.Component {
   }
 
   clearForm() {
+    this.setState({
+      rating: 0
+    });
+
     document.getElementById("review-input").value = '';
   }
 
