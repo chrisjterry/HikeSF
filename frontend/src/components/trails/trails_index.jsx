@@ -21,7 +21,7 @@ class TrailIndex extends React.Component {
 
         const trailsList = this.props.trails.length ? (
           this.props.trails.map((trail, i) => (
-            <div className="trails-list-internal">
+            <div key={trail._id} className="trails-list-internal">
               <div>
                 <Link to={`/trails/${trail._id}`}>
                   <img
@@ -58,7 +58,6 @@ class TrailIndex extends React.Component {
               {/* <div className="index-map"> */}
                 <IndexMap
                   trails={this.props.trails}
-                  key={this.props.trails.length}
                   fetchTrails={this.props.fetchTrails}
                 />
               {/* </div> */}
