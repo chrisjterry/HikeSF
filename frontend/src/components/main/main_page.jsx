@@ -7,10 +7,16 @@ import '../../stylesheets/logged_in_home.css';
 
 const MainPage = ({ currentUser, history }) => {
 
-  const handleClick = e => {
-    if (!Object.keys(currentUser).length) {
-      e.preventDefault();
-      history.push('/register')
+  const handleClick = redirect => {
+    return e => {
+      console.log('bruh')
+      if (!Object.keys(currentUser).length) {
+        e.preventDefault();
+        history.push({
+          pathname: '/register',
+          search: `redirect=${redirect}`
+        })
+      }
     }
   }
 
@@ -32,12 +38,12 @@ const MainPage = ({ currentUser, history }) => {
           <div className="main-page-header">Ready for your next adventure?</div>
           <div className='right-side-trails-wrapper'>
             <div className="trails-link">
-              <Link className="all-trails pulsate-2" to={"/trails"} onClick={handleClick}>
+              <Link className="all-trails pulsate-2" to={"/trails"} onClick={handleClick('/trails')}>
                 All Trails
               </Link>
             </div>
             <div className="create-trail-wrap">
-              <Link className="create-trail pulsate-1" to={"/trails/new"} onClick={handleClick}>
+              <Link className="create-trail pulsate-1" to={"/trails/new"} onClick={handleClick('/trails/new')}>
                 Create Trail
               </Link>
             </div>

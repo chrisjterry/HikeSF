@@ -5,13 +5,23 @@ import logo from "./logo.png";
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      redirect: new URLSearchParams(this.props.location.search).get('redirect')
+    }
     this.logoutUser = this.logoutUser.bind(this);
     this.getLinks = this.getLinks.bind(this);
   }
+
+  componentDidUpdate() {
+    const redirect = new URLSearchParams(this.props.location.search).get('redirect');
+    if (redirect && !this.state.redirect) this.setState({ redirect })
+  }
+
   logoutUser(e) {
     e.preventDefault();
     this.props.logout();
   }
+
   getLinks() {
     if (this.props.loggedIn) {
       return (
@@ -66,12 +76,12 @@ class NavBar extends React.Component {
           </div>
           <div className="right-nav">
             {/* <div className="signup"> */}
-              <Link className="nav-link" to={"/register"}>
+              <Link className="nav-link" to={`/register${this.state.redirect ? `?redirect=${this.state.redirect}` : ''}`}>
                 Sign up
               </Link>
             {/* </div> */}
             {/* <div className="login"> */}
-              <Link className="nav-link" to={"/login"}>
+              <Link className="nav-link" to={`/login${this.state.redirect ? `?redirect=${this.state.redirect}` : ''}`}>
                 Log in
               </Link>
             {/* </div> */}
@@ -80,6 +90,7 @@ class NavBar extends React.Component {
       );
     }
   }
+
   render() {
     return (
       <div>
@@ -88,4 +99,5 @@ class NavBar extends React.Component {
     );
   }
 }
+
 export default NavBar;

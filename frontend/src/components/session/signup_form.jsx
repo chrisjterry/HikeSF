@@ -46,6 +46,8 @@ class SignupForm extends React.Component {
         this.props.login({
           email: this.state.email,
           password: this.state.password,
+        }).then(() => {
+          if (this.props.redirect) this.props.history.push(this.props.redirect);
         });
     });
   }
@@ -79,8 +81,10 @@ class SignupForm extends React.Component {
       }, speed);
     };
     const login = () => {
-      this.props.login(this.state);
-      this.setState({ username: "", password: "" });
+      this.props.login(this.state).then(() => {
+        this.setState({ username: "", password: "" });
+        if (this.props.redirect) this.props.history.push(this.props.redirect);
+      });
     };
   }
 
