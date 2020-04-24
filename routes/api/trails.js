@@ -33,10 +33,14 @@ router.get('/', (req, res) => {
     req.query.south = req.query.south || -180;
 
     Trail.find({
-        lat: { $gte: req.query.south },
-        lat: { $lte: req.query.north },
-        lng: { $gte: req.query.west },
-        lng: { $lte: req.query.east }
+        $and: [
+            { lat: { $gte: req.query.south } },
+            { lat: { $lte: req.query.north } }
+        ],
+        $and: [
+            { lng: { $gte: req.query.west } },
+            { lng: { $lte: req.query.east } }
+        ]
      })
         .sort({ date: -1 })
         .then(trails => res.json(trails))
