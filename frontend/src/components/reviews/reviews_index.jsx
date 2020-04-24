@@ -19,6 +19,7 @@ class ReviewIndex extends React.Component {
         ratingsSum += review.rating
       )
     avg = Math.floor(ratingsSum / (this.props.reviews.length));
+    avg = avg || 5;
     this.setState({ avg_rating: avg});
   }
 
@@ -33,9 +34,19 @@ class ReviewIndex extends React.Component {
       });    
   }
 
+  componentDidUpdate() {
+    let avg;
+    let ratingsSum = 0;
+      this.props.reviews.map(review => 
+        ratingsSum += review.rating
+      )
+    avg = Math.floor(ratingsSum / (this.props.reviews.length));
+    avg = avg || 5;
+    if (avg !== this.state.avg_rating) this.setState({ avg_rating: avg});
+  }
 
   reviewsList() {
-    // console.log(this.props.reviews)
+    // console.log(this.state.avg_rating)
     if (Object.keys(this.props.reviews).length < 1) {
       return(
         <div>No reviews yet</div>
