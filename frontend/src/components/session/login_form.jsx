@@ -40,7 +40,9 @@ class LoginForm extends React.Component {
       password: this.state.password,
     };
 
-    this.props.login(user);
+    this.props.login(user).then(() => {
+      if (this.props.redirect) this.props.history.push(this.props.redirect);
+    });
   }
 
   handleDemo(e, speed = 110) {
@@ -71,9 +73,12 @@ class LoginForm extends React.Component {
         }
       }, speed);
     };
+    
     const login = () => {
-      this.props.login(this.state);
-      this.setState({ username: "", password: "" });
+      this.props.login(this.state).then(() => {
+        this.setState({ username: "", password: "" });
+        if (this.props.redirect) this.props.history.push(this.props.redirect);
+      });
     };
   }
 

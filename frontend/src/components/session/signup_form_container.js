@@ -2,10 +2,11 @@ import { connect } from "react-redux";
 import { signup, login } from "../../actions/session_actions";
 import SignupForm from "./signup_form";
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, ownProps) => {
   return {
     signedIn: state.session.isSignedIn,
-    errors: state.errors.sessionErrors
+    errors: state.errors.sessionErrors,
+    redirect: new URLSearchParams(ownProps.location.search).get('redirect')
   };
 };
 
