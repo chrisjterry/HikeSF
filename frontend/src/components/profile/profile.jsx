@@ -35,7 +35,11 @@ class Profile extends React.Component {
                         </Link>
                     </div>
                     <div className='profile-desc-container'>
-                        <div className="user-trail-title">{trail.title}</div>
+                        <div className="user-trail-title">
+                        {trail.title.length > 14 ?
+                            `${trail.title.substring(0, 13)}...` : trail.title
+                        }
+                        </div>
                         {/* <br/> */}
                         <div className="user-trail-description">
                             {trail.description.length > 15 ?

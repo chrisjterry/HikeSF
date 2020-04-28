@@ -34,7 +34,11 @@ class TrailIndex extends React.Component {
               </div>
           
               {/* <div> */}
-                <div className="index-trail-title">{trail.title}</div>
+                <div className="index-trail-title">
+                  {trail.title.length > 14 ?
+                    `${trail.title.substring(0, 15)}...` : trail.title
+                  }
+                </div>
                 {/* <div className="index-trail-description">{trail.description}</div> */}
                 <div className="index-trail-description">
                   {trail.description.length > 15 ?
