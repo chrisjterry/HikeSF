@@ -9,7 +9,6 @@ const MainPage = ({ currentUser, history }) => {
 
   const handleClick = redirect => {
     return e => {
-      console.log('bruh')
       if (!Object.keys(currentUser).length) {
         e.preventDefault();
         history.push({
