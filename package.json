@@ -14,7 +14,7 @@
   "author": "Victoria Campbell, Jeff Lui, Jordan Tom, Chris Terry",
   "license": "ISC",
   "dependencies": {
-    "aws-sdk": "^2.642.0",
+    "aws-sdk": "^2.814.0",
     "axios": "^0.19.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
